@@ -1,0 +1,645 @@
+{
+  "files": {
+    "document/index.md": {
+      "bytes": 593,
+      "sha256": "cbb8988229b958d8378933c265fec734309650cd37eb3ded562038de08f48595"
+    },
+    "document/overview.md": {
+      "bytes": 1358,
+      "sha256": "6d5afa64c507f2763362125d360b9dbf095e6339f3cce242eefb8a2a49c8d25b"
+    },
+    "document/peer-review.md": {
+      "bytes": 1326,
+      "sha256": "9581dff0d1ec69e4bca5d69c1d8426915ad87f3e081b93e8c8060ac2580bd630"
+    },
+    "document/sources/agent-ready-infrastructure-paper.md": {
+      "bytes": 641,
+      "sha256": "1fa9ebc6864e457aed3dfed4667cd9497c967aea12d9fedfdc641f4ddc3481d9"
+    },
+    "document/sources/engineering-deck.md": {
+      "bytes": 427,
+      "sha256": "3489d0b3844b7c512ec2ef907c439b3744b537c65f15e4359517db25230c799a"
+    },
+    "document/sources/federated-ai-report.md": {
+      "bytes": 665,
+      "sha256": "6f47f3dcac94d581f4a4a479e7e835049d25a768b0815a12e96d414310f0fbd5"
+    },
+    "document/sources/index.md": {
+      "bytes": 686,
+      "sha256": "9a06038d77afbc9371617c339f14ea86673fa90640cc75c56be86cdf4aca5f69"
+    },
+    "document/themes/agent-ready-not-agent-trusting.md": {
+      "bytes": 716,
+      "sha256": "82ff670b9e598bc3c83f74b363b1a7ae20a711af0f38fe4fd2595aef230c97c0"
+    },
+    "document/themes/discovery-to-governance.md": {
+      "bytes": 820,
+      "sha256": "901c7127359821aebbd9711b40f6140b36395f9d4774d0ee3385ec5d84c4f5b7"
+    },
+    "document/themes/evaluation-format-to-execution.md": {
+      "bytes": 721,
+      "sha256": "f0835b3a6b70dec42d196fbd8ae041df6974b3f3edf3a5a8b75d494488dc3e3c"
+    },
+    "document/themes/failure-taxonomy.md": {
+      "bytes": 1499,
+      "sha256": "d39aec15684cec7f44f11a5ab52eab1f940408d6da417a4a625010b6ff83c40d"
+    },
+    "document/themes/index.md": {
+      "bytes": 1240,
+      "sha256": "fb5178e6deb9ffa79f24c61392d8a7d4deaed376231e58f35346fb37a39bc38c"
+    },
+    "document/themes/missing-collaborative-learning-layer.md": {
+      "bytes": 718,
+      "sha256": "60eebf31d04fa177fcebf431786f9bf788046a94f800552bbbbe948693d9495a"
+    },
+    "document/themes/recommendations-roadmap.md": {
+      "bytes": 1244,
+      "sha256": "d9f29a804dfc5f2ad6d44f848522de5c396505e643f92c1544012c30ba483226"
+    },
+    "document/themes/uk-public-sector-implications.md": {
+      "bytes": 1220,
+      "sha256": "2b2cae1be9d9c629c0e6811bb9962a553b7c6c03751d143b8c43a7ca8d9f97e2"
+    },
+    "federated/cross-device-vs-cross-silo.md": {
+      "bytes": 664,
+      "sha256": "808d3eb3f6d58463d012229332284f236fff92f122561d5bf6170c4502427b6c"
+    },
+    "federated/differential-privacy.md": {
+      "bytes": 576,
+      "sha256": "9391a10a3facde42001d8d65afb49ebf6e0e4e237cf3c331669247f4a9d7d7f8"
+    },
+    "federated/evaluation-rubric.md": {
+      "bytes": 667,
+      "sha256": "832c6934027d6d9669c573dfcac6c7f0400ac0c6f9559744b4a6518b406e088b"
+    },
+    "federated/federated-analytics.md": {
+      "bytes": 605,
+      "sha256": "83a4458ab8e0f82faaeeaa0f4ee69ee5b22f52a42ae879fc2ad6dc27e527ba82"
+    },
+    "federated/federated-evaluation.md": {
+      "bytes": 534,
+      "sha256": "b6ce43263a4133fdc08801d281f5e1f6fa8d6aa0a9b12e01b63d22ff69bc84c1"
+    },
+    "federated/federated-learning.md": {
+      "bytes": 837,
+      "sha256": "16006428f02dff7b12a9724a227042f630034c483df40ad5247f8cc716e5ece8"
+    },
+    "federated/federated-rag.md": {
+      "bytes": 535,
+      "sha256": "45e1b9f9480e7ec850eba1b52ea22bc1340bc30f4fb92f33b5e0261a5d3a22b8"
+    },
+    "federated/federated-unlearning.md": {
+      "bytes": 427,
+      "sha256": "59380e62191b40db4d9463fadd5e280579bb3f3efec95b97242965b5e706c2bc"
+    },
+    "federated/homomorphic-encryption-mpc.md": {
+      "bytes": 589,
+      "sha256": "36a99866f6b94ef4a0b7cf29445820165d3fad15c9d2828a7a475370690cbfa9"
+    },
+    "federated/hub-and-spoke-vs-hierarchical.md": {
+      "bytes": 703,
+      "sha256": "8edbba0ffca4c7da6c311e1ac3a8f6526ce9f7313d214b97588eeca67e3b463e"
+    },
+    "federated/index.md": {
+      "bytes": 2219,
+      "sha256": "bbda4e0287cc49f6e5121c5a7faf48b8a2f6a6a50ef0276860f8421bef29ef20"
+    },
+    "federated/membership-inference.md": {
+      "bytes": 533,
+      "sha256": "74af8679ec9b17c601280afcd740fc001aa5ea2852489f5492f025a3c83f757a"
+    },
+    "federated/model-poisoning-backdoors.md": {
+      "bytes": 627,
+      "sha256": "9eb6c2a819464e35cf4475655185410c78c31689ec758df6fc1fe5e99832dab0"
+    },
+    "federated/non-iid-data.md": {
+      "bytes": 654,
+      "sha256": "6c1dafbc16fec85a3b909d6deb595b1955e9c4cad91e6f6127bca7da0ad13367"
+    },
+    "federated/secure-aggregation.md": {
+      "bytes": 661,
+      "sha256": "f744235b5a5d5791baa4087e4208d7007c273c4b998567f8a80abfdd692103ee"
+    },
+    "federated/trusted-execution-environments.md": {
+      "bytes": 826,
+      "sha256": "fd10ed27e3fe146028b5ea2e742485c57cdea9ec100383dca4f6c8c92569f002"
+    },
+    "frameworks/autogen.md": {
+      "bytes": 438,
+      "sha256": "a82fb45c8d66f1b0bf7d7ea9be31fd6dd44604edb81fd8d4189bd91609ff73ed"
+    },
+    "frameworks/context-hub.md": {
+      "bytes": 2405,
+      "sha256": "9d75844372ed4e98f91e122ea32ea699dbd532f11dfa8c060203fec532aaecba"
+    },
+    "frameworks/fate.md": {
+      "bytes": 458,
+      "sha256": "e83731535ae0e89193afa92f5147e6ee327ecc0ecd0221ee0429f091a7e25c74"
+    },
+    "frameworks/fedml.md": {
+      "bytes": 494,
+      "sha256": "deb42f474a204dfc9f6231fb7a2f6b1f2ebe8f6bb001e40c93fab230462e4155"
+    },
+    "frameworks/flotilla.md": {
+      "bytes": 583,
+      "sha256": "4a92ff4e494b8c48182fa277445513739ace1e4f0a08c015daa7a3f123610777"
+    },
+    "frameworks/flower.md": {
+      "bytes": 873,
+      "sha256": "3ce547980ac580a7c919bcfdf945164e5c3da8ffb90d8c9fb8190a565fc44c76"
+    },
+    "frameworks/index.md": {
+      "bytes": 1595,
+      "sha256": "5349c8fe7ef48a8e9edd4200958b474715978ba531c2cf0c35b9efcf25e1cfe8"
+    },
+    "frameworks/nvidia-flare.md": {
+      "bytes": 588,
+      "sha256": "8deba3fd0091b668a6395014a6f7918098a96c1bbba4ab20c7532bd6959e635f"
+    },
+    "frameworks/openai-agents-sdk.md": {
+      "bytes": 706,
+      "sha256": "a5a3a0ba56fd7a41e2282f00f3f193d19b5643601d5048cff765796f08728f35"
+    },
+    "frameworks/openfl.md": {
+      "bytes": 415,
+      "sha256": "98ff2f26a5b8cf09f7950d3370861266ebcc77d65a58550b07f0838f325daff1"
+    },
+    "frameworks/pysyft.md": {
+      "bytes": 535,
+      "sha256": "c4ca6990c99419c937bfc4b098d9b8cf9baaa08b780ece554de3ae5ef584184d"
+    },
+    "frameworks/semantic-kernel.md": {
+      "bytes": 541,
+      "sha256": "fb8286f09192c9e10a44cfafd6f7555048f40979695e540f9d98c2cfade3f5a0"
+    },
+    "frameworks/substra.md": {
+      "bytes": 644,
+      "sha256": "af52dfff674fdb84c319711cb0aa28db21aeb1b0a95e411232156e43e02d4d8c"
+    },
+    "frameworks/tensorflow-federated.md": {
+      "bytes": 477,
+      "sha256": "b243a1d70ca26850ec3eb85c9cbabbf3cdf73a1213a7829524275ca051ba51ab"
+    },
+    "glossary/agent-card.md": {
+      "bytes": 592,
+      "sha256": "85dba4b012a45ef3f3b257656d4f69c625336cdda2b7c21cd6323099e200e6bd"
+    },
+    "glossary/agent-skill.md": {
+      "bytes": 626,
+      "sha256": "c22ed1222d4012c0d350167fdac61c798829897f6ecab2e41b623a11206149ef"
+    },
+    "glossary/api-calling.md": {
+      "bytes": 558,
+      "sha256": "d73eb63672e4ca36a593a5d7b8fb65ad56c94e8c4dd477d00450c1b9a07af212"
+    },
+    "glossary/api-gateway.md": {
+      "bytes": 558,
+      "sha256": "045546b7d68ad19ea30d806b3f59d0a22a6d66a6ad6873f0e19e4e4b3faef70c"
+    },
+    "glossary/attestation.md": {
+      "bytes": 718,
+      "sha256": "51a8c172c2586903a01e3d4d2fc44664bbe04f52646c3ddcb683239541dfef13"
+    },
+    "glossary/audit-trail.md": {
+      "bytes": 682,
+      "sha256": "325de91369634adcbccdc9ef038da0b729c0c494940e2d0b6d4e080a8c71d4ab"
+    },
+    "glossary/bearer-token.md": {
+      "bytes": 604,
+      "sha256": "03ae1af9a6850c81512cda152c6852526c4d814b71d107fd2bd0810d9af8af37"
+    },
+    "glossary/compensation.md": {
+      "bytes": 576,
+      "sha256": "cf569f68124089b81c54757905650dcf26a5a6f129d21a94f2dfe927919a65bc"
+    },
+    "glossary/confused-deputy.md": {
+      "bytes": 579,
+      "sha256": "59a5336bed9762ae00dfd633723b408b8455d11ec1553d22c7fd8d1a5c6bde8e"
+    },
+    "glossary/consent.md": {
+      "bytes": 672,
+      "sha256": "8a12d3e5596ead62bd5df6c60f601ece0ed65581cbfe10efd4c7fec19b2b68cc"
+    },
+    "glossary/function-calling.md": {
+      "bytes": 688,
+      "sha256": "2319c2be6918eb0b715e1659656bebb4d1aaa217e133a147aa87f96c71f743cd"
+    },
+    "glossary/idempotency.md": {
+      "bytes": 565,
+      "sha256": "5259392af42be850c356b1526b6dfe0fdc232d6f576f31139f0a4b72366b491e"
+    },
+    "glossary/index.md": {
+      "bytes": 2946,
+      "sha256": "6764b53cc72e692e915279d16e5ae2f40601d765a843548ef7c5d4c7022694ae"
+    },
+    "glossary/least-privilege.md": {
+      "bytes": 628,
+      "sha256": "369ee1b837829f3bce78d6fdba4876db92cb2a81ee8cc1d692600ea1d7f5eae0"
+    },
+    "glossary/policy-as-code.md": {
+      "bytes": 623,
+      "sha256": "afaa4b6b58996de514deb2eee864921b0d8ad5eaf14dedd51cf37b83fea1153e"
+    },
+    "glossary/prompt-injection.md": {
+      "bytes": 689,
+      "sha256": "6a59e820bd53920dd135e180d8f9e735e90c92f3365492da48176d2c1a2dfd2a"
+    },
+    "glossary/provenance.md": {
+      "bytes": 649,
+      "sha256": "1a734d899049d94d011beae93c1a95837e7eefad160e5c49afbc2d6dc6018686"
+    },
+    "glossary/schema-grounding.md": {
+      "bytes": 641,
+      "sha256": "282f46ff91160c41d13f235826772ff42576e1b165dc22870438b8cb6ade595f"
+    },
+    "glossary/semantic-grounding.md": {
+      "bytes": 567,
+      "sha256": "ad076d403274990ff6004e95811bd5aa5cac29444261635ea3639d645b2f6aaf"
+    },
+    "glossary/sender-constrained-token.md": {
+      "bytes": 765,
+      "sha256": "ed0e32e1cac3cd184c0285642a0da43fb14846c6c5f7bbc1fcc42980b87c51dd"
+    },
+    "glossary/structured-output.md": {
+      "bytes": 739,
+      "sha256": "822c0f75ec5bce2e8c89e2dee78b7c8a08503a21ea34e8f6d5741926bd8bd72d"
+    },
+    "glossary/tool-discovery.md": {
+      "bytes": 733,
+      "sha256": "7887d04a7f79b774d746c26014c19c9f7903a07e2e086ba15e56d48fc3311acc"
+    },
+    "glossary/tool-retrieval.md": {
+      "bytes": 629,
+      "sha256": "6a322ccf745662867e678fbb411fad7bccd7b1a0fc32cdba845a0a39fba0b0d4"
+    },
+    "glossary/tool-use.md": {
+      "bytes": 660,
+      "sha256": "bdaa213aafbeb562cac1b570ef6cec0e774363d11811c939381943318e9130c3"
+    },
+    "glossary/workflow-engine.md": {
+      "bytes": 684,
+      "sha256": "94db15651927483967230a73e53c9d63dd87ecf67b713a3f9026c1bc98f4ee9c"
+    },
+    "glossary/workload-identity.md": {
+      "bytes": 675,
+      "sha256": "689f75553a44715ba28e4f3d7504800ee91266ace5762aeed716b73d4d315af8"
+    },
+    "index.html": {
+      "bytes": 821,
+      "sha256": "3dc2e6c475bea697ec4dfd23e87dcdf5b36d2537d39c575f6df81408a05abb13"
+    },
+    "index.md": {
+      "bytes": 2268,
+      "sha256": "c4f0fba9fa0d772445261530689f261115ff4cd2daeba8e4c388b16bf0755ced"
+    },
+    "log.md": {
+      "bytes": 1650,
+      "sha256": "298d25c6bad26a34ad5f7098db2243c08d890d147652fb73c5987e2e6d1bcb90"
+    },
+    "okf-bundle.json": {
+      "bytes": 295201,
+      "sha256": "2f4f9a37dc138ce95c76786ec2a17d3de730bdeac0da0f08facbbf457401e645"
+    },
+    "okf-bundle.jsonld": {
+      "bytes": 694,
+      "sha256": "9cbeaad77401343be3a49e2cb42857402f58f0c4721726146a8e8d47cc301f50"
+    },
+    "okf-bundle.yamlld": {
+      "bytes": 775,
+      "sha256": "220609fb87b5020d3650a6fa51018e0ef6c81478f262c128fdbf3d928138b122"
+    },
+    "okf.config.json": {
+      "bytes": 719,
+      "sha256": "428054b8f37cafed0b1bc70f6463532963effed3099cace4a4683a714b22619c"
+    },
+    "organisations/aisi.md": {
+      "bytes": 392,
+      "sha256": "3c7ee10b41bc7bac8054511805c3a9314319facb3db42a8b041b096ace4df66c"
+    },
+    "organisations/anthropic.md": {
+      "bytes": 287,
+      "sha256": "8ff06390e9f55b27cdc0d655b0ea22b4f622d9b3a5a606b3761e462bff0beb60"
+    },
+    "organisations/cncf.md": {
+      "bytes": 378,
+      "sha256": "42573d57beb49009911a8d3362d0582e7a038349e3a703782b83d0cc8d805640"
+    },
+    "organisations/dsit.md": {
+      "bytes": 526,
+      "sha256": "23470348bb9e022e0cd99764885a55ff9ab6dd04c25774108145e9fe38bd5cf3"
+    },
+    "organisations/flower-labs.md": {
+      "bytes": 318,
+      "sha256": "c4b262a1dc8f2cceb64ff39f63e87c28f1b13496647c63679edf19850060a207"
+    },
+    "organisations/gds.md": {
+      "bytes": 453,
+      "sha256": "fb0fc9102fcb17f822ad582040e3c5e23d2b24005a688a7d2622639b1408514a"
+    },
+    "organisations/google.md": {
+      "bytes": 412,
+      "sha256": "57d1cd1bdf5f769b5c771b2d38c266a29ab01450b853ad449ee4f9237f0ff7cf"
+    },
+    "organisations/ico.md": {
+      "bytes": 432,
+      "sha256": "819cd4805650e35d6d2707ac43ef4b2edc8390150d21f5f5814e13e6b49178dc"
+    },
+    "organisations/ietf.md": {
+      "bytes": 563,
+      "sha256": "44157aa57844953ab3ddb214f956b8479eaeb67cc5fee659b2d8276f075628dc"
+    },
+    "organisations/index.md": {
+      "bytes": 1534,
+      "sha256": "6dffd05ca7ec21071da159237d190724f87aad7b67775a79083bb9474cc8706e"
+    },
+    "organisations/linux-foundation.md": {
+      "bytes": 499,
+      "sha256": "00ddfb0b045b46dddb9aabd45ead7a93c49f220c00e255b1b91f3e4cf3b95301"
+    },
+    "organisations/ncsc.md": {
+      "bytes": 400,
+      "sha256": "6eb0a42c2ded367942c6b97972cf1b648ce68c0298e425e3112a722fde04ff54"
+    },
+    "organisations/nvidia.md": {
+      "bytes": 285,
+      "sha256": "a72210ad941e2a35363b5a0bf71dc042208035485a70d44a71036fbae44e8ae0"
+    },
+    "organisations/openai.md": {
+      "bytes": 595,
+      "sha256": "bde30679c90110cd4b1e83c8c98d529ecb0d5445204071444747d69aab411df1"
+    },
+    "organisations/openapi-initiative.md": {
+      "bytes": 360,
+      "sha256": "6f99fd5b970680afa562ffb3fa74bc600ef893ef4ad7baaf6de941706e439f2c"
+    },
+    "organisations/openmined.md": {
+      "bytes": 338,
+      "sha256": "4ada642d484e36cd49b85d5b51ee5e13bd0ed52f2f0955d983041b2e0b314960"
+    },
+    "organisations/w3c.md": {
+      "bytes": 297,
+      "sha256": "5cc2f798ff5840008b8732af9acfde3475005e287c5df5fbd99482abf37d55ab"
+    },
+    "research/agentbench.md": {
+      "bytes": 417,
+      "sha256": "d04f56fb9a067be29cbedc72421e0561a2d05d4536a64405c6aab52bbf480730"
+    },
+    "research/api-bank.md": {
+      "bytes": 417,
+      "sha256": "3bc5112cf973ac402d9c6255c2e3fd235dfc47870cb9a2828d9bb2a69827b41b"
+    },
+    "research/apigen.md": {
+      "bytes": 526,
+      "sha256": "51ca85937042f37346f08ce2dff4844058aa3c44555544128970abd6c035b5db"
+    },
+    "research/bfcl.md": {
+      "bytes": 539,
+      "sha256": "20e874553856082ce14f0e8897d02c6cf607f60202b81517bcccc87e6fc649d5"
+    },
+    "research/fedavg.md": {
+      "bytes": 553,
+      "sha256": "502195de4f3d6a6f405d6332c9b976dfab8c3931d1da051ee7acc7498bb53d2f"
+    },
+    "research/google-keyboard-fl.md": {
+      "bytes": 589,
+      "sha256": "206c24a98ee6f00b9023e41536b410bc785191ea3be0d82db71cc33d89165afb"
+    },
+    "research/gorilla.md": {
+      "bytes": 775,
+      "sha256": "e95f6a284e4cefe45f0e0dc8eec59b8b7f2ecbdb267141c533c33caf2fecc86b"
+    },
+    "research/index.md": {
+      "bytes": 2153,
+      "sha256": "726e8e9600a7f8e425fbac4ce0dd58cf16da9ed15c53d70887371b108e98e474"
+    },
+    "research/kairouz-open-problems.md": {
+      "bytes": 626,
+      "sha256": "b0a8da1adfbf27d3f84c7268eaece1e3a30719edbba618c581d26951d1e8f7c1"
+    },
+    "research/melloddy.md": {
+      "bytes": 617,
+      "sha256": "f03672e4809d6c04248bdff6ce052aa257684a82ede96ec2ec364c762702f091"
+    },
+    "research/mrkl.md": {
+      "bytes": 420,
+      "sha256": "665565ba83b453b1c2b660cc1ffe76659c177d382eb0e968e1061989cbb61a13"
+    },
+    "research/react.md": {
+      "bytes": 476,
+      "sha256": "d968adb95603ae25d78d05a6e7fb003bb966ab4cb96f2009e87dd361dbff3942"
+    },
+    "research/realm.md": {
+      "bytes": 567,
+      "sha256": "cddc8586ca4ae2335e727b1697c62993af90a3762e7080e620c88676cd940004"
+    },
+    "research/tau-bench.md": {
+      "bytes": 504,
+      "sha256": "89385b6421fee24d05bb5f0b1e1403ca8c4dd58af8a3bff4ebb3784887625a8b"
+    },
+    "research/toolace.md": {
+      "bytes": 438,
+      "sha256": "accc874b21888e96d03e1370ee21cf64f0e115f1821a525eefd06d7495a6c1b4"
+    },
+    "research/toolformer.md": {
+      "bytes": 401,
+      "sha256": "0bab041e4cd4c51b0794329b34f398e99b3ed891e82808c8f18eacc4cbe6aead"
+    },
+    "research/toolllm-toolbench.md": {
+      "bytes": 491,
+      "sha256": "bce964f0c22a33d33c94891bc1a70937e230513560d8ac47053840e4c742567c"
+    },
+    "research/toolsandbox.md": {
+      "bytes": 551,
+      "sha256": "8e4730b1164547c863a244c3227c9e41047904f70bf3a409d9140db551c09734"
+    },
+    "sources-index.md": {
+      "bytes": 9212,
+      "sha256": "7ccabd83b0952d6bcaa50df1903ac8e4105044f1c1027e9c93f7d1c43191c4b6"
+    },
+    "stack/contracts-and-interfaces.md": {
+      "bytes": 1040,
+      "sha256": "f3db7d62c2d0fbb569c2db8536f376b480915dd47b9e7689f8e806a173885215"
+    },
+    "stack/control-plane.md": {
+      "bytes": 1475,
+      "sha256": "c4ee9a8c884aa06e9afc39c4c3f4919c61fea6b18170c34c3a126ee4069d568a"
+    },
+    "stack/discovery-and-retrieval.md": {
+      "bytes": 1236,
+      "sha256": "c1b888aec769e172fd7630ab0b7c724d37aad9dcc35867425dcba9822b5aee05"
+    },
+    "stack/execution-and-orchestration.md": {
+      "bytes": 1225,
+      "sha256": "2c848a3b5e0e64e8a0d37d52b0dedf456e912e0177ab53afcf5c5fe43bc5a09a"
+    },
+    "stack/federation-layer.md": {
+      "bytes": 1433,
+      "sha256": "9f114586fd4dac56088962f87be12218a303c2f7c40ccc1d40c26bccbe0a05b6"
+    },
+    "stack/identity-and-authorisation.md": {
+      "bytes": 1346,
+      "sha256": "b4c30e17e314ac36e54aef421b2b1d09bdf519d8c1c4b188396ba53fab7e0ba2"
+    },
+    "stack/index.md": {
+      "bytes": 1599,
+      "sha256": "09223088fc0d512287994f3c81964d61960051b649984a78585a0b69729c3543"
+    },
+    "stack/observability-and-provenance.md": {
+      "bytes": 1324,
+      "sha256": "c81f9192f593a6cc10e5baf91b9a92477586d85b302c5f9c1fd57bb7b09c961d"
+    },
+    "stack/policy-enforcement.md": {
+      "bytes": 863,
+      "sha256": "b2f4df62764528ce5202ba69aa6f0eef4be24dfa118144201e8ca91b5e94144e"
+    },
+    "stack/understanding-and-grounding.md": {
+      "bytes": 1089,
+      "sha256": "89c3bc25a43cf3e2584323c7b54c6abbce6982836464841f478c56cdc74969a2"
+    },
+    "standards/a2a.md": {
+      "bytes": 756,
+      "sha256": "c2b4f678741a29afe04a487ec475325206277d17f295cca4a8d0c2e70a19f567"
+    },
+    "standards/arazzo.md": {
+      "bytes": 664,
+      "sha256": "387b4f0a374ad22da8eaa9814c7e191b2cf2a0f924d8bf1a2ea16101f7214afc"
+    },
+    "standards/asyncapi.md": {
+      "bytes": 531,
+      "sha256": "0917b4588acd714874a4ad63f941a6c6fee689e74abab0e4a7f8edd80cb5e3e7"
+    },
+    "standards/dcat-ap.md": {
+      "bytes": 962,
+      "sha256": "d450e84af0158d532803c11c5ebc3692acd6675979b05d520d62364eae3c38ec"
+    },
+    "standards/dcat.md": {
+      "bytes": 1006,
+      "sha256": "68648bc36533588f83ee7407ff773970d3a93019a318ca727173f3d61d42cc91"
+    },
+    "standards/dpop.md": {
+      "bytes": 568,
+      "sha256": "3ee39107854a1cc2105f9a893a43b96d9b2be7069d625a03e9b249ac59bcdd59"
+    },
+    "standards/dqv.md": {
+      "bytes": 855,
+      "sha256": "45a15ea6c2f952ad2bb3695b77a3d216b4bf8e6b571cfeb52982d94d0c3ce776"
+    },
+    "standards/graphql.md": {
+      "bytes": 484,
+      "sha256": "712fd4044be6b9ff9644cdccd4e3ede09006ebb8f095067cfd49104304a51975"
+    },
+    "standards/grpc-protobuf.md": {
+      "bytes": 656,
+      "sha256": "6d717ea15bf94a9aef34beee9c000cf63941bc15606e89d469e1d7fd81d45c52"
+    },
+    "standards/http-message-signatures.md": {
+      "bytes": 476,
+      "sha256": "2be26177dc923dc8b1ba8ad238503ac35e88b4a705c69ef592cba4442055bdc7"
+    },
+    "standards/index.md": {
+      "bytes": 2924,
+      "sha256": "467c0bc7622dade2132d032922bae9291580bed33d1f958beea127e494c10169"
+    },
+    "standards/json-schema.md": {
+      "bytes": 645,
+      "sha256": "0411df7f76841252d61bdea1f76b668784d4cb21e3d90ccccd48346ae8b5a20c"
+    },
+    "standards/mcp.md": {
+      "bytes": 916,
+      "sha256": "4d49db6975d95bce8a6d6e013cc25292c3d5baa809a36f01bfb0cc6d69714247"
+    },
+    "standards/mtls-bound-tokens.md": {
+      "bytes": 462,
+      "sha256": "d7747fbafe30a74056ff5bc0b5a3fffffb0d08f9aadc4236bcaad8f0f97e4d86"
+    },
+    "standards/oauth-2-0-security-bcp.md": {
+      "bytes": 541,
+      "sha256": "5c83bb60f2a2a3497eb7acc618aa4d8d9e65d03d633c7c5e5587796c80a18b58"
+    },
+    "standards/oauth-2-0.md": {
+      "bytes": 696,
+      "sha256": "1b781fb22c3977ac7672014e8ee6a3b696413c5fcac13bec08b28ad1199af6ff"
+    },
+    "standards/opa.md": {
+      "bytes": 530,
+      "sha256": "00ab495b568e167ec222b1a04ebd81db494114d6213307b489ffc496c6138390"
+    },
+    "standards/openapi.md": {
+      "bytes": 998,
+      "sha256": "3f782581188a1e70b423d2a0c8fd961a5960f8e57236370032aa8fcf96d3edd5"
+    },
+    "standards/opentelemetry.md": {
+      "bytes": 480,
+      "sha256": "2ed2b48355e0522ba5b1bb0ab8172a2cc93fc15486c6bf30fb1ffbc27b83bdd3"
+    },
+    "standards/pkce.md": {
+      "bytes": 572,
+      "sha256": "d91896976660b6ceb7c8b0dc08c9906e81244159cdff0930b20785075416fe00"
+    },
+    "standards/spiffe-spire.md": {
+      "bytes": 779,
+      "sha256": "0c397ad06ea647382711652b61f41e40adb7e6a04a240c044f82ffc5d67a51c1"
+    },
+    "standards/structured-outputs.md": {
+      "bytes": 629,
+      "sha256": "e9e21788907e989b69e6caa88d0b7efe8c9730c78ec32a45a18a53d6e6a2d64c"
+    },
+    "standards/token-exchange.md": {
+      "bytes": 457,
+      "sha256": "c89669e94a885fc1ada7ba2ab93d5b32cfe3fbc23cfe9f5b8c49def40eebc897"
+    },
+    "standards/w3c-prov.md": {
+      "bytes": 543,
+      "sha256": "c2d54702ce44e69b39a0804f0c4949f5d3b40a83fa069be422058fdb64e35aa7"
+    },
+    "standards/zero-trust.md": {
+      "bytes": 664,
+      "sha256": "e8bf282510b348379418b64c48b3cdfe8960121cea5578bcd771166b511c7c10"
+    },
+    "uk-government/ai-management-essentials.md": {
+      "bytes": 463,
+      "sha256": "36f41ad3f9f417fb660497f12484ef0f2ea316c77e1b482f5e4d59544ed73af8"
+    },
+    "uk-government/atrs.md": {
+      "bytes": 648,
+      "sha256": "b66e97bf4ef4959e6715c5ef64d0729b97f86f1eb38c6fe4b0f623550f9d5f22"
+    },
+    "uk-government/blueprint-modern-digital-government.md": {
+      "bytes": 509,
+      "sha256": "ae7c090439d3421ec6c064da17394ce94e102bf078cd004e1bc0e5d377c06623"
+    },
+    "uk-government/data-ethics-framework.md": {
+      "bytes": 453,
+      "sha256": "ae80d16076b70aec9964d991e1f4a13dff8ddfbd53f91f0b6e593bfe843eb8b3"
+    },
+    "uk-government/dpia.md": {
+      "bytes": 517,
+      "sha256": "6a648de995ab8211e62e775b0ce243dd465acc345fcb12873a26fa0a3d52fab6"
+    },
+    "uk-government/gds-api-standards.md": {
+      "bytes": 658,
+      "sha256": "29ae89decdf01314c54c37e15992136172e0daf5ef49ac1d41e3fb5647aa14da"
+    },
+    "uk-government/ico-ai-guidance.md": {
+      "bytes": 582,
+      "sha256": "2dac01c10b59674eadbeaf0d14933a242fe088bf668f4a7b50ace83ea1cd04fd"
+    },
+    "uk-government/index.md": {
+      "bytes": 1512,
+      "sha256": "0c42b84ca0cbc2d937201bc768d93b2898949bd01fcb70ece48a739a2d6745a2"
+    },
+    "uk-government/ncsc-secure-ai.md": {
+      "bytes": 501,
+      "sha256": "3bed7e1083c1cbb6d59ba91d657474f5e17823a683f04f29b558c514e15c5b44"
+    },
+    "uk-government/state-of-digital-government.md": {
+      "bytes": 534,
+      "sha256": "257f7278ca4a3adc3b94f21d783d41662a34250706d594b61155149e5ba7bf04"
+    },
+    "uk-government/uk-api-catalogue.md": {
+      "bytes": 404,
+      "sha256": "3c086b21eb978701e803827b446fdcfbe8123f490717a44301bac0ec1a6f70c3"
+    }
+  },
+  "schema": "okf-checksums.v1"
+}
