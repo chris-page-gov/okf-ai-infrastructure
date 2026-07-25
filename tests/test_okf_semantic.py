@@ -75,6 +75,29 @@ class OkfSemanticTest(unittest.TestCase):
         ]
         self.assertEqual(source["sources"], projected["sources"])
 
+    def test_v02_optional_families_reject_invalid_dates_and_counts(self) -> None:
+        errors = update_viewer.validate_v02_metadata(
+            "bad.md",
+            {
+                "type": "Reference",
+                "generated": {"by": "process:test", "at": "not-a-date"},
+                "verified": {"by": "human:reviewer", "at": "still-not-a-date"},
+                "stale_after": "2026-99-99",
+                "sources": [
+                    {
+                        "resource": "scope descriptor",
+                        "last_modified": "yesterday",
+                        "usage_count": -1,
+                    }
+                ],
+            },
+        )
+        self.assertIn("bad.md generated.at must be an ISO 8601 datetime", errors)
+        self.assertIn("bad.md verified[0].at must be an ISO 8601 datetime", errors)
+        self.assertIn("bad.md sources[0].last_modified must be an ISO date", errors)
+        self.assertIn("bad.md sources[0].usage_count must be a non-negative integer", errors)
+        self.assertIn("bad.md stale_after must be an ISO date", errors)
+
 
 if __name__ == "__main__":
     unittest.main()

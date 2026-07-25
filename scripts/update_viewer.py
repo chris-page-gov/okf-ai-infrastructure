@@ -8,6 +8,7 @@ import json
 import os
 import re
 import sys
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -137,6 +138,25 @@ def find_edges(path_id: str, body: str, known_ids: set[str]) -> tuple[list[tuple
 
 def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
     errors: list[str] = []
+
+    def valid_datetime(value: object) -> bool:
+        if not isinstance(value, str) or "T" not in value:
+            return False
+        try:
+            datetime.fromisoformat(value.replace("Z", "+00:00"))
+        except ValueError:
+            return False
+        return True
+
+    def valid_date(value: object) -> bool:
+        if not isinstance(value, str):
+            return False
+        try:
+            date.fromisoformat(value)
+        except ValueError:
+            return False
+        return True
+
     if "timestamp" in meta:
         errors.append(f"{path_id} uses superseded timestamp; use generated.at")
     status = meta.get("status", "stable")
@@ -149,6 +169,8 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
         or not generated["by"].strip()
     ):
         errors.append(f"{path_id} generated must be a mapping with non-empty by")
+    elif isinstance(generated, dict) and "at" in generated and not valid_datetime(generated["at"]):
+        errors.append(f"{path_id} generated.at must be an ISO 8601 datetime")
     verified = meta.get("verified")
     events = [verified] if isinstance(verified, dict) else verified
     if verified is not None and not isinstance(events, list):
@@ -159,6 +181,8 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
                 isinstance(event.get(key), str) and event[key].strip() for key in ("by", "at")
             ):
                 errors.append(f"{path_id} verified[{index}] must contain non-empty by and at")
+            elif not valid_datetime(event["at"]):
+                errors.append(f"{path_id} verified[{index}].at must be an ISO 8601 datetime")
     sources = meta.get("sources")
     if sources is not None:
         if not isinstance(sources, list):
@@ -171,6 +195,17 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
                     or not source["resource"].strip()
                 ):
                     errors.append(f"{path_id} sources[{index}] must contain non-empty resource")
+                if "last_modified" in source and not valid_date(source["last_modified"]):
+                    errors.append(f"{path_id} sources[{index}].last_modified must be an ISO date")
+                if "usage_count" in source and (
+                    not isinstance(source["usage_count"], int)
+                    or isinstance(source["usage_count"], bool)
+                    or source["usage_count"] < 0
+                ):
+                    errors.append(f"{path_id} sources[{index}].usage_count must be a non-negative integer")
+    stale_after = meta.get("stale_after")
+    if stale_after is not None and not valid_date(stale_after):
+        errors.append(f"{path_id} stale_after must be an ISO date")
     return errors
 
 
