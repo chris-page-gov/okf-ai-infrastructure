@@ -3,8 +3,7 @@ type: "Stack layer"
 title: "Observability and provenance"
 description: "The evidence layer: traces, metrics, logs and an interoperable provenance graph."
 tags: [stack, observability, provenance, evidence]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 # Role in the stack

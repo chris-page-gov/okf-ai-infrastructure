@@ -9,5 +9,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: python3 -m pip install -r requirements-okf.txt
+      - run: python3 scripts/migrate_okf_v02.py --check
       - run: python3 scripts/build_okf_bundle.py --check
+      - run: python3 scripts/update_viewer.py --check
       - run: python3 scripts/check_publication.py
+      - run: python3 -m unittest discover -s tests -v

@@ -4,8 +4,10 @@ title: "OAuth 2.0 Security BCP — RFC 9700"
 description: "Current best practice; deprecates insecure OAuth modes."
 resource: "https://www.rfc-editor.org/rfc/rfc9700"
 tags: [oauth, security, bcp]
-timestamp: 2025-01-01T00:00:00Z
-verified: "yes"
+status: stable
+sources:
+  - resource: "https://www.rfc-editor.org/rfc/rfc9700"
+    last_modified: "2025-01-01"
 ---
 
 Updates the OAuth threat model and security advice and deprecates modes now considered insecure. Underpins the move from bearer access toward demonstrable, sender-constrained authority.

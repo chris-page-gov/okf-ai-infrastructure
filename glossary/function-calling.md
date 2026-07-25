@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Function calling"
 description: "A model emitting a tool invocation against a declared function schema."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "function calling; function call; tool calling"
+status: stable
 ---
 
 # Definition

@@ -3,8 +3,7 @@ type: "Document"
 title: "AI infrastructure — overview"
 description: "Two complementary threads: the agent-ready vertical stack and the federated collaborative-learning layer."
 tags: [document, overview]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 # What this bundle covers

@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Provenance"
 description: "The recorded entities, activities and agents that produced an outcome."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "provenance; lineage"
+status: stable
 ---
 
 # Definition

@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Tool use"
 description: "The widest term: APIs, code execution, search, retrieval, workflow calls."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "tool use; tool-using"
+status: stable
 ---
 
 # Definition

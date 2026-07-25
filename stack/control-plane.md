@@ -3,8 +3,7 @@ type: "Architecture"
 title: "The discovery-to-governance control plane"
 description: "The end-to-end lifecycle that turns a tool-calling model into governed agent execution."
 tags: [architecture, stack, agentic]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 # What it is

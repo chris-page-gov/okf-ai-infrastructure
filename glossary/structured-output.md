@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Structured output"
 description: "Constraining a model's output to a schema; guarantees form, not authority."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "structured output; structured outputs"
+status: stable
 ---
 
 # Definition

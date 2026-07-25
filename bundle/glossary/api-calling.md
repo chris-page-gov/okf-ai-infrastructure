@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "API calling"
 description: "Outbound calls to remote services (REST, GraphQL, gRPC, events)."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "api calling; api call"
+status: stable
 ---
 
 # Definition

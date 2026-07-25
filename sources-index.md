@@ -3,7 +3,7 @@ type: "Index"
 title: "Sources index"
 description: "Every source, standard, framework, paper and organisation in the bundle, with verified citations."
 tags: [index, sources]
-timestamp: 2026-06-27T00:00:00Z
+status: stable
 ---
 
 # Sources index

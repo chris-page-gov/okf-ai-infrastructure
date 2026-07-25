@@ -23,7 +23,7 @@ def route_slug(value: str) -> str:
     return slug or "index"
 
 
-def route_aliases(path_id: str, node: dict[str, str]) -> list[str]:
+def route_aliases(path_id: str, node: dict[str, Any]) -> list[str]:
     aliases = {
         route_slug(Path(path_id).with_suffix("").as_posix()),
         path_id.lower(),
@@ -33,14 +33,20 @@ def route_aliases(path_id: str, node: dict[str, str]) -> list[str]:
         aliases.add(route_slug(Path(path_id).stem))
     if path_id == "index.md":
         aliases.add("index")
-    for alias in (node.get("aliases") or "").split(";"):
+    raw_aliases = node.get("aliases") or []
+    if isinstance(raw_aliases, str):
+        raw_aliases = raw_aliases.split(";")
+    if not isinstance(raw_aliases, list):
+        raw_aliases = [str(raw_aliases)]
+    for alias in raw_aliases:
+        alias = str(alias)
         alias = alias.strip()
         if alias:
             aliases.add(route_slug(alias))
     return sorted(aliases)
 
 
-def edge_kind(source: dict[str, str], target: dict[str, str]) -> str:
+def edge_kind(source: dict[str, Any], target: dict[str, Any]) -> str:
     source_section = source.get("section", "root")
     target_section = target.get("section", "root")
     if target_section in {"document"} and target.get("type", "").lower().startswith("source"):
@@ -54,35 +60,37 @@ def edge_kind(source: dict[str, str], target: dict[str, str]) -> str:
     return "links to"
 
 
-def ordered_sections(nodes: dict[str, dict[str, str]], preferred: list[str]) -> list[str]:
+def ordered_sections(nodes: dict[str, dict[str, Any]], preferred: list[str]) -> list[str]:
     sections = sorted({node.get("section", "root") for node in nodes.values()})
     ordered = [section for section in preferred if section in sections]
     ordered.extend(section for section in sections if section not in ordered)
     return ordered
 
 
-def bundle_generated_at(nodes: dict[str, dict[str, str]]) -> str:
-    timestamps = sorted(node.get("timestamp", "") for node in nodes.values() if node.get("timestamp"))
-    return timestamps[-1] if timestamps else ""
+def bundle_generated_at(config: dict[str, Any]) -> str:
+    return str(config.get("publicationGeneratedAt", ""))
 
 
-def normalized_nodes(nodes: dict[str, dict[str, str]], source_root: str) -> dict[str, dict[str, Any]]:
+def normalized_nodes(nodes: dict[str, dict[str, Any]], source_root: str) -> dict[str, dict[str, Any]]:
     normalized: dict[str, dict[str, Any]] = {}
     prefix = "" if source_root in {"", "."} else f"{source_root.rstrip('/')}/"
     for path_id, node in nodes.items():
-        normalized[path_id] = {
-            "id": path_id,
-            "type": node.get("type", ""),
-            "title": node.get("title", path_id),
-            "description": node.get("description", ""),
-            "timestamp": node.get("timestamp", ""),
-            "resource": node.get("resource", ""),
-            "aliases": node.get("aliases", ""),
-            "route_aliases": route_aliases(path_id, node),
-            "section": node.get("section", "root"),
-            "source": f"{prefix}{path_id}",
-            "body": node.get("body", ""),
-        }
+        payload = dict(node)
+        payload.update(
+            {
+                "id": path_id,
+                "type": node.get("type", ""),
+                "title": node.get("title", path_id),
+                "description": node.get("description", ""),
+                "resource": node.get("resource", ""),
+                "aliases": node.get("aliases", ""),
+                "route_aliases": route_aliases(path_id, node),
+                "section": node.get("section", "root"),
+                "source": f"{prefix}{path_id}",
+                "body": node.get("body", ""),
+            }
+        )
+        normalized[path_id] = payload
     return normalized
 
 
@@ -132,9 +140,13 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
     bundle = {
         "schema": "okf-explorer-bundle.v0",
         "kind": "okf-bundle",
-        "okf_version": "0.1",
+        "okf_version": "0.2",
         "generated_by": "scripts/build_okf_bundle.py",
-        "generated_at": bundle_generated_at(nodes),
+        "generated_at": bundle_generated_at(config),
+        "generated": {
+            "by": "process:okf-ai-infrastructure-publication",
+            "at": bundle_generated_at(config),
+        },
         "meta": {
             "title": config["siteTitle"],
             "default_corpus": corpus_id,

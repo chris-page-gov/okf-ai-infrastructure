@@ -3,8 +3,7 @@ type: "Stack layer"
 title: "Policy enforcement"
 description: "Decoupling policy decisions from enforcement points across the stack."
 tags: [stack, policy, governance]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 # Role in the stack

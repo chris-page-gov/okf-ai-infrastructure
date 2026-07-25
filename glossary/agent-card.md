@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Agent Card"
 description: "A2A's machine-readable description of an agent's capabilities."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "agent card; agent cards"
+status: stable
 ---
 
 # Definition

@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Consent"
 description: "Explicit user permission for data exposure or action."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "consent; user consent"
+status: stable
 ---
 
 # Definition

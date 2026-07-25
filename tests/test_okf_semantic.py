@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import sys
 import unittest
 from pathlib import Path
@@ -8,8 +7,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import build_okf_registry  # noqa: E402
+import build_okf_bundle  # noqa: E402
 import okf_semantic  # noqa: E402
+import update_viewer  # noqa: E402
 
 
 class OkfSemanticTest(unittest.TestCase):
@@ -19,6 +19,8 @@ class OkfSemanticTest(unittest.TestCase):
         page = okf_semantic.parse_markdown(self.fixture_root / "concept.md")
         self.assertEqual("https://example.gov.uk/okf/concepts/example", page.metadata["@id"])
         self.assertEqual(["example", "government"], page.metadata["tags"])
+        self.assertEqual("human:fixture-reviewer", page.metadata["verified"]["by"])
+        self.assertEqual("https://www.gov.uk/example", page.metadata["sources"][0]["resource"])
         self.assertIn("Human-readable Markdown", page.body)
         self.assertFalse(okf_semantic.schema_errors(page.metadata, "concept.schema.json"))
         expanded = okf_semantic.expand(page.metadata)
@@ -44,14 +46,34 @@ class OkfSemanticTest(unittest.TestCase):
         with self.assertRaises(okf_semantic.SemanticError):
             okf_semantic.expand({"@context": "https://untrusted.example/context", "@id": "https://example.test/item"})
 
-    def test_registry_has_one_semantic_source_and_two_deterministic_outputs(self) -> None:
-        rendered = build_okf_registry.build()
-        legacy = json.loads(rendered["legacy"])
-        semantic = json.loads(rendered["semantic"])
-        self.assertEqual("okf-explorer-registry.v1", legacy["schema"])
-        self.assertEqual(4, len(legacy["bundles"]))
-        self.assertEqual("registry/okf-registry.yamlld", legacy["semantic_source"])
-        self.assertIn("@context", semantic)
+    def test_canonical_corpus_and_projection_are_okf_v02(self) -> None:
+        graph, errors = update_viewer.build_graph()
+        self.assertEqual([], errors)
+        self.assertEqual(155, len(graph["nodes"]))
+        self.assertEqual(579, len(graph["edges"]))
+        root = graph["nodes"]["index.md"]
+        self.assertEqual("0.2", root["okf_version"])
+        self.assertEqual("Index", root["type"])
+        source = graph["nodes"]["standards/openapi.md"]
+        self.assertNotIn("timestamp", source)
+        self.assertNotIn("verified", source)
+        self.assertEqual("stable", source["status"])
+        self.assertEqual(
+            "https://spec.openapis.org/oas/v3.2.0.html",
+            source["sources"][0]["resource"],
+        )
+
+        bundle, bundle_errors = build_okf_bundle.build_bundle()
+        self.assertEqual([], bundle_errors)
+        self.assertEqual("0.2", bundle["okf_version"])
+        self.assertEqual(
+            "process:okf-ai-infrastructure-publication",
+            bundle["generated"]["by"],
+        )
+        projected = bundle["corpora"]["ai-infrastructure-wiki"]["nodes"][
+            "standards/openapi.md"
+        ]
+        self.assertEqual(source["sources"], projected["sources"])
 
 
 if __name__ == "__main__":

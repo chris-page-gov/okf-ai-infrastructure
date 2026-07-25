@@ -1,5 +1,6 @@
 {
-  "profile": "OKF v0.1 + explorer bundle",
+  "profile": "OKF v0.2 + Explorer extensions",
+  "publicationGeneratedAt": "2026-07-25T11:16:40Z",
   "siteTitle": "OKF Explorer",
   "defaultBundle": "okf-bundle.json",
   "corpora": [

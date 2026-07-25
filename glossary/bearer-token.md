@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Bearer token"
 description: "A credential where mere possession grants access."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "bearer token; bearer"
+status: stable
 ---
 
 # Definition

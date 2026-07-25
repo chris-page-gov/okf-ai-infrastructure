@@ -27,9 +27,11 @@ OKF_DIRS = {
     "standards",
     "uk-government",
 }
-# Repo policy superset of OKF v0.1 §9 (only "type" is spec-required);
-# see docs/okf-conformance.md.
-REQUIRED_FIELDS = ("type", "title", "description", "timestamp")
+# OKF v0.2 requires only ``type`` on concept Markdown.  Reserved index/log
+# files are navigation documents and therefore have no concept frontmatter
+# (apart from ``okf_version`` on the root index).
+REQUIRED_FIELDS = ("type",)
+RESERVED_MARKDOWN = {"index.md", "log.md"}
 LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 
 
@@ -48,12 +50,51 @@ def iter_okf_markdown() -> list[Path]:
     return sorted(paths, key=rel)
 
 
-def parse_frontmatter(path: Path) -> tuple[dict[str, str], str]:
+def first_heading(body: str, fallback: str) -> str:
+    for line in body.splitlines():
+        if line.startswith("# "):
+            return line[2:].strip() or fallback
+    return fallback
+
+
+def first_description(body: str) -> str:
+    after_heading = False
+    for line in body.splitlines():
+        stripped = line.strip()
+        if not after_heading:
+            after_heading = line.startswith("# ")
+            continue
+        if not stripped or stripped.startswith(("#", "-", "*", ">")):
+            continue
+        return stripped
+    return ""
+
+
+def reserved_metadata(path: Path, body: str, declared: dict[str, object] | None = None) -> dict[str, object]:
+    metadata = dict(declared or {})
+    metadata.update(
+        {
+            "type": "Log" if path.name == "log.md" else "Index",
+            "title": first_heading(body, rel(path)),
+            "description": first_description(body),
+            "status": "stable",
+        }
+    )
+    return metadata
+
+
+def parse_frontmatter(path: Path) -> tuple[dict[str, object], str]:
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---\n") and path.name in RESERVED_MARKDOWN:
+        body = text.strip("\n")
+        return reserved_metadata(path, body), body
     try:
         document = okf_semantic.parse_markdown(path)
     except okf_semantic.SemanticError as exc:
         raise ValueError(str(exc).replace(str(ROOT) + "/", "")) from exc
-    return okf_semantic.legacy_frontmatter(document.metadata), document.body
+    if path.name in RESERVED_MARKDOWN:
+        return reserved_metadata(path, document.body, document.metadata), document.body
+    return document.metadata, document.body
 
 
 def section_for(path_id: str) -> str:
@@ -94,10 +135,49 @@ def find_edges(path_id: str, body: str, known_ids: set[str]) -> tuple[list[tuple
     return sorted(edges), errors
 
 
-def build_graph() -> tuple[dict[str, object], list[str]]:
-    nodes: dict[str, dict[str, str]] = {}
+def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
     errors: list[str] = []
-    parsed: dict[str, tuple[dict[str, str], str]] = {}
+    if "timestamp" in meta:
+        errors.append(f"{path_id} uses superseded timestamp; use generated.at")
+    status = meta.get("status", "stable")
+    if status not in {"draft", "stable", "deprecated"}:
+        errors.append(f"{path_id} has invalid lifecycle status {status!r}")
+    generated = meta.get("generated")
+    if generated is not None and (
+        not isinstance(generated, dict)
+        or not isinstance(generated.get("by"), str)
+        or not generated["by"].strip()
+    ):
+        errors.append(f"{path_id} generated must be a mapping with non-empty by")
+    verified = meta.get("verified")
+    events = [verified] if isinstance(verified, dict) else verified
+    if verified is not None and not isinstance(events, list):
+        errors.append(f"{path_id} verified must be a mapping or list")
+    elif isinstance(events, list):
+        for index, event in enumerate(events):
+            if not isinstance(event, dict) or not all(
+                isinstance(event.get(key), str) and event[key].strip() for key in ("by", "at")
+            ):
+                errors.append(f"{path_id} verified[{index}] must contain non-empty by and at")
+    sources = meta.get("sources")
+    if sources is not None:
+        if not isinstance(sources, list):
+            errors.append(f"{path_id} sources must be a list")
+        else:
+            for index, source in enumerate(sources):
+                if (
+                    not isinstance(source, dict)
+                    or not isinstance(source.get("resource"), str)
+                    or not source["resource"].strip()
+                ):
+                    errors.append(f"{path_id} sources[{index}] must contain non-empty resource")
+    return errors
+
+
+def build_graph() -> tuple[dict[str, object], list[str]]:
+    nodes: dict[str, dict[str, object]] = {}
+    errors: list[str] = []
+    parsed: dict[str, tuple[dict[str, object], str]] = {}
 
     for path in iter_okf_markdown():
         path_id = rel(path)
@@ -107,19 +187,25 @@ def build_graph() -> tuple[dict[str, object], list[str]]:
             errors.append(str(exc))
             continue
         parsed[path_id] = (meta, body)
-        for field in REQUIRED_FIELDS:
-            if not meta.get(field):
-                errors.append(f"{path_id} is missing required frontmatter field {field}")
-        nodes[path_id] = {
-            "type": meta.get("type", ""),
-            "title": meta.get("title", path_id),
-            "description": meta.get("description", ""),
-            "resource": meta.get("resource", ""),
-            "timestamp": meta.get("timestamp", ""),
-            "aliases": meta.get("aliases", ""),
-            "section": section_for(path_id),
-            "body": body,
-        }
+        is_reserved = Path(path_id).name in RESERVED_MARKDOWN
+        if not is_reserved:
+            for field in REQUIRED_FIELDS:
+                if not meta.get(field):
+                    errors.append(f"{path_id} is missing required frontmatter field {field}")
+            errors.extend(validate_v02_metadata(path_id, meta))
+        node = dict(meta)
+        node.update(
+            {
+                "type": meta.get("type", ""),
+                "title": meta.get("title", path_id),
+                "description": meta.get("description", ""),
+                "resource": meta.get("resource", ""),
+                "aliases": meta.get("aliases", ""),
+                "section": section_for(path_id),
+                "body": body,
+            }
+        )
+        nodes[path_id] = node
 
     known_ids = set(nodes)
     edge_set: set[tuple[str, str]] = set()
@@ -157,6 +243,14 @@ def main(argv: list[str] | None = None) -> int:
         for error in errors:
             print(error, file=sys.stderr)
         return 1
+
+    if not VIEWER.exists():
+        print(
+            "canonical graph validated with "
+            f"{len(graph['nodes'])} nodes and {len(graph['edges'])} edges; "
+            "this publication has no legacy viewer.html template"
+        )
+        return 0
 
     updated = rendered_viewer(graph)
     current = VIEWER.read_text(encoding="utf-8")
