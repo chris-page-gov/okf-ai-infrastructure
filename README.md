@@ -19,3 +19,7 @@ conforms to OKF v0.2: only the root index declares `okf_version`, reserved
 indexes/logs have no concept frontmatter, concepts require `type`, and
 source-backed concepts use standard `sources`. The invalid actor-free legacy
 `verified: "yes"` flag is deliberately not promoted into a trust claim.
+
+`main` requires a pull request, current CI, resolved conversations, linear
+history and explicit maintainer self-review. A separate approving reviewer is
+not required because this is a solo-maintained repository.
