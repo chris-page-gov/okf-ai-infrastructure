@@ -1,6 +1,6 @@
 # OKF Bundle Wiki Profile v1
 
-Status: experimental implementation profile, 11 July 2026.
+Status: experimental implementation profile, updated 25 July 2026.
 
 This profile defines a federated publication contract for independently hosted
 Open Knowledge Format bundle wikis. It uses YAML-LD Basic profile semantics for
@@ -23,6 +23,12 @@ The profile URI is:
 
 - Use UTF-8 and YAML 1.2 Core Schema.
 - Use one YAML-LD document in each Markdown frontmatter block.
+- Follow the OKF v0.2 reserved-file rule: only the bundle-root `index.md` may
+  carry `okf_version`; other indexes and logs have no frontmatter.
+- Require only a non-empty `type` for concepts, tolerate unknown fields and
+  preserve them through projections.
+- Prefer `generated.at` over legacy `timestamp`, `sources` over body citation
+  lists, and normalize a single `verified` mapping to one verification event.
 - Give every production concept an absolute `@id`.
 - Use IRI-valued `@type` values; retain human labels separately.
 - Quote dates and timestamps even though conforming YAML-LD processors treat
@@ -45,7 +51,7 @@ Every generated or inferred statement must be distinguishable as one of:
 
 `okf-explorer-bundle.v0` and `okf-explorer-large-corpus.v1` remain supported
 runtime projections. They are generated artifacts rather than the semantic
-authority.
+authority and may retain explicitly documented v0.1 fallbacks.
 
 ## Validation
 

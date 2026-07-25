@@ -1,12 +1,11 @@
----
-type: "Log"
-title: "Change log & provenance"
-description: "How this bundle was produced and verified."
-tags: [log, provenance]
-timestamp: 2026-07-07T00:00:00Z
----
 
 # Change log & provenance
+
+## 2026-07-25
+
+* **Format**: Migrated canonical Markdown to Open Knowledge Format v0.2. The root alone declares `okf_version`; directory indexes and the log use reserved-file form without concept frontmatter.
+* **Provenance**: Replaced source-oriented legacy timestamps with `sources[].last_modified` where a reviewed resource exists. Actor-free `verified: "yes"` flags were not promoted into v0.2 verification events, avoiding an unsupported human-review claim.
+* **Compatibility**: Explorer and legacy-viewer projections synthesize navigation nodes and preserve tags, aliases, routes and unknown producer extensions while publishing structured v0.2 metadata.
 
 ## 2026-07-07
 

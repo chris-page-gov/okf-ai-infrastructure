@@ -3,8 +3,7 @@ type: "Concept"
 title: "Model poisoning & backdoors"
 description: "Malicious participants corrupt the shared model."
 tags: [fl, threat, security, federated]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 Without strong node authentication, malicious or compromised participants can poison the shared model or implant backdoors. Access control and node identity matter as much as cryptography: if unauthorised participants can join, poisoning and replay risks remain.

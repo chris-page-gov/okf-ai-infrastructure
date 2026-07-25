@@ -4,8 +4,10 @@ title: "Anthropic"
 description: "Introduced MCP (Nov 2024)."
 resource: "https://www.anthropic.com/"
 tags: [agentic, organisation]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
+sources:
+  - resource: "https://www.anthropic.com/"
+    last_modified: "2026-06-27"
 ---
 
 Introduced the [Model Context Protocol](../standards/mcp.md) in November 2024.

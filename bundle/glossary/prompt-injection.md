@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Prompt injection"
 description: "Malicious instructions hidden in tool descriptions or retrieved content."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "prompt injection; context injection; indirect injection"
+status: stable
 ---
 
 # Definition

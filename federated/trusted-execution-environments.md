@@ -4,8 +4,10 @@ title: "Trusted execution environments (TEEs)"
 description: "Hardware-isolated computation strengthening server-side confidentiality."
 resource: "https://confidentialcomputing.io/"
 tags: [fl, privacy, security, federated]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
+sources:
+  - resource: "https://confidentialcomputing.io/"
+    last_modified: "2026-06-27"
 ---
 
 Hardware-isolated enclaves that strengthen server-side confidentiality and verifiability of federated computation. They improve confidentiality but do **not** remove the need for code review, attestation policy, procurement assurance or oversight — how far to trust TEEs organisationally and politically is an open public-sector question.

@@ -6,16 +6,27 @@
   "descriptor": {
     "@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/okf-bundle.json"
   },
+  "generated": {
+    "at": "2026-07-25T11:16:40Z",
+    "by": "process:okf-ai-infrastructure-publication"
+  },
+  "home": {
+    "@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/"
+  },
   "license": {
     "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
   },
+  "okf_version": "0.2",
   "profile": {
     "@id": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
   },
   "publisher": {
     "@id": "https://github.com/chris-page-gov"
   },
+  "semanticDescriptor": {
+    "@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/okf-bundle.yamlld"
+  },
   "status": "preview",
   "title": "AI Infrastructure OKF Wiki",
-  "version": "0.4.0"
+  "version": "0.5.0"
 }

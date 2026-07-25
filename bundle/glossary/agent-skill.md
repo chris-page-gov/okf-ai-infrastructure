@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Agent skill"
 description: "A reusable, packaged instruction/workflow bundle for an agent."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "agent skill; agent skills; skills"
+status: stable
 ---
 
 # Definition

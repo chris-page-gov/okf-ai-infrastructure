@@ -3494,7 +3494,7 @@
           ],
           "section": "document",
           "source": "document/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "The reviewed sources",
           "type": "Index"
         },
@@ -3511,7 +3511,11 @@
           ],
           "section": "document",
           "source": "document/overview.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "document",
+            "overview"
+          ],
           "title": "AI infrastructure — overview",
           "type": "Document"
         },
@@ -3528,7 +3532,11 @@
           ],
           "section": "document",
           "source": "document/peer-review.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "evaluation",
+            "document"
+          ],
           "title": "Evaluation & provenance note",
           "type": "Evaluation"
         },
@@ -3545,7 +3553,11 @@
           ],
           "section": "document",
           "source": "document/sources/agent-ready-infrastructure-paper.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "document",
+            "source"
+          ],
           "title": "From API-Calling LLMs to Agent-Ready Digital Infrastructure",
           "type": "Source document"
         },
@@ -3562,7 +3574,12 @@
           ],
           "section": "document",
           "source": "document/sources/engineering-deck.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "document",
+            "source",
+            "slides"
+          ],
           "title": "Engineering Agent-Ready Infrastructure (deck)",
           "type": "Source document"
         },
@@ -3579,7 +3596,12 @@
           ],
           "section": "document",
           "source": "document/sources/federated-ai-report.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "document",
+            "source",
+            "federated"
+          ],
           "title": "Federated AI Research Execution Report",
           "type": "Source document"
         },
@@ -3596,7 +3618,7 @@
           ],
           "section": "document",
           "source": "document/sources/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Source documents",
           "type": "Index"
         },
@@ -3613,7 +3635,12 @@
           ],
           "section": "document",
           "source": "document/themes/agent-ready-not-agent-trusting.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "security",
+            "governance"
+          ],
           "title": "Agent-ready, not agent-trusting",
           "type": "Concept"
         },
@@ -3630,7 +3657,11 @@
           ],
           "section": "document",
           "source": "document/themes/discovery-to-governance.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "architecture"
+          ],
           "title": "The discovery-to-governance lifecycle",
           "type": "Concept"
         },
@@ -3647,7 +3678,12 @@
           ],
           "section": "document",
           "source": "document/themes/evaluation-format-to-execution.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "evaluation",
+            "benchmark"
+          ],
           "title": "Evaluation moved from format to execution",
           "type": "Concept"
         },
@@ -3664,7 +3700,12 @@
           ],
           "section": "document",
           "source": "document/themes/failure-taxonomy.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "reliability",
+            "security"
+          ],
           "title": "Failure taxonomy",
           "type": "Concept"
         },
@@ -3681,7 +3722,7 @@
           ],
           "section": "document",
           "source": "document/themes/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Themes",
           "type": "Index"
         },
@@ -3698,7 +3739,12 @@
           ],
           "section": "document",
           "source": "document/themes/missing-collaborative-learning-layer.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "federated",
+            "architecture"
+          ],
           "title": "The missing collaborative-learning layer",
           "type": "Concept"
         },
@@ -3715,7 +3761,12 @@
           ],
           "section": "document",
           "source": "document/themes/recommendations-roadmap.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "roadmap",
+            "recommendations"
+          ],
           "title": "Recommendations and roadmap",
           "type": "Concept"
         },
@@ -3732,7 +3783,12 @@
           ],
           "section": "document",
           "source": "document/themes/uk-public-sector-implications.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "theme",
+            "uk-government",
+            "governance"
+          ],
           "title": "UK public-sector implications",
           "type": "Concept"
         },
@@ -3749,7 +3805,12 @@
           ],
           "section": "federated",
           "source": "federated/cross-device-vs-cross-silo.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "taxonomy",
+            "federated"
+          ],
           "title": "Cross-device vs cross-silo",
           "type": "Concept"
         },
@@ -3766,7 +3827,12 @@
           ],
           "section": "federated",
           "source": "federated/differential-privacy.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "federated"
+          ],
           "title": "Differential privacy",
           "type": "Concept"
         },
@@ -3783,7 +3849,13 @@
           ],
           "section": "federated",
           "source": "federated/evaluation-rubric.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "evaluation",
+            "governance",
+            "federated"
+          ],
           "title": "Multi-dimensional evaluation rubric",
           "type": "Concept"
         },
@@ -3800,7 +3872,12 @@
           ],
           "section": "federated",
           "source": "federated/federated-analytics.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "analytics",
+            "federated"
+          ],
           "title": "Federated analytics",
           "type": "Concept"
         },
@@ -3817,7 +3894,12 @@
           ],
           "section": "federated",
           "source": "federated/federated-evaluation.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "evaluation",
+            "federated"
+          ],
           "title": "Federated evaluation",
           "type": "Concept"
         },
@@ -3834,7 +3916,17 @@
           ],
           "section": "federated",
           "source": "federated/federated-learning.md",
-          "timestamp": "2017-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2017-02-01",
+              "resource": "https://arxiv.org/abs/1602.05629"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "federated"
+          ],
           "title": "Federated learning",
           "type": "Concept"
         },
@@ -3851,7 +3943,13 @@
           ],
           "section": "federated",
           "source": "federated/federated-rag.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "llm",
+            "rag",
+            "federated"
+          ],
           "title": "Federated / confidential RAG",
           "type": "Concept"
         },
@@ -3868,7 +3966,13 @@
           ],
           "section": "federated",
           "source": "federated/federated-unlearning.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "governance",
+            "privacy",
+            "federated"
+          ],
           "title": "Federated unlearning",
           "type": "Concept"
         },
@@ -3885,7 +3989,13 @@
           ],
           "section": "federated",
           "source": "federated/homomorphic-encryption-mpc.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "cryptography",
+            "federated"
+          ],
           "title": "Homomorphic encryption & MPC",
           "type": "Concept"
         },
@@ -3902,7 +4012,12 @@
           ],
           "section": "federated",
           "source": "federated/hub-and-spoke-vs-hierarchical.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "architecture",
+            "federated"
+          ],
           "title": "Hub-and-spoke vs hierarchical coordination",
           "type": "Concept"
         },
@@ -3919,7 +4034,7 @@
           ],
           "section": "federated",
           "source": "federated/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Federated AI",
           "type": "Index"
         },
@@ -3936,7 +4051,13 @@
           ],
           "section": "federated",
           "source": "federated/membership-inference.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "threat",
+            "federated"
+          ],
           "title": "Membership inference & gradient leakage",
           "type": "Concept"
         },
@@ -3953,7 +4074,13 @@
           ],
           "section": "federated",
           "source": "federated/model-poisoning-backdoors.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "threat",
+            "security",
+            "federated"
+          ],
           "title": "Model poisoning & backdoors",
           "type": "Concept"
         },
@@ -3970,7 +4097,12 @@
           ],
           "section": "federated",
           "source": "federated/non-iid-data.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "heterogeneity",
+            "federated"
+          ],
           "title": "Non-IID data",
           "type": "Concept"
         },
@@ -3987,7 +4119,19 @@
           ],
           "section": "federated",
           "source": "federated/secure-aggregation.md",
-          "timestamp": "2017-10-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2017-10-01",
+              "resource": "https://arxiv.org/abs/1611.04482"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "security",
+            "federated"
+          ],
           "title": "Secure aggregation",
           "type": "Concept"
         },
@@ -4004,7 +4148,19 @@
           ],
           "section": "federated",
           "source": "federated/trusted-execution-environments.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://confidentialcomputing.io/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "security",
+            "federated"
+          ],
           "title": "Trusted execution environments (TEEs)",
           "type": "Concept"
         },
@@ -4021,9 +4177,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/autogen.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://microsoft.github.io/autogen/stable/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agent",
+            "framework"
+          ],
           "title": "AutoGen",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "Microsoft"
         },
         "frameworks/context-hub.md": {
           "aliases": "",
@@ -4038,9 +4205,22 @@
           ],
           "section": "frameworks",
           "source": "frameworks/context-hub.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://github.com/andrewyng/context-hub"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "registry",
+            "agent-skill",
+            "discovery",
+            "tool"
+          ],
           "title": "Context Hub",
-          "type": "Tool / registry"
+          "type": "Tool / registry",
+          "vendor": "Andrew Ng / AI Suite"
         },
         "frameworks/fate.md": {
           "aliases": "",
@@ -4055,9 +4235,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/fate.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://github.com/FederatedAI/FATE"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "framework"
+          ],
           "title": "FATE",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "FedAI / LF"
         },
         "frameworks/fedml.md": {
           "aliases": "",
@@ -4072,9 +4263,21 @@
           ],
           "section": "frameworks",
           "source": "frameworks/fedml.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://fedml.ai/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "mlops",
+            "framework"
+          ],
           "title": "FedML / TensorOpera",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "FedML"
         },
         "frameworks/flotilla.md": {
           "aliases": "",
@@ -4089,9 +4292,15 @@
           ],
           "section": "frameworks",
           "source": "frameworks/flotilla.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "fl",
+            "research",
+            "framework"
+          ],
           "title": "Flotilla",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "academic"
         },
         "frameworks/flower.md": {
           "aliases": "",
@@ -4106,9 +4315,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/flower.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://flower.ai/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "framework"
+          ],
           "title": "Flower",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "Flower Labs"
         },
         "frameworks/index.md": {
           "aliases": "",
@@ -4123,7 +4343,7 @@
           ],
           "section": "frameworks",
           "source": "frameworks/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Frameworks & middleware",
           "type": "Index"
         },
@@ -4140,9 +4360,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/nvidia-flare.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://nvflare.readthedocs.io/en/main/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "framework"
+          ],
           "title": "NVIDIA FLARE",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "NVIDIA"
         },
         "frameworks/openai-agents-sdk.md": {
           "aliases": "",
@@ -4157,9 +4388,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/openai-agents-sdk.md",
-          "timestamp": "2025-03-11T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2025-03-11",
+              "resource": "https://openai.com/index/new-tools-for-building-agents/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agent",
+            "framework"
+          ],
           "title": "OpenAI Agents SDK & Responses API",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "OpenAI"
         },
         "frameworks/openfl.md": {
           "aliases": "",
@@ -4174,9 +4416,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/openfl.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://openfl.readthedocs.io/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "framework"
+          ],
           "title": "OpenFL",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "LF AI & Data"
         },
         "frameworks/pysyft.md": {
           "aliases": "",
@@ -4191,9 +4444,21 @@
           ],
           "section": "frameworks",
           "source": "frameworks/pysyft.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://github.com/OpenMined/PySyft"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "framework"
+          ],
           "title": "PySyft",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "OpenMined"
         },
         "frameworks/semantic-kernel.md": {
           "aliases": "",
@@ -4208,9 +4473,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/semantic-kernel.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://learn.microsoft.com/en-us/semantic-kernel/overview/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agent",
+            "framework"
+          ],
           "title": "Semantic Kernel",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "Microsoft"
         },
         "frameworks/substra.md": {
           "aliases": "",
@@ -4225,9 +4501,20 @@
           ],
           "section": "frameworks",
           "source": "frameworks/substra.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://docs.substra.org/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "framework"
+          ],
           "title": "Substra",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "LF AI & Data / Owkin"
         },
         "frameworks/tensorflow-federated.md": {
           "aliases": "",
@@ -4242,9 +4529,21 @@
           ],
           "section": "frameworks",
           "source": "frameworks/tensorflow-federated.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.tensorflow.org/federated"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "research",
+            "framework"
+          ],
           "title": "TensorFlow Federated",
-          "type": "Framework"
+          "type": "Framework",
+          "vendor": "Google"
         },
         "glossary/agent-card.md": {
           "aliases": "agent card; agent cards",
@@ -4261,7 +4560,10 @@
           ],
           "section": "glossary",
           "source": "glossary/agent-card.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Agent Card",
           "type": "Glossary term"
         },
@@ -4281,7 +4583,10 @@
           ],
           "section": "glossary",
           "source": "glossary/agent-skill.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Agent skill",
           "type": "Glossary term"
         },
@@ -4300,7 +4605,10 @@
           ],
           "section": "glossary",
           "source": "glossary/api-calling.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "API calling",
           "type": "Glossary term"
         },
@@ -4319,7 +4627,10 @@
           ],
           "section": "glossary",
           "source": "glossary/api-gateway.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "API gateway",
           "type": "Glossary term"
         },
@@ -4339,7 +4650,10 @@
           ],
           "section": "glossary",
           "source": "glossary/attestation.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Attestation",
           "type": "Glossary term"
         },
@@ -4358,7 +4672,10 @@
           ],
           "section": "glossary",
           "source": "glossary/audit-trail.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Audit trail",
           "type": "Glossary term"
         },
@@ -4377,7 +4694,10 @@
           ],
           "section": "glossary",
           "source": "glossary/bearer-token.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Bearer token",
           "type": "Glossary term"
         },
@@ -4397,7 +4717,10 @@
           ],
           "section": "glossary",
           "source": "glossary/compensation.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Compensation",
           "type": "Glossary term"
         },
@@ -4415,7 +4738,10 @@
           ],
           "section": "glossary",
           "source": "glossary/confused-deputy.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Confused deputy",
           "type": "Glossary term"
         },
@@ -4434,7 +4760,10 @@
           ],
           "section": "glossary",
           "source": "glossary/consent.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Consent",
           "type": "Glossary term"
         },
@@ -4454,7 +4783,10 @@
           ],
           "section": "glossary",
           "source": "glossary/function-calling.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Function calling",
           "type": "Glossary term"
         },
@@ -4473,7 +4805,10 @@
           ],
           "section": "glossary",
           "source": "glossary/idempotency.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Idempotency",
           "type": "Glossary term"
         },
@@ -4490,7 +4825,7 @@
           ],
           "section": "glossary",
           "source": "glossary/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Glossary",
           "type": "Index"
         },
@@ -4509,7 +4844,10 @@
           ],
           "section": "glossary",
           "source": "glossary/least-privilege.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Least privilege",
           "type": "Glossary term"
         },
@@ -4527,7 +4865,10 @@
           ],
           "section": "glossary",
           "source": "glossary/policy-as-code.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Policy-as-code",
           "type": "Glossary term"
         },
@@ -4547,7 +4888,10 @@
           ],
           "section": "glossary",
           "source": "glossary/prompt-injection.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Prompt injection",
           "type": "Glossary term"
         },
@@ -4566,7 +4910,10 @@
           ],
           "section": "glossary",
           "source": "glossary/provenance.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Provenance",
           "type": "Glossary term"
         },
@@ -4584,7 +4931,10 @@
           ],
           "section": "glossary",
           "source": "glossary/schema-grounding.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Schema grounding",
           "type": "Glossary term"
         },
@@ -4602,7 +4952,10 @@
           ],
           "section": "glossary",
           "source": "glossary/semantic-grounding.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Semantic grounding",
           "type": "Glossary term"
         },
@@ -4622,7 +4975,10 @@
           ],
           "section": "glossary",
           "source": "glossary/sender-constrained-token.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Sender-constrained token",
           "type": "Glossary term"
         },
@@ -4641,7 +4997,10 @@
           ],
           "section": "glossary",
           "source": "glossary/structured-output.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Structured output",
           "type": "Glossary term"
         },
@@ -4659,7 +5018,10 @@
           ],
           "section": "glossary",
           "source": "glossary/tool-discovery.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Tool discovery",
           "type": "Glossary term"
         },
@@ -4677,7 +5039,10 @@
           ],
           "section": "glossary",
           "source": "glossary/tool-retrieval.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Tool retrieval",
           "type": "Glossary term"
         },
@@ -4696,7 +5061,10 @@
           ],
           "section": "glossary",
           "source": "glossary/tool-use.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Tool use",
           "type": "Glossary term"
         },
@@ -4715,7 +5083,10 @@
           ],
           "section": "glossary",
           "source": "glossary/workflow-engine.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Workflow engine",
           "type": "Glossary term"
         },
@@ -4734,15 +5105,19 @@
           ],
           "section": "glossary",
           "source": "glossary/workload-identity.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "glossary"
+          ],
           "title": "Workload identity",
           "type": "Glossary term"
         },
         "index.md": {
           "aliases": "",
-          "body": "# ai-infrastructure-wiki\n\nAn **Open Knowledge Format (OKF v0.1)** bundle covering **AI infrastructure** in two complementary threads: the **agent-ready vertical stack** (contracts → discovery → identity → execution → policy → observability/provenance) and the **federated collaborative-learning layer**. Just markdown + YAML frontmatter, cross-linked into a graph; open `viewer.html` for the interactive view.\n\n## Contents\n- **[The reviewed sources](document/index.md)** — overview, [themes](document/themes/index.md), [source documents](document/sources/index.md), [evaluation](document/peer-review.md).\n- **[Stack layers](stack/index.md)** (9) · **[Standards](standards/index.md)** (21) · **[Federated AI](federated/index.md)** (15)\n- **[Frameworks](frameworks/index.md)** (12) · **[Research & benchmarks](research/index.md)** (17)\n- **[UK government](uk-government/index.md)** (10) · **[Organisations](organisations/index.md)** (16) · **[Glossary](glossary/index.md)** (25)\n- **[Sources index](sources-index.md)** · **[Change log](log.md)**\n\n## Linking conventions\n\nOKF v0.1 links are plain markdown — unidirectional and untyped. This bundle adopts two conventions the spec leaves open (see the companion proposal in the sibling `okf-proposal/`):\n\n1. **Glossary/vocabulary** terms are linked **from the concept that uses them** (a `Terms` section), mirroring wiki practice; each glossary entry also lists where it is used, so the term↔concept relationship is bidirectional in the files.\n2. **Direction is meaningful** (a link means *source references target*); consumers build the reverse index (the viewer's \"Referenced by\"). Relationship *types* (defines, stewards, introduces, adopts…) are inferred by the viewer from section + direction.\n\n## Companion\nThis is a standalone sibling of `api-mcp-wiki`. Where they share standards (OpenAPI, MCP, A2A, Arazzo, OAuth), each bundle describes them in its own realm's context.",
-          "description": "An Open Knowledge Format bundle on agent-ready digital infrastructure and the federated collaborative-learning layer.",
+          "body": "# ai-infrastructure-wiki\n\nAn **Open Knowledge Format (OKF v0.2)** bundle covering **AI infrastructure** in two complementary threads: the **agent-ready vertical stack** (contracts → discovery → identity → execution → policy → observability/provenance) and the **federated collaborative-learning layer**. Canonical concepts are Markdown with YAML frontmatter, cross-linked into a graph; open `viewer.html` for the compatibility view.\n\n## Contents\n- **[The reviewed sources](document/index.md)** — overview, [themes](document/themes/index.md), [source documents](document/sources/index.md), [evaluation](document/peer-review.md).\n- **[Stack layers](stack/index.md)** (9) · **[Standards](standards/index.md)** (21) · **[Federated AI](federated/index.md)** (15)\n- **[Frameworks](frameworks/index.md)** (12) · **[Research & benchmarks](research/index.md)** (17)\n- **[UK government](uk-government/index.md)** (10) · **[Organisations](organisations/index.md)** (16) · **[Glossary](glossary/index.md)** (25)\n- **[Sources index](sources-index.md)** · **[Change log](log.md)**\n\n## Linking conventions\n\nOKF v0.2 links are plain markdown — unidirectional and untyped. This bundle adopts two compatible conventions:\n\n1. **Glossary/vocabulary** terms are linked **from the concept that uses them** (a `Terms` section), mirroring wiki practice; each glossary entry also lists where it is used, so the term↔concept relationship is bidirectional in the files.\n2. **Direction is meaningful** (a link means *source references target*); consumers build the reverse index (the viewer's \"Referenced by\"). Relationship *types* (defines, stewards, introduces, adopts…) are inferred by the viewer from section + direction.\n\n## Provenance and trust\n\nSource-backed concepts use `sources[].resource` and `sources[].last_modified`.\nThe former v0.1 `verified: \"yes\"` flag had neither an actor nor a verification\nevent time, so it is not promoted into v0.2 `verified`; those concepts remain\nconsumable but explicitly unverified until evidence-backed events are recorded.\nAll producer-specific tags, aliases, links and Explorer routes are retained.\n\n## Companion\nThis is a standalone sibling of `api-mcp-wiki`. Where they share standards (OpenAPI, MCP, A2A, Arazzo, OAuth), each bundle describes them in its own realm's context.",
+          "description": "An **Open Knowledge Format (OKF v0.2)** bundle covering **AI infrastructure** in two complementary threads: the **agent-ready vertical stack** (contracts → discovery → identity → execution → policy → observability/provenance) and the **federated collaborative-learning layer**. Canonical concepts are Markdown with YAML frontmatter, cross-linked into a graph; open `viewer.html` for the compatibility view.",
           "id": "index.md",
+          "okf_version": "0.2",
           "resource": "",
           "route_aliases": [
             "index",
@@ -4750,14 +5125,14 @@
           ],
           "section": "root",
           "source": "index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
-          "title": "ai-infrastructure-wiki — AI infrastructure (OKF bundle)",
+          "status": "stable",
+          "title": "ai-infrastructure-wiki",
           "type": "Index"
         },
         "log.md": {
           "aliases": "",
-          "body": "# Change log & provenance\n\n## 2026-07-07\n\n* **Update**: Applied the Claude Fable 5 code review: XSS and URL-scheme hardening across the Svelte, static, and legacy viewers; harvested-URL sanitisation (credential redaction, scheme validation) and data-hygiene warnings in the UK Government API generator; CI now exercises the generator against fixtures. Full findings in `docs/code-review-2026-07-07.md`.\n* **Update**: Restructured this log to OKF §7 date-grouped headings; intentional OKF v0.1 deviations documented in `docs/okf-conformance.md`.\n\n## 2026-06-27\n\n* **Initialization**: Bundle created from *From API-Calling LLMs to Agent-Ready Digital Infrastructure* (Published DRAFT), the *Federated AI Research Execution Report*, and the *Engineering Agent-Ready Infrastructure* deck. 137 concepts authored across nine sections; technical claims grounded in primary standards, RFCs, arXiv papers and UK guidance (URLs from the source paper's own references where available).\n* **Update**: Added [Context Hub](frameworks/context-hub.md) (Andrew Ng; `andrewyng/context-hub`, MIT) as the now-verified primary source for the content/skills registry layer, resolving the open item from the source paper.\n* **Convention**: Point-of-use glossary linking + reverse index; see [Linking conventions](index.md). Open items (Context Hub; UK federated-AI deployment evidence) recorded in the [evaluation](document/peer-review.md).\n* **Format**: Open Knowledge Format v0.1 (Google Cloud, 2026).",
-          "description": "How this bundle was produced and verified.",
+          "body": "# Change log & provenance\n\n## 2026-07-25\n\n* **Format**: Migrated canonical Markdown to Open Knowledge Format v0.2. The root alone declares `okf_version`; directory indexes and the log use reserved-file form without concept frontmatter.\n* **Provenance**: Replaced source-oriented legacy timestamps with `sources[].last_modified` where a reviewed resource exists. Actor-free `verified: \"yes\"` flags were not promoted into v0.2 verification events, avoiding an unsupported human-review claim.\n* **Compatibility**: Explorer and legacy-viewer projections synthesize navigation nodes and preserve tags, aliases, routes and unknown producer extensions while publishing structured v0.2 metadata.\n\n## 2026-07-07\n\n* **Update**: Applied the Claude Fable 5 code review: XSS and URL-scheme hardening across the Svelte, static, and legacy viewers; harvested-URL sanitisation (credential redaction, scheme validation) and data-hygiene warnings in the UK Government API generator; CI now exercises the generator against fixtures. Full findings in `docs/code-review-2026-07-07.md`.\n* **Update**: Restructured this log to OKF §7 date-grouped headings; intentional OKF v0.1 deviations documented in `docs/okf-conformance.md`.\n\n## 2026-06-27\n\n* **Initialization**: Bundle created from *From API-Calling LLMs to Agent-Ready Digital Infrastructure* (Published DRAFT), the *Federated AI Research Execution Report*, and the *Engineering Agent-Ready Infrastructure* deck. 137 concepts authored across nine sections; technical claims grounded in primary standards, RFCs, arXiv papers and UK guidance (URLs from the source paper's own references where available).\n* **Update**: Added [Context Hub](frameworks/context-hub.md) (Andrew Ng; `andrewyng/context-hub`, MIT) as the now-verified primary source for the content/skills registry layer, resolving the open item from the source paper.\n* **Convention**: Point-of-use glossary linking + reverse index; see [Linking conventions](index.md). Open items (Context Hub; UK federated-AI deployment evidence) recorded in the [evaluation](document/peer-review.md).\n* **Format**: Open Knowledge Format v0.1 (Google Cloud, 2026).",
+          "description": "",
           "id": "log.md",
           "resource": "",
           "route_aliases": [
@@ -4766,7 +5141,7 @@
           ],
           "section": "root",
           "source": "log.md",
-          "timestamp": "2026-07-07T00:00:00Z",
+          "status": "stable",
           "title": "Change log & provenance",
           "type": "Log"
         },
@@ -4783,7 +5158,18 @@
           ],
           "section": "organisations",
           "source": "organisations/aisi.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.aisi.gov.uk/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "uk-government",
+            "research",
+            "organisation"
+          ],
           "title": "AI Security Institute (AISI)",
           "type": "Organisation"
         },
@@ -4800,7 +5186,17 @@
           ],
           "section": "organisations",
           "source": "organisations/anthropic.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.anthropic.com/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agentic",
+            "organisation"
+          ],
           "title": "Anthropic",
           "type": "Organisation"
         },
@@ -4817,7 +5213,17 @@
           ],
           "section": "organisations",
           "source": "organisations/cncf.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.cncf.io/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standards-body",
+            "organisation"
+          ],
           "title": "CNCF",
           "type": "Organisation"
         },
@@ -4834,7 +5240,17 @@
           ],
           "section": "organisations",
           "source": "organisations/dsit.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "uk-government",
+            "organisation"
+          ],
           "title": "DSIT",
           "type": "Organisation"
         },
@@ -4851,7 +5267,18 @@
           ],
           "section": "organisations",
           "source": "organisations/flower-labs.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://flower.ai/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "vendor",
+            "organisation"
+          ],
           "title": "Flower Labs",
           "type": "Organisation"
         },
@@ -4868,7 +5295,17 @@
           ],
           "section": "organisations",
           "source": "organisations/gds.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/organisations/government-digital-service"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "uk-government",
+            "organisation"
+          ],
           "title": "Government Digital Service (GDS)",
           "type": "Organisation"
         },
@@ -4885,7 +5322,18 @@
           ],
           "section": "organisations",
           "source": "organisations/google.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://ai.google/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agentic",
+            "fl",
+            "organisation"
+          ],
           "title": "Google",
           "type": "Organisation"
         },
@@ -4902,7 +5350,18 @@
           ],
           "section": "organisations",
           "source": "organisations/ico.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://ico.org.uk/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "uk-government",
+            "regulator",
+            "organisation"
+          ],
           "title": "ICO",
           "type": "Organisation"
         },
@@ -4919,7 +5378,17 @@
           ],
           "section": "organisations",
           "source": "organisations/ietf.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.rfc-editor.org/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standards-body",
+            "organisation"
+          ],
           "title": "IETF / RFC Editor",
           "type": "Organisation"
         },
@@ -4936,7 +5405,7 @@
           ],
           "section": "organisations",
           "source": "organisations/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Organisations",
           "type": "Index"
         },
@@ -4953,7 +5422,17 @@
           ],
           "section": "organisations",
           "source": "organisations/linux-foundation.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.linuxfoundation.org/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standards-body",
+            "organisation"
+          ],
           "title": "Linux Foundation",
           "type": "Organisation"
         },
@@ -4970,7 +5449,18 @@
           ],
           "section": "organisations",
           "source": "organisations/ncsc.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.ncsc.gov.uk/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "uk-government",
+            "security",
+            "organisation"
+          ],
           "title": "NCSC",
           "type": "Organisation"
         },
@@ -4987,7 +5477,18 @@
           ],
           "section": "organisations",
           "source": "organisations/nvidia.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.nvidia.com/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "vendor",
+            "organisation"
+          ],
           "title": "NVIDIA",
           "type": "Organisation"
         },
@@ -5004,7 +5505,17 @@
           ],
           "section": "organisations",
           "source": "organisations/openai.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://openai.com/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agentic",
+            "organisation"
+          ],
           "title": "OpenAI",
           "type": "Organisation"
         },
@@ -5021,7 +5532,17 @@
           ],
           "section": "organisations",
           "source": "organisations/openapi-initiative.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.openapis.org/about"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standards-body",
+            "organisation"
+          ],
           "title": "OpenAPI Initiative",
           "type": "Organisation"
         },
@@ -5038,7 +5559,18 @@
           ],
           "section": "organisations",
           "source": "organisations/openmined.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://openmined.org/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "privacy",
+            "organisation"
+          ],
           "title": "OpenMined",
           "type": "Organisation"
         },
@@ -5055,7 +5587,17 @@
           ],
           "section": "organisations",
           "source": "organisations/w3c.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.w3.org/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standards-body",
+            "organisation"
+          ],
           "title": "W3C",
           "type": "Organisation"
         },
@@ -5072,7 +5614,18 @@
           ],
           "section": "research",
           "source": "research/agentbench.md",
-          "timestamp": "2023-08-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-08-01",
+              "resource": "https://arxiv.org/abs/2308.03688"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "agents",
+            "research"
+          ],
           "title": "AgentBench (2023)",
           "type": "Research"
         },
@@ -5089,7 +5642,18 @@
           ],
           "section": "research",
           "source": "research/api-bank.md",
-          "timestamp": "2023-04-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-04-01",
+              "resource": "https://arxiv.org/abs/2304.08244"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "tool-use",
+            "research"
+          ],
           "title": "API-Bank (2023)",
           "type": "Research"
         },
@@ -5106,7 +5670,19 @@
           ],
           "section": "research",
           "source": "research/apigen.md",
-          "timestamp": "2024-06-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-06-01",
+              "resource": "https://arxiv.org/abs/2406.18518"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "function-calling",
+            "data",
+            "research"
+          ],
           "title": "APIGen (2024)",
           "type": "Research"
         },
@@ -5123,7 +5699,18 @@
           ],
           "section": "research",
           "source": "research/bfcl.md",
-          "timestamp": "2024-01-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-01-01",
+              "resource": "https://gorilla.cs.berkeley.edu/leaderboard.html"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "function-calling",
+            "research"
+          ],
           "title": "Berkeley Function Calling Leaderboard (BFCL)",
           "type": "Research"
         },
@@ -5140,7 +5727,18 @@
           ],
           "section": "research",
           "source": "research/fedavg.md",
-          "timestamp": "2017-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2017-02-01",
+              "resource": "https://arxiv.org/abs/1602.05629"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "foundational",
+            "research"
+          ],
           "title": "FedAvg — McMahan et al. (2017)",
           "type": "Research"
         },
@@ -5157,7 +5755,18 @@
           ],
           "section": "research",
           "source": "research/google-keyboard-fl.md",
-          "timestamp": "2018-11-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2018-11-01",
+              "resource": "https://arxiv.org/abs/1811.03604"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "deployment",
+            "research"
+          ],
           "title": "Google keyboard FL — Hard et al. (2018)",
           "type": "Research"
         },
@@ -5174,7 +5783,18 @@
           ],
           "section": "research",
           "source": "research/gorilla.md",
-          "timestamp": "2023-05-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-05-01",
+              "resource": "https://arxiv.org/abs/2305.15334"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "tool-use",
+            "research"
+          ],
           "title": "Gorilla & APIBench (2023)",
           "type": "Research"
         },
@@ -5191,7 +5811,7 @@
           ],
           "section": "research",
           "source": "research/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Research & benchmarks",
           "type": "Index"
         },
@@ -5208,7 +5828,18 @@
           ],
           "section": "research",
           "source": "research/kairouz-open-problems.md",
-          "timestamp": "2019-12-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2019-12-01",
+              "resource": "https://arxiv.org/abs/1912.04977"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "survey",
+            "research"
+          ],
           "title": "Kairouz et al. — Advances and open problems (2019)",
           "type": "Research"
         },
@@ -5225,7 +5856,19 @@
           ],
           "section": "research",
           "source": "research/melloddy.md",
-          "timestamp": "2022-01-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2022-01-01",
+              "resource": "https://www.melloddy.eu/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "fl",
+            "deployment",
+            "cross-silo",
+            "research"
+          ],
           "title": "MELLODDY (2019–2022)",
           "type": "Research"
         },
@@ -5242,7 +5885,18 @@
           ],
           "section": "research",
           "source": "research/mrkl.md",
-          "timestamp": "2022-05-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2022-05-01",
+              "resource": "https://arxiv.org/abs/2205.00445"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agents",
+            "tool-use",
+            "research"
+          ],
           "title": "MRKL (2022)",
           "type": "Research"
         },
@@ -5259,7 +5913,18 @@
           ],
           "section": "research",
           "source": "research/react.md",
-          "timestamp": "2022-10-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2022-10-01",
+              "resource": "https://arxiv.org/abs/2210.03629"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agents",
+            "tool-use",
+            "research"
+          ],
           "title": "ReAct (2022)",
           "type": "Research"
         },
@@ -5276,7 +5941,17 @@
           ],
           "section": "research",
           "source": "research/realm.md",
-          "timestamp": "2020-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2020-02-01",
+              "resource": "https://arxiv.org/abs/2002.08909"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "retrieval",
+            "research"
+          ],
           "title": "REALM (2020)",
           "type": "Research"
         },
@@ -5293,7 +5968,19 @@
           ],
           "section": "research",
           "source": "research/tau-bench.md",
-          "timestamp": "2024-06-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-06-01",
+              "resource": "https://arxiv.org/abs/2406.12045"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "agents",
+            "policy",
+            "research"
+          ],
           "title": "τ-bench (2024)",
           "type": "Research"
         },
@@ -5310,7 +5997,19 @@
           ],
           "section": "research",
           "source": "research/toolace.md",
-          "timestamp": "2024-09-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-09-01",
+              "resource": "https://arxiv.org/abs/2409.00920"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "function-calling",
+            "data",
+            "research"
+          ],
           "title": "ToolACE (2024)",
           "type": "Research"
         },
@@ -5327,7 +6026,18 @@
           ],
           "section": "research",
           "source": "research/toolformer.md",
-          "timestamp": "2023-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-02-01",
+              "resource": "https://arxiv.org/abs/2302.04761"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "agents",
+            "tool-use",
+            "research"
+          ],
           "title": "Toolformer (2023)",
           "type": "Research"
         },
@@ -5344,7 +6054,19 @@
           ],
           "section": "research",
           "source": "research/toolllm-toolbench.md",
-          "timestamp": "2023-07-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-07-01",
+              "resource": "https://arxiv.org/abs/2307.16789"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "tool-use",
+            "retrieval",
+            "research"
+          ],
           "title": "ToolLLM / ToolBench (2023)",
           "type": "Research"
         },
@@ -5361,7 +6083,19 @@
           ],
           "section": "research",
           "source": "research/toolsandbox.md",
-          "timestamp": "2024-08-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-08-01",
+              "resource": "https://arxiv.org/abs/2408.04682"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "benchmark",
+            "agents",
+            "state",
+            "research"
+          ],
           "title": "ToolSandbox (2024)",
           "type": "Research"
         },
@@ -5377,7 +6111,11 @@
           ],
           "section": "root",
           "source": "sources-index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "index",
+            "sources"
+          ],
           "title": "Sources index",
           "type": "Index"
         },
@@ -5394,7 +6132,12 @@
           ],
           "section": "stack",
           "source": "stack/contracts-and-interfaces.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "contracts",
+            "standards"
+          ],
           "title": "Contracts and interfaces",
           "type": "Stack layer"
         },
@@ -5411,7 +6154,12 @@
           ],
           "section": "stack",
           "source": "stack/control-plane.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "architecture",
+            "stack",
+            "agentic"
+          ],
           "title": "The discovery-to-governance control plane",
           "type": "Architecture"
         },
@@ -5428,7 +6176,12 @@
           ],
           "section": "stack",
           "source": "stack/discovery-and-retrieval.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "discovery",
+            "retrieval"
+          ],
           "title": "Discovery and current-context retrieval",
           "type": "Stack layer"
         },
@@ -5445,7 +6198,12 @@
           ],
           "section": "stack",
           "source": "stack/execution-and-orchestration.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "execution",
+            "orchestration"
+          ],
           "title": "Execution and orchestration",
           "type": "Stack layer"
         },
@@ -5462,7 +6220,12 @@
           ],
           "section": "stack",
           "source": "stack/federation-layer.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "architecture",
+            "federated",
+            "stack"
+          ],
           "title": "The federation layer (the missing plane)",
           "type": "Architecture"
         },
@@ -5479,7 +6242,13 @@
           ],
           "section": "stack",
           "source": "stack/identity-and-authorisation.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "identity",
+            "authorisation",
+            "security"
+          ],
           "title": "Identity and authorisation",
           "type": "Stack layer"
         },
@@ -5496,7 +6265,7 @@
           ],
           "section": "stack",
           "source": "stack/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Stack layers",
           "type": "Index"
         },
@@ -5513,7 +6282,13 @@
           ],
           "section": "stack",
           "source": "stack/observability-and-provenance.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "observability",
+            "provenance",
+            "evidence"
+          ],
           "title": "Observability and provenance",
           "type": "Stack layer"
         },
@@ -5530,7 +6305,12 @@
           ],
           "section": "stack",
           "source": "stack/policy-enforcement.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "policy",
+            "governance"
+          ],
           "title": "Policy enforcement",
           "type": "Stack layer"
         },
@@ -5547,7 +6327,12 @@
           ],
           "section": "stack",
           "source": "stack/understanding-and-grounding.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
+          "tags": [
+            "stack",
+            "grounding",
+            "semantics"
+          ],
           "title": "Understanding and grounding",
           "type": "Stack layer"
         },
@@ -5564,7 +6349,18 @@
           ],
           "section": "standards",
           "source": "standards/a2a.md",
-          "timestamp": "2025-06-23T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2025-06-23",
+              "resource": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "a2a",
+            "protocol",
+            "agentic"
+          ],
           "title": "Agent2Agent (A2A)",
           "type": "Specification"
         },
@@ -5581,7 +6377,18 @@
           ],
           "section": "standards",
           "source": "standards/arazzo.md",
-          "timestamp": "2026-04-15T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-04-15",
+              "resource": "https://spec.openapis.org/arazzo/latest.html"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "arazzo",
+            "workflows",
+            "standard"
+          ],
           "title": "Arazzo",
           "type": "Specification"
         },
@@ -5598,7 +6405,18 @@
           ],
           "section": "standards",
           "source": "standards/asyncapi.md",
-          "timestamp": "2026-01-31T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-01-31",
+              "resource": "https://www.asyncapi.com/docs/reference/specification/latest"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "asyncapi",
+            "events",
+            "standard"
+          ],
           "title": "AsyncAPI",
           "type": "Specification"
         },
@@ -5615,7 +6433,20 @@
           ],
           "section": "standards",
           "source": "standards/dcat-ap.md",
-          "timestamp": "2026-07-09T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-07-09",
+              "resource": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "dcat-ap",
+            "dcat",
+            "standard",
+            "catalogue",
+            "federation"
+          ],
           "title": "DCAT Application Profile 3.0.0",
           "type": "Specification"
         },
@@ -5632,7 +6463,20 @@
           ],
           "section": "standards",
           "source": "standards/dcat.md",
-          "timestamp": "2026-07-09T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-07-09",
+              "resource": "https://www.w3.org/TR/vocab-dcat-3/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "dcat",
+            "standard",
+            "catalogue",
+            "data-service",
+            "dataset"
+          ],
           "title": "Data Catalog Vocabulary (DCAT) Version 3",
           "type": "Specification"
         },
@@ -5649,7 +6493,18 @@
           ],
           "section": "standards",
           "source": "standards/dpop.md",
-          "timestamp": "2023-09-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2023-09-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc9449"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "dpop",
+            "security"
+          ],
           "title": "DPoP — RFC 9449",
           "type": "Specification"
         },
@@ -5666,7 +6521,19 @@
           ],
           "section": "standards",
           "source": "standards/dqv.md",
-          "timestamp": "2026-07-09T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-07-09",
+              "resource": "https://www.w3.org/TR/vocab-dqv/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "dqv",
+            "data-quality",
+            "standard",
+            "dcat"
+          ],
           "title": "Data Quality Vocabulary (DQV)",
           "type": "Specification"
         },
@@ -5683,7 +6550,18 @@
           ],
           "section": "standards",
           "source": "standards/graphql.md",
-          "timestamp": "2021-10-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2021-10-01",
+              "resource": "https://spec.graphql.org/October2021/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "graphql",
+            "query",
+            "standard"
+          ],
           "title": "GraphQL",
           "type": "Specification"
         },
@@ -5700,7 +6578,18 @@
           ],
           "section": "standards",
           "source": "standards/grpc-protobuf.md",
-          "timestamp": "2016-01-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2016-01-01",
+              "resource": "https://protobuf.dev/overview/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "grpc",
+            "rpc",
+            "standard"
+          ],
           "title": "gRPC / Protocol Buffers",
           "type": "Specification"
         },
@@ -5717,7 +6606,18 @@
           ],
           "section": "standards",
           "source": "standards/http-message-signatures.md",
-          "timestamp": "2024-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-02-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc9421"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "http",
+            "integrity",
+            "security"
+          ],
           "title": "HTTP Message Signatures — RFC 9421",
           "type": "Specification"
         },
@@ -5734,7 +6634,7 @@
           ],
           "section": "standards",
           "source": "standards/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "Standards & specifications",
           "type": "Index"
         },
@@ -5751,7 +6651,18 @@
           ],
           "section": "standards",
           "source": "standards/json-schema.md",
-          "timestamp": "2020-12-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2020-12-01",
+              "resource": "https://json-schema.org/draft/2020-12"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "json-schema",
+            "validation",
+            "standard"
+          ],
           "title": "JSON Schema",
           "type": "Specification"
         },
@@ -5768,7 +6679,18 @@
           ],
           "section": "standards",
           "source": "standards/mcp.md",
-          "timestamp": "2024-11-25T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-11-25",
+              "resource": "https://modelcontextprotocol.io/specification/2025-06-18"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "mcp",
+            "protocol",
+            "agentic"
+          ],
           "title": "Model Context Protocol (MCP)",
           "type": "Specification"
         },
@@ -5785,7 +6707,18 @@
           ],
           "section": "standards",
           "source": "standards/mtls-bound-tokens.md",
-          "timestamp": "2020-02-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2020-02-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc8705"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "mtls",
+            "security"
+          ],
           "title": "mTLS-bound tokens — RFC 8705",
           "type": "Specification"
         },
@@ -5802,7 +6735,18 @@
           ],
           "section": "standards",
           "source": "standards/oauth-2-0-security-bcp.md",
-          "timestamp": "2025-01-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2025-01-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc9700"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "security",
+            "bcp"
+          ],
           "title": "OAuth 2.0 Security BCP — RFC 9700",
           "type": "Specification"
         },
@@ -5819,7 +6763,18 @@
           ],
           "section": "standards",
           "source": "standards/oauth-2-0.md",
-          "timestamp": "2012-10-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2012-10-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc6749"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "security",
+            "standard"
+          ],
           "title": "OAuth 2.0",
           "type": "Specification"
         },
@@ -5836,7 +6791,18 @@
           ],
           "section": "standards",
           "source": "standards/opa.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.openpolicyagent.org/docs/latest/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "opa",
+            "policy",
+            "cncf"
+          ],
           "title": "Open Policy Agent (OPA)",
           "type": "Specification"
         },
@@ -5853,7 +6819,18 @@
           ],
           "section": "standards",
           "source": "standards/openapi.md",
-          "timestamp": "2026-07-09T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-07-09",
+              "resource": "https://spec.openapis.org/oas/v3.2.0.html"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "openapi",
+            "standard",
+            "contracts"
+          ],
           "title": "OpenAPI",
           "type": "Specification"
         },
@@ -5870,7 +6847,18 @@
           ],
           "section": "standards",
           "source": "standards/opentelemetry.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://opentelemetry.io/docs/concepts/observability-primer/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "observability",
+            "cncf",
+            "standard"
+          ],
           "title": "OpenTelemetry",
           "type": "Specification"
         },
@@ -5887,7 +6875,18 @@
           ],
           "section": "standards",
           "source": "standards/pkce.md",
-          "timestamp": "2015-09-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2015-09-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc7636"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "pkce",
+            "security"
+          ],
           "title": "PKCE — RFC 7636",
           "type": "Specification"
         },
@@ -5904,7 +6903,18 @@
           ],
           "section": "standards",
           "source": "standards/spiffe-spire.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://spiffe.io/docs/latest/spiffe-about/overview/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "spiffe",
+            "identity",
+            "security"
+          ],
           "title": "SPIFFE / SPIRE",
           "type": "Specification"
         },
@@ -5921,7 +6931,18 @@
           ],
           "section": "standards",
           "source": "standards/structured-outputs.md",
-          "timestamp": "2024-08-06T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2024-08-06",
+              "resource": "https://platform.openai.com/docs/guides/structured-outputs"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "openai",
+            "schema",
+            "standard"
+          ],
           "title": "Structured Outputs",
           "type": "Specification"
         },
@@ -5938,7 +6959,18 @@
           ],
           "section": "standards",
           "source": "standards/token-exchange.md",
-          "timestamp": "2020-01-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2020-01-01",
+              "resource": "https://www.rfc-editor.org/rfc/rfc8693"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "oauth",
+            "delegation",
+            "security"
+          ],
           "title": "OAuth Token Exchange — RFC 8693",
           "type": "Specification"
         },
@@ -5955,7 +6987,18 @@
           ],
           "section": "standards",
           "source": "standards/w3c-prov.md",
-          "timestamp": "2013-04-30T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2013-04-30",
+              "resource": "https://www.w3.org/TR/prov-overview/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "provenance",
+            "w3c",
+            "standard"
+          ],
           "title": "W3C PROV",
           "type": "Specification"
         },
@@ -5972,7 +7015,18 @@
           ],
           "section": "standards",
           "source": "standards/zero-trust.md",
-          "timestamp": "2020-08-01T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2020-08-01",
+              "resource": "https://csrc.nist.gov/pubs/sp/800/207/final"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "zero-trust",
+            "security",
+            "standard"
+          ],
           "title": "Zero trust architecture (NIST SP 800-207)",
           "type": "Specification"
         },
@@ -5989,7 +7043,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/ai-management-essentials.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/consultations/ai-management-essentials-tool"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "assurance",
+            "uk-government"
+          ],
           "title": "AI Management Essentials",
           "type": "Government Publication"
         },
@@ -6006,7 +7070,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/atrs.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "transparency",
+            "uk-government"
+          ],
           "title": "Algorithmic Transparency Recording Standard (ATRS)",
           "type": "Government Publication"
         },
@@ -6023,7 +7097,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/blueprint-modern-digital-government.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/publications/a-blueprint-for-modern-digital-government"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "policy",
+            "uk-government"
+          ],
           "title": "Blueprint for modern digital government",
           "type": "Government Publication"
         },
@@ -6040,7 +7124,18 @@
           ],
           "section": "uk-government",
           "source": "uk-government/data-ethics-framework.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/publications/data-ethics-framework"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "policy",
+            "ethics",
+            "uk-government"
+          ],
           "title": "Data Ethics Framework",
           "type": "Government Publication"
         },
@@ -6057,7 +7152,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/dpia.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "regulation",
+            "uk-government"
+          ],
           "title": "Data Protection Impact Assessment (DPIA)",
           "type": "Government Publication"
         },
@@ -6074,7 +7179,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/gds-api-standards.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/guidance/gds-api-technical-and-data-standards"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "standard",
+            "uk-government"
+          ],
           "title": "GDS API technical and data standards",
           "type": "Government Publication"
         },
@@ -6091,7 +7206,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/ico-ai-guidance.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "regulation",
+            "uk-government"
+          ],
           "title": "ICO guidance on AI and data protection",
           "type": "Government Publication"
         },
@@ -6108,7 +7233,7 @@
           ],
           "section": "uk-government",
           "source": "uk-government/index.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "status": "stable",
           "title": "UK government",
           "type": "Index"
         },
@@ -6125,7 +7250,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/ncsc-secure-ai.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "security",
+            "uk-government"
+          ],
           "title": "NCSC Guidelines for secure AI system development",
           "type": "Government Publication"
         },
@@ -6142,7 +7277,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/state-of-digital-government.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.gov.uk/government/publications/state-of-digital-government-review"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "policy",
+            "uk-government"
+          ],
           "title": "State of digital government review",
           "type": "Government Publication"
         },
@@ -6159,7 +7304,17 @@
           ],
           "section": "uk-government",
           "source": "uk-government/uk-api-catalogue.md",
-          "timestamp": "2026-06-27T00:00:00Z",
+          "sources": [
+            {
+              "last_modified": "2026-06-27",
+              "resource": "https://www.api.gov.uk/"
+            }
+          ],
+          "status": "stable",
+          "tags": [
+            "catalogue",
+            "uk-government"
+          ],
           "title": "GOV.UK API Catalogue",
           "type": "Government Publication"
         }
@@ -6182,7 +7337,11 @@
       "title": "AI Infrastructure OKF Wiki"
     }
   },
-  "generated_at": "2026-07-09T00:00:00Z",
+  "generated": {
+    "at": "2026-07-25T11:16:40Z",
+    "by": "process:okf-ai-infrastructure-publication"
+  },
+  "generated_at": "2026-07-25T11:16:40Z",
   "generated_by": "scripts/build_okf_bundle.py",
   "kind": "okf-bundle",
   "meta": {
@@ -6192,6 +7351,6 @@
     "default_corpus": "ai-infrastructure-wiki",
     "title": "OKF Explorer"
   },
-  "okf_version": "0.1",
+  "okf_version": "0.2",
   "schema": "okf-explorer-bundle.v0"
 }

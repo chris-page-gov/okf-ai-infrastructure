@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Schema grounding"
 description: "Checking that fields and types match a formal contract."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "schema grounding"
+status: stable
 ---
 
 # Definition

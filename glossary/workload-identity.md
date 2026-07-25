@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Workload identity"
 description: "Cryptographic identity for software workloads; 'what is calling'."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "workload identity; non-human identity"
+status: stable
 ---
 
 # Definition

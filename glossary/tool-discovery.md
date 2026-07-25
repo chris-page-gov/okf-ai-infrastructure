@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Tool discovery"
 description: "Finding that a capability exists (catalogues, agent cards, registries)."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "tool discovery"
+status: stable
 ---
 
 # Definition

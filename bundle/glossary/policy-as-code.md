@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Policy-as-code"
 description: "Decoupling policy decisions from enforcement points across services."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "policy-as-code; policy as code"
+status: stable
 ---
 
 # Definition

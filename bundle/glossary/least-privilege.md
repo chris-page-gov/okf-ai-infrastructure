@@ -3,9 +3,8 @@ type: "Glossary term"
 title: "Least privilege"
 description: "Granting only the minimum authority needed for a task."
 tags: [glossary]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
 aliases: "least privilege; narrow scope"
+status: stable
 ---
 
 # Definition

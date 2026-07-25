@@ -3,8 +3,7 @@ type: "Stack layer"
 title: "Contracts and interfaces"
 description: "Authoritative, machine-readable descriptions of what a capability is and how to call it."
 tags: [stack, contracts, standards]
-timestamp: 2026-06-27T00:00:00Z
-verified: "yes"
+status: stable
 ---
 
 # Role in the stack
