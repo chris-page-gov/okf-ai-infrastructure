@@ -1,0 +1,160 @@
+{
+  "okf_core": {
+    "specification": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
+    "status": "conformant",
+    "version": "0.2"
+  },
+  "reader": {
+    "consumer": "https://chris-page-gov.github.io/okf-explorer/",
+    "delivery": "json-small-bundle-projection",
+    "preserves": [
+      "direction",
+      "semantic-identities",
+      "local-routes",
+      "predicate",
+      "relationship-kind",
+      "preferred-and-inverse-labels",
+      "assertion-status-and-scope",
+      "authority",
+      "derivation",
+      "supporting-assertions",
+      "confidence",
+      "review-status",
+      "evidence",
+      "rights",
+      "freshness",
+      "lifecycle"
+    ]
+  },
+  "relationship_contract": {
+    "authoring": "authored-markdown-reference-graph-with-rich-generated-assertions",
+    "direct_triple_policy": "generated-from-one-assertion-source",
+    "predicate_policy": "absolute-iri",
+    "required_fields": [
+      "id",
+      "source",
+      "target",
+      "source_iri",
+      "target_iri",
+      "predicate",
+      "kind",
+      "label",
+      "inverse_label",
+      "assertion_status",
+      "assertion_scope",
+      "authority",
+      "derivation",
+      "observed_at",
+      "evidence",
+      "rights"
+    ],
+    "schema": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/semantic-assertion.schema.json"
+  },
+  "repository": {
+    "name": "okf-ai-infrastructure",
+    "role": "small-bundle",
+    "root_index": "index.md"
+  },
+  "schema": "okf-repository-semantic-contract.v1",
+  "semantic_layer": {
+    "authoritative_inputs": [
+      "index.md",
+      "sources-index.md",
+      "log.md",
+      "okf.config.json",
+      "document/",
+      "federated/",
+      "frameworks/",
+      "glossary/",
+      "organisations/",
+      "research/",
+      "stack/",
+      "standards/",
+      "uk-government/",
+      "profiles/bundle-wiki/v1/",
+      "profiles/bundle-wiki/v1.vendor-lock.json",
+      "requirements-okf.txt",
+      "requirements-okf.lock",
+      "scripts/build_okf_bundle.py",
+      "scripts/build_publication.py",
+      "scripts/check_british_english.py",
+      "scripts/check_publication.py",
+      "scripts/migrate_okf_v02.py",
+      "scripts/okf_semantic.py",
+      "scripts/semantic_projection.py",
+      "scripts/update_viewer.py"
+    ],
+    "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
+    "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
+    "limitations": [
+      "Authored local Markdown links are conservatively assigned the exact `normalized` status and emitted as dcterms:references; domain-specific predicates require separately authored evidence and are not inferred from link placement or prose.",
+      "The YAML-LD and JSON-LD graph is authoritative for directed relationships. Its entity nodes are an intentionally selected-field, lossy projection containing semantic identity and type plus `route`, `title`, `description`, `status` and `source_document`; authored Markdown remains authoritative for complete prose, source metadata and navigation richness, while the generated Explorer projection preserves the selected reader fields.",
+      "The `semantic_layer.outputs` list enumerates only artefacts that have governed Bundle Wiki v1 semantic or Reader roles. The static publication additionally generates `bundle/index.html`, `bundle/checksums.json`, the copied root surfaces `bundle/index.md`, `bundle/sources-index.md`, `bundle/log.md` and `bundle/okf.config.json`, and copied Markdown under `bundle/document/**/*.md`, `bundle/federated/**/*.md`, `bundle/frameworks/**/*.md`, `bundle/glossary/**/*.md`, `bundle/organisations/**/*.md`, `bundle/research/**/*.md`, `bundle/stack/**/*.md`, `bundle/standards/**/*.md` and `bundle/uk-government/**/*.md`. Repository-contract v1 has no truthful generic static-publication role for those HTML, Markdown and configuration outputs, so they are scoped here rather than mislabelled: `bundle/checksums.json` binds every other published file by exact path, byte count and SHA-256, while `scripts/check_publication.py` validates that exact file set, the checksum manifest and every byte-exact source/configuration copy.",
+      "A conformant local semantic receipt establishes deterministic build and validation status only; public deployment, release identity and live Reader behaviour remain separate release gates and are not proved by this contract."
+    ],
+    "outputs": [
+      {
+        "generated": true,
+        "path": "okf-bundle.json",
+        "required": true,
+        "role": "explorer-runtime"
+      },
+      {
+        "generated": true,
+        "path": "bundle/okf-bundle.yamlld",
+        "required": true,
+        "role": "semantic-yaml-ld"
+      },
+      {
+        "generated": true,
+        "path": "bundle/okf-bundle.jsonld",
+        "required": true,
+        "role": "semantic-json-ld"
+      },
+      {
+        "generated": true,
+        "path": "bundle/okf-bundle.json",
+        "required": true,
+        "role": "explorer-runtime"
+      },
+      {
+        "generated": true,
+        "path": "bundle/relationships.json",
+        "required": true,
+        "role": "relationship-runtime"
+      },
+      {
+        "generated": false,
+        "path": "profiles/bundle-wiki/v1/semantic-assertion.schema.json",
+        "required": true,
+        "role": "relationship-schema"
+      },
+      {
+        "generated": true,
+        "path": "bundle/semantic-validation.json",
+        "required": true,
+        "role": "semantic-validation"
+      }
+    ],
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/",
+    "state": "generated-yaml-ld-graph"
+  },
+  "tooling": {
+    "build": [
+      ".venv/bin/python scripts/build_okf_bundle.py",
+      ".venv/bin/python scripts/build_publication.py"
+    ],
+    "check": [
+      ".venv/bin/python scripts/migrate_okf_v02.py --check",
+      ".venv/bin/python scripts/build_okf_bundle.py --check",
+      ".venv/bin/python scripts/update_viewer.py --check",
+      ".venv/bin/python scripts/check_british_english.py",
+      ".venv/bin/python scripts/check_publication.py",
+      ".venv/bin/python -m unittest discover -s tests -v"
+    ],
+    "setup": [
+      "python3 -m venv .venv",
+      ".venv/bin/python -m pip install --requirement requirements-okf.lock"
+    ]
+  }
+}

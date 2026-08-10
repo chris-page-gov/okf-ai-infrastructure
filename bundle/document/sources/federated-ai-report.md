@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/sources/federated-ai-report"
+"@type": "okf:Concept"
 type: "Source document"
 title: "Federated AI Research Execution Report"
 description: "Multi-agent study of FL frameworks, deployments, privacy and UK policy."

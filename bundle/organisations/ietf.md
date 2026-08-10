@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/organisations/ietf"
+"@type": "okf:Concept"
 type: "Organisation"
 title: "IETF / RFC Editor"
 description: "Publishes the OAuth, DPoP, mTLS and HTTP-signature RFCs."

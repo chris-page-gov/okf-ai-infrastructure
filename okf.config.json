@@ -1,8 +1,12 @@
 {
-  "profile": "OKF v0.2 + Explorer extensions",
-  "publicationGeneratedAt": "2026-07-25T11:16:40Z",
+  "profile": "OKF v0.2 + Bundle Wiki YAML-LD semantic profile v1",
+  "publicationGeneratedAt": "2026-08-10T12:33:30Z",
   "siteTitle": "OKF Explorer",
   "defaultBundle": "okf-bundle.json",
+  "releaseExpectedCounts": {
+    "nodes": 155,
+    "relationships": 579
+  },
   "corpora": [
     {
       "id": "ai-infrastructure-wiki",

@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Mechanically migrate this bundle's legacy OKF v0.1 frontmatter to v0.2.
+"""Mechanically migrate this bundle's legacy OKF v0.1 front matter to v0.2.
 
 The legacy ``timestamp`` values on source-backed concepts describe the
 referenced material, not a known content-generation event, so they become
 ``sources[].last_modified``.  The actor-free ``verified: "yes"`` flag cannot
 be promoted to v0.2 verification without inventing an actor and event time.
-Reserved index/log metadata is synthesized only in the Explorer projection.
+Reserved index/log metadata is synthesised only in the Explorer projection.
 """
 
 from __future__ import annotations
 
 import argparse
 import re
+import sys
 from pathlib import Path
+
+import okf_semantic
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,6 +32,10 @@ OKF_DIRS = {
     "uk-government",
 }
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+CONTEXT_URL = (
+    "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+)
+PUBLIC_BASE = "https://chris-page-gov.github.io/okf-ai-infrastructure/"
 
 
 def iter_markdown() -> list[Path]:
@@ -47,7 +54,7 @@ def split_frontmatter(path: Path, text: str) -> tuple[list[str], str] | None:
         return None
     end = text.find("\n---\n", 4)
     if end < 0:
-        raise ValueError(f"{path.relative_to(ROOT)} has unterminated frontmatter")
+        raise ValueError(f"{path.relative_to(ROOT)} has unterminated front matter")
     return text[4:end].splitlines(), text[end + 5 :]
 
 
@@ -74,8 +81,6 @@ def migrate_text(path: Path, text: str) -> str:
     timestamp = scalar_line(lines, "timestamp")
     verified = scalar_line(lines, "verified")
     resource = scalar_line(lines, "resource")
-    if timestamp is None:
-        return text
     if verified not in {None, '"yes"', "'yes'", "yes"}:
         raise ValueError(f"{relative} has a nonstandard legacy verified value")
 
@@ -84,9 +89,9 @@ def migrate_text(path: Path, text: str) -> str:
         for line in lines
         if not line.startswith("timestamp:") and not line.startswith("verified:")
     ]
-    if not any(line.startswith("status:") for line in migrated):
+    if timestamp is not None and not any(line.startswith("status:") for line in migrated):
         migrated.append("status: stable")
-    if resource and not any(line.startswith("sources:") for line in migrated):
+    if timestamp is not None and resource and not any(line.startswith("sources:") for line in migrated):
         date_match = DATE_RE.search(timestamp)
         migrated.extend(
             [
@@ -99,6 +104,20 @@ def migrate_text(path: Path, text: str) -> str:
                 ),
             ]
         )
+    expected_id = PUBLIC_BASE + "id/" + relative.as_posix().removesuffix(".md")
+    declared_id = scalar_line(migrated, '"@id"') or scalar_line(migrated, "@id")
+    if declared_id and declared_id.strip('"\'') != expected_id:
+        raise ValueError(
+            f"{relative} has semantic @id {declared_id}, expected {expected_id}"
+        )
+    semantic_header: list[str] = []
+    if not any(line.startswith(('"@context":', "'@context':", "@context:")) for line in migrated):
+        semantic_header.append(f'"@context": "{CONTEXT_URL}"')
+    if not declared_id:
+        semantic_header.append(f'"@id": "{expected_id}"')
+    if not any(line.startswith(('"@type":', "'@type':", "@type:")) for line in migrated):
+        semantic_header.append('"@type": "okf:Concept"')
+    migrated = [*semantic_header, *migrated]
     return "---\n" + "\n".join(migrated) + "\n---\n" + body
 
 
@@ -107,11 +126,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args(argv)
     pending: list[tuple[Path, str]] = []
-    for path in iter_markdown():
-        current = path.read_text(encoding="utf-8")
-        migrated = migrate_text(path, current)
-        if migrated != current:
-            pending.append((path, migrated))
+    try:
+        for path in iter_markdown():
+            current = okf_semantic.read_markdown_text(path, repository_root=ROOT)
+            migrated = migrate_text(path, current)
+            if migrated != current:
+                pending.append((path, migrated))
+    except (okf_semantic.SemanticError, ValueError) as exc:
+        print(f"OKF v0.2 migration failed: {exc}", file=sys.stderr)
+        return 1
     if args.check:
         if pending:
             for path, _content in pending:
@@ -119,8 +142,16 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print("canonical Markdown is migrated to OKF v0.2")
         return 0
-    for path, content in pending:
-        path.write_text(content, encoding="utf-8")
+    try:
+        for path, content in pending:
+            okf_semantic.write_markdown_text(
+                path,
+                content,
+                repository_root=ROOT,
+            )
+    except okf_semantic.SemanticError as exc:
+        print(f"OKF v0.2 migration failed: {exc}", file=sys.stderr)
+        return 1
     print(f"migrated {len(pending)} Markdown files to OKF v0.2")
     return 0
 

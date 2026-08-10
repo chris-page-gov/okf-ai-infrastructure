@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/kairouz-open-problems"
+"@type": "okf:Concept"
 type: "Research"
 title: "Kairouz et al. — Advances and open problems (2019)"
 description: "The field's open problems: heterogeneity, privacy, fairness, evaluation."

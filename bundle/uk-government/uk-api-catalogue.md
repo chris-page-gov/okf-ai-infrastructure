@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/uk-api-catalogue"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "GOV.UK API Catalogue"
 description: "Check existing catalogues before building a new API."

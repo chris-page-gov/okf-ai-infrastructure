@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/discovery-and-retrieval"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Discovery and current-context retrieval"
 description: "Finding that a capability exists, and selecting a small candidate set at inference time."

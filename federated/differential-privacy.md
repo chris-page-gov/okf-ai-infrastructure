@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/differential-privacy"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Differential privacy"
 description: "A formal bound on what any individual contributes to a released result."

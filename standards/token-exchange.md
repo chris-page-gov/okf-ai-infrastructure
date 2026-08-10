@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/token-exchange"
+"@type": "okf:Concept"
 type: "Specification"
 title: "OAuth Token Exchange — RFC 8693"
 description: "Narrowing or translating authority for downstream services."

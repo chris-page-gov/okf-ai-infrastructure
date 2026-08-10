@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/workflow-engine"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Workflow engine"
 description: "Orchestrates multi-step, stateful processes; Arazzo describes them declaratively."

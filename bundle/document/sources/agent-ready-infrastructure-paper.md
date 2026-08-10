@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/sources/agent-ready-infrastructure-paper"
+"@type": "okf:Concept"
 type: "Source document"
 title: "From API-Calling LLMs to Agent-Ready Digital Infrastructure"
 description: "The substantive paper on the agent-ready stack, benchmarks, protocols and governance."

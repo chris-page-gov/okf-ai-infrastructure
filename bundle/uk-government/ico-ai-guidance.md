@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/ico-ai-guidance"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "ICO guidance on AI and data protection"
 description: "Accountability, transparency, lawfulness, fairness, security, minimisation."

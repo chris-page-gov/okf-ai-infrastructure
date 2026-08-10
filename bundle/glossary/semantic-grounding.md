@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/semantic-grounding"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Semantic grounding"
 description: "Checking that intent maps to the right operation and entities."

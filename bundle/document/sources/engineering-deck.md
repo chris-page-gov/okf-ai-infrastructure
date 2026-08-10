@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/sources/engineering-deck"
+"@type": "okf:Concept"
 type: "Source document"
 title: "Engineering Agent-Ready Infrastructure (deck)"
 description: "A 15-slide visual summary of the agent-ready paper."

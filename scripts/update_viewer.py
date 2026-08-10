@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronize viewer.html with the OKF Markdown corpus."""
+"""Synchronise viewer.html with the OKF Markdown corpus."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ OKF_DIRS = {
     "uk-government",
 }
 # OKF v0.2 requires only ``type`` on concept Markdown.  Reserved index/log
-# files are navigation documents and therefore have no concept frontmatter
+# files are navigation documents and therefore have no concept front matter
 # (apart from ``okf_version`` on the root index).
 REQUIRED_FIELDS = ("type",)
 RESERVED_MARKDOWN = {"index.md", "log.md"}
@@ -85,12 +85,15 @@ def reserved_metadata(path: Path, body: str, declared: dict[str, object] | None 
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, object], str]:
-    text = path.read_text(encoding="utf-8")
+    try:
+        text = okf_semantic.read_markdown_text(path, repository_root=ROOT)
+    except okf_semantic.SemanticError as exc:
+        raise ValueError(str(exc).replace(str(ROOT) + "/", "")) from exc
     if not text.startswith("---\n") and path.name in RESERVED_MARKDOWN:
         body = text.strip("\n")
         return reserved_metadata(path, body), body
     try:
-        document = okf_semantic.parse_markdown(path)
+        document = okf_semantic.parse_markdown(path, repository_root=ROOT)
     except okf_semantic.SemanticError as exc:
         raise ValueError(str(exc).replace(str(ROOT) + "/", "")) from exc
     if path.name in RESERVED_MARKDOWN:
@@ -226,7 +229,7 @@ def build_graph() -> tuple[dict[str, object], list[str]]:
         if not is_reserved:
             for field in REQUIRED_FIELDS:
                 if not meta.get(field):
-                    errors.append(f"{path_id} is missing required frontmatter field {field}")
+                    errors.append(f"{path_id} is missing required front matter field {field}")
             errors.extend(validate_v02_metadata(path_id, meta))
         node = dict(meta)
         node.update(
@@ -270,7 +273,7 @@ def rendered_viewer(graph: dict[str, object]) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--check", action="store_true", help="fail if viewer.html is not synchronized")
+    parser.add_argument("--check", action="store_true", help="fail if viewer.html is not synchronised")
     args = parser.parse_args(argv)
 
     graph, errors = build_graph()
@@ -291,16 +294,16 @@ def main(argv: list[str] | None = None) -> int:
     current = VIEWER.read_text(encoding="utf-8")
     if args.check:
         if updated != current:
-            print("viewer.html is not synchronized; run python3 scripts/update_viewer.py", file=sys.stderr)
+            print("viewer.html is not synchronised; run python3 scripts/update_viewer.py", file=sys.stderr)
             return 1
-        print(f"viewer.html is synchronized with {len(graph['nodes'])} nodes and {len(graph['edges'])} edges")
+        print(f"viewer.html is synchronised with {len(graph['nodes'])} nodes and {len(graph['edges'])} edges")
         return 0
 
     if updated != current:
         VIEWER.write_text(updated, encoding="utf-8")
         print(f"updated viewer.html with {len(graph['nodes'])} nodes and {len(graph['edges'])} edges")
     else:
-        print(f"viewer.html already synchronized with {len(graph['nodes'])} nodes and {len(graph['edges'])} edges")
+        print(f"viewer.html already synchronised with {len(graph['nodes'])} nodes and {len(graph['edges'])} edges")
     return 0
 
 

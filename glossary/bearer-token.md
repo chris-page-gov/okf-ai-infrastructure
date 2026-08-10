@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/bearer-token"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Bearer token"
 description: "A credential where mere possession grants access."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/policy-as-code"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Policy-as-code"
 description: "Decoupling policy decisions from enforcement points across services."

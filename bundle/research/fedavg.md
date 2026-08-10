@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/fedavg"
+"@type": "okf:Concept"
 type: "Research"
 title: "FedAvg — McMahan et al. (2017)"
 description: "Communication-efficient decentralised training by model averaging."

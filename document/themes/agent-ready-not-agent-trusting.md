@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/agent-ready-not-agent-trusting"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Agent-ready, not agent-trusting"
 description: "Understanding a tool is never authority to use it."

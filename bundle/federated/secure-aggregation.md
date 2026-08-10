@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/secure-aggregation"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Secure aggregation"
 description: "The server learns the aggregate of updates, not any individual update."

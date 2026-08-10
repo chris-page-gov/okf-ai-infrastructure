@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/openapi"
+"@type": "okf:Concept"
 type: "Specification"
 title: "OpenAPI"
 description: "HTTP API contracts: ops, schemas, security metadata; machine- and human-readable."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/a2a"
+"@type": "okf:Concept"
 type: "Specification"
 title: "Agent2Agent (A2A)"
 description: "Agent-to-agent protocol: capability discovery, delegation, long-running tasks, streaming."

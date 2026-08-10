@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/w3c-prov"
+"@type": "okf:Concept"
 type: "Specification"
 title: "W3C PROV"
 description: "Interoperable model of provenance: entities, activities, agents."

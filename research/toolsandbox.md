@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/toolsandbox"
+"@type": "okf:Concept"
 type: "Research"
 title: "ToolSandbox (2024)"
 description: "Stateful, conversational evaluation with a user simulator."

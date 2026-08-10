@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/observability-and-provenance"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Observability and provenance"
 description: "The evidence layer: traces, metrics, logs and an interoperable provenance graph."

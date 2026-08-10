@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/confused-deputy"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Confused deputy"
 description: "A privileged component tricked into misusing its authority for another."

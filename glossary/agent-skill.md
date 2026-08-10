@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/agent-skill"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Agent skill"
 description: "A reusable, packaged instruction/workflow bundle for an agent."

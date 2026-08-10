@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/provenance"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Provenance"
 description: "The recorded entities, activities and agents that produced an outcome."

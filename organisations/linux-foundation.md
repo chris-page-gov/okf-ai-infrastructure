@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/organisations/linux-foundation"
+"@type": "okf:Concept"
 type: "Organisation"
 title: "Linux Foundation"
 description: "Hosts A2A, OpenAPI Initiative, CNCF, LF AI & Data."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/attestation"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Attestation"
 description: "Cryptographic proof of a workload's or node's identity/integrity."

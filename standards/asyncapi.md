@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/asyncapi"
+"@type": "okf:Concept"
 type: "Specification"
 title: "AsyncAPI"
 description: "Protocol-agnostic description of channels, operations and messages."

@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "direct_triples_reconciled": 579,
+    "entities": 155,
+    "runtime_assertions_validated": 579,
+    "semantic_assertions_validated": 579,
+    "validation_failures": 0
+  },
+  "digests": {
+    "assertion_ids_sha256": "e59d6fd677c367157bd02cc4c8aef743f01b53daf38d4e357eb39e3e5d736c45",
+    "assertion_payload_sha256": "0c994956135783529a37a1867fdbd43961d4262d1bd97a1870c97e968a0a51ee",
+    "triple_set_sha256": "9798944355e2bf85a4a9258f9d286d30ffd991acd00ddc52c8b93c756e51e2a8"
+  },
+  "result": "pass",
+  "schema": "okf-semantic-validation-receipt.v1",
+  "shared_schema": {
+    "$id": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/semantic-assertion.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "bytes": 7308,
+    "sha256": "f69480328db4b64d678d9c50b6534d808000f7fb50a30e8cc9e3bf2facbcb8bc"
+  }
+}

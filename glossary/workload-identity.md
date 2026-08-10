@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/workload-identity"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Workload identity"
 description: "Cryptographic identity for software workloads; 'what is calling'."

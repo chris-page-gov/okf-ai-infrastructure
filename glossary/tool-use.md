@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/tool-use"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Tool use"
 description: "The widest term: APIs, code execution, search, retrieval, workflow calls."

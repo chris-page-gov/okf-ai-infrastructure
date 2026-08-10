@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/openai-agents-sdk"
+"@type": "okf:Concept"
 type: "Framework"
 title: "OpenAI Agents SDK & Responses API"
 description: "Multi-tool/multi-agent orchestration, built-in tools, streaming, observability."

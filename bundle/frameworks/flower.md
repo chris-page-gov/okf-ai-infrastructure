@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/flower"
+"@type": "okf:Concept"
 type: "Framework"
 title: "Flower"
 description: "Framework-agnostic federated AI: simulation-to-deployment, secure agg, DP, audit, OIDC."

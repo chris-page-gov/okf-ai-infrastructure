@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/audit-trail"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Audit trail"
 description: "A trustworthy record of what an agent read, decided and did."

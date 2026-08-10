@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/missing-collaborative-learning-layer"
+"@type": "okf:Concept"
 type: "Concept"
 title: "The missing collaborative-learning layer"
 description: "Orchestration standards don't define how institutions jointly improve a model."

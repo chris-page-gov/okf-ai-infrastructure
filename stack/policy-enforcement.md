@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/policy-enforcement"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Policy enforcement"
 description: "Decoupling policy decisions from enforcement points across the stack."

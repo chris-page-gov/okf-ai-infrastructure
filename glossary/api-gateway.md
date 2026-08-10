@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/api-gateway"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "API gateway"
 description: "Runtime enforcement point for authn/z, rate limiting, routing and logging."

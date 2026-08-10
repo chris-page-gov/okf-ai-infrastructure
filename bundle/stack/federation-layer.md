@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/federation-layer"
+"@type": "okf:Concept"
 type: "Architecture"
 title: "The federation layer (the missing plane)"
 description: "The collaborative-learning plane that lets institutions improve a shared model without centralising data."

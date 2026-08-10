@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/peer-review"
+"@type": "okf:Concept"
 type: "Evaluation"
 title: "Evaluation & provenance note"
 description: "How this bundle was built and what is verified vs open."

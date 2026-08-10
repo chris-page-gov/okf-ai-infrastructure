@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/agent-card"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Agent Card"
 description: "A2A's machine-readable description of an agent's capabilities."
