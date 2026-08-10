@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/atrs"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "Algorithmic Transparency Recording Standard (ATRS)"
 description: "Mandatory transparency records for public-effect algorithmic tools."

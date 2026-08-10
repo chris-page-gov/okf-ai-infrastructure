@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/sources-index"
+"@type": "okf:Concept"
 type: "Index"
 title: "Sources index"
 description: "Every source, standard, framework, paper and organisation in the bundle, with verified citations."

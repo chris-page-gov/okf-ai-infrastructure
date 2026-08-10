@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/pysyft"
+"@type": "okf:Concept"
 type: "Framework"
 title: "PySyft"
 description: "Privacy-preserving remote analysis on data that stays put."

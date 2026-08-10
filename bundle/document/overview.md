@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/overview"
+"@type": "okf:Concept"
 type: "Document"
 title: "AI infrastructure — overview"
 description: "Two complementary threads: the agent-ready vertical stack and the federated collaborative-learning layer."

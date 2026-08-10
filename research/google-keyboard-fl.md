@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/google-keyboard-fl"
+"@type": "okf:Concept"
 type: "Research"
 title: "Google keyboard FL — Hard et al. (2018)"
 description: "On-device federated training for next-word prediction at production scale."

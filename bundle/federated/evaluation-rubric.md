@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/evaluation-rubric"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Multi-dimensional evaluation rubric"
 description: "Judge federations on utility *and* governance, not accuracy alone."

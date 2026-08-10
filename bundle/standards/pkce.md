@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/pkce"
+"@type": "okf:Concept"
 type: "Specification"
 title: "PKCE — RFC 7636"
 description: "Proof Key for Code Exchange; protects auth-code flows from interception."

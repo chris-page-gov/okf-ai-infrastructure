@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/organisations/aisi"
+"@type": "okf:Concept"
 type: "Organisation"
 title: "AI Security Institute (AISI)"
 description: "UK institute; evidence on agent/MCP tool usage."

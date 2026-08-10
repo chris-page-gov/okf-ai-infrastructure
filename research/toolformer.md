@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/toolformer"
+"@type": "okf:Concept"
 type: "Research"
 title: "Toolformer (2023)"
 description: "Self-supervised learning of when and how to call tools."

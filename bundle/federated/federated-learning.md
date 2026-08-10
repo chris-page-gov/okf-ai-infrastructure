@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/federated-learning"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Federated learning"
 description: "Many clients train a shared model under orchestration while data stays decentralised."

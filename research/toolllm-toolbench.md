@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/toolllm-toolbench"
+"@type": "okf:Concept"
 type: "Research"
 title: "ToolLLM / ToolBench (2023)"
 description: "16,000+ APIs; ToolLLaMA with a neural API retriever; DFSDT."

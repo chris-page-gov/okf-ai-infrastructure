@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/autogen"
+"@type": "okf:Concept"
 type: "Framework"
 title: "AutoGen"
 description: "Conversational single- and multi-agent programming framework."

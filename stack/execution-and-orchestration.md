@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/execution-and-orchestration"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Execution and orchestration"
 description: "Durable, stateful multi-step execution owned by the runtime, not the prompt."

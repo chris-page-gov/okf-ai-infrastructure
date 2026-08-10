@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/dcat"
+"@type": "okf:Concept"
 type: "Specification"
 title: "Data Catalog Vocabulary (DCAT) Version 3"
 description: "W3C vocabulary for catalogues, datasets, data services, endpoint URLs, endpoint descriptions, publishers, licences and distributions."

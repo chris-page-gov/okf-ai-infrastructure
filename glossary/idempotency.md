@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/idempotency"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Idempotency"
 description: "An operation that can be safely repeated with the same effect."

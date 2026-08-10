@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/uk-public-sector-implications"
+"@type": "okf:Concept"
 type: "Concept"
 title: "UK public-sector implications"
 description: "Roles, SLAs and liability shift as agents move from answering to acting."

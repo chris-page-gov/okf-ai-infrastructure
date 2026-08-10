@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/dqv"
+"@type": "okf:Concept"
 type: "Specification"
 title: "Data Quality Vocabulary (DQV)"
 description: "W3C companion vocabulary for expressing data quality metadata and quality annotations alongside DCAT."

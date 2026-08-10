@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/failure-taxonomy"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Failure taxonomy"
 description: "Seven failure classes, each with its own controls — not just 'stale data'."

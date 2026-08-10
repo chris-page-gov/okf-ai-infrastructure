@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/toolace"
+"@type": "okf:Concept"
 type: "Research"
 title: "ToolACE (2024)"
 description: "Self-evolution synthesis; 26,507 APIs; dual verification."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/flotilla"
+"@type": "okf:Concept"
 type: "Framework"
 title: "Flotilla"
 description: "Research system for large-scale, asynchronous, fault-tolerant federations."

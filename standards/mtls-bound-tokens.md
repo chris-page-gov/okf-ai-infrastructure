@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/mtls-bound-tokens"
+"@type": "okf:Concept"
 type: "Specification"
 title: "mTLS-bound tokens — RFC 8705"
 description: "Sender-constrains tokens to a client via mutual TLS."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/organisations/flower-labs"
+"@type": "okf:Concept"
 type: "Organisation"
 title: "Flower Labs"
 description: "Maintains the Flower federated AI framework."

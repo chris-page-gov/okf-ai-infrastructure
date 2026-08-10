@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/contracts-and-interfaces"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Contracts and interfaces"
 description: "Authoritative, machine-readable descriptions of what a capability is and how to call it."

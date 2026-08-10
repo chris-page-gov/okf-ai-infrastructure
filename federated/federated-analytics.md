@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/federated-analytics"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Federated analytics"
 description: "Distributed statistics and monitoring without training a model."

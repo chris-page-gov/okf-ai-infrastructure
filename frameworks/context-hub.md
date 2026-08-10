@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/context-hub"
+"@type": "okf:Concept"
 type: "Tool / registry"
 title: "Context Hub"
 description: "Andrew Ng open content/skills registry: curated, versioned docs (and skills) for coding agents."
@@ -12,7 +15,7 @@ sources:
 ---
 
 # What it is
-**Context Hub** (Andrew Ng; MIT-licensed, npm `@aisuite/chub`) gives coding agents **curated, versioned, language-specific documentation** — with agent skills on the roadmap — so they stop hallucinating APIs and forgetting what they learn within a session. All content is **open markdown with YAML frontmatter** in a public repo (the same shape as an OKF bundle), so you can inspect exactly what an agent reads and contribute back by pull request.
+**Context Hub** (Andrew Ng; MIT-licensed, npm `@aisuite/chub`) gives coding agents **curated, versioned, language-specific documentation** — with agent skills on the roadmap — so they stop hallucinating APIs and forgetting what they learn within a session. All content is **open markdown with YAML front matter** in a public repo (the same shape as an OKF bundle), so you can inspect exactly what an agent reads and contribute back by pull request.
 
 # How it works
 Designed for the **agent**, not the human, through a `chub` CLI: `chub search`, `chub get <id> --lang py|js`, `chub annotate`, `chub feedback up|down`. **Incremental fetch** returns only the reference files needed, to avoid wasting tokens. It can be wrapped as an [agent skill](../glossary/agent-skill.md) via a SKILL.md.

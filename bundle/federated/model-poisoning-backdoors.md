@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/model-poisoning-backdoors"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Model poisoning & backdoors"
 description: "Malicious participants corrupt the shared model."

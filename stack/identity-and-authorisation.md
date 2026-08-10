@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/identity-and-authorisation"
+"@type": "okf:Concept"
 type: "Stack layer"
 title: "Identity and authorisation"
 description: "Establishing who or what is acting, for whom, for what purpose, with which limits."

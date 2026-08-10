@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/stack/control-plane"
+"@type": "okf:Concept"
 type: "Architecture"
 title: "The discovery-to-governance control plane"
 description: "The end-to-end lifecycle that turns a tool-calling model into governed agent execution."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/tool-retrieval"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Tool retrieval"
 description: "Selecting a small candidate set from a large inventory at inference time."

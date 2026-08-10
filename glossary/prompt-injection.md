@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/prompt-injection"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Prompt injection"
 description: "Malicious instructions hidden in tool descriptions or retrieved content."

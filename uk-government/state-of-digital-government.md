@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/state-of-digital-government"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "State of digital government review"
 description: "Public-sector transformation constrained by technology debt and fragmentation."

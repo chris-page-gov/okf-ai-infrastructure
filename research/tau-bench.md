@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/tau-bench"
+"@type": "okf:Concept"
 type: "Research"
 title: "τ-bench (2024)"
 description: "Tool-Agent-User evaluation with domain policies."

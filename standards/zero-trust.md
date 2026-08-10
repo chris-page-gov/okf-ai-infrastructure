@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/zero-trust"
+"@type": "okf:Concept"
 type: "Specification"
 title: "Zero trust architecture (NIST SP 800-207)"
 description: "No implicit trust based on network location."

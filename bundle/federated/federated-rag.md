@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/federated-rag"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Federated / confidential RAG"
 description: "Applying the federated pattern to LLM-era retrieval and generation."

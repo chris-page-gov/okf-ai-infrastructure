@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/non-iid-data"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Non-IID data"
 description: "Heterogeneity is intrinsic, not incidental, in federated settings."

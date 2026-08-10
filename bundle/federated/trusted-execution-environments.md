@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/trusted-execution-environments"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Trusted execution environments (TEEs)"
 description: "Hardware-isolated computation strengthening server-side confidentiality."

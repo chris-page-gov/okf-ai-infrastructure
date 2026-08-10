@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/apigen"
+"@type": "okf:Concept"
 type: "Research"
 title: "APIGen (2024)"
 description: "Pipeline for verifiable function-calling data; 3,673 executable APIs."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/organisations/ico"
+"@type": "okf:Concept"
 type: "Organisation"
 title: "ICO"
 description: "UK regulator; AI and data-protection guidance."

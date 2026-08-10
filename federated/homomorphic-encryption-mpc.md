@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/homomorphic-encryption-mpc"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Homomorphic encryption & MPC"
 description: "Computing over encrypted data / across parties without revealing inputs."

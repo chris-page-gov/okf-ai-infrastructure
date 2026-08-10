@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/sender-constrained-token"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Sender-constrained token"
 description: "A token usable only by the client that presents the right proof."

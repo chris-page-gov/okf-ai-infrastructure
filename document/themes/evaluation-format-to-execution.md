@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/evaluation-format-to-execution"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Evaluation moved from format to execution"
 description: "Benchmarks shifted from argument syntax to state, policy and outcome reliability."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/data-ethics-framework"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "Data Ethics Framework"
 description: "Principles for responsible public-sector data and AI use."

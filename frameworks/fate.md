@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/fate"
+"@type": "okf:Concept"
 type: "Framework"
 title: "FATE"
 description: "Industrial-grade FL with HE/MPC secure computation."

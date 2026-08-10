@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/frameworks/openfl"
+"@type": "okf:Concept"
 type: "Framework"
 title: "OpenFL"
 description: "Open Federated Learning library (LF AI & Data)."

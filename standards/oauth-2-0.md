@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/oauth-2-0"
+"@type": "okf:Concept"
 type: "Specification"
 title: "OAuth 2.0"
 description: "Delegated, scoped access to an HTTP service without sharing credentials."

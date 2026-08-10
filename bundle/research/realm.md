@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/research/realm"
+"@type": "okf:Concept"
 type: "Research"
 title: "REALM (2020)"
 description: "Retrieval-augmented pre-training; knowledge can be retrieved, not only stored."

@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/arazzo"
+"@type": "okf:Concept"
 type: "Specification"
 title: "Arazzo"
 description: "Machine-readable workflow narratives over API descriptions."

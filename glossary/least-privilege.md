@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/least-privilege"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Least privilege"
 description: "Granting only the minimum authority needed for a task."

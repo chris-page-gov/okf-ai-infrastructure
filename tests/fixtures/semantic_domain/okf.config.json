@@ -1,0 +1,22 @@
+{
+  "profile": "OKF v0.2 + Bundle Wiki YAML-LD semantic profile v1",
+  "publicationGeneratedAt": "2026-08-10T10:00:00Z",
+  "siteTitle": "Semantic domain assertion fixture",
+  "defaultBundle": "okf-bundle.json",
+  "releaseExpectedCounts": {
+    "nodes": 3,
+    "relationships": 1
+  },
+  "corpora": [
+    {
+      "id": "ai-infrastructure-wiki",
+      "label": "Fixture",
+      "title": "Semantic domain assertion fixture",
+      "subtitle": "One evidence-backed domain relationship authored in Markdown.",
+      "root": "index.md",
+      "sourceRoot": ".",
+      "markdownUrl": "index.md",
+      "sectionOrder": ["root", "frameworks"]
+    }
+  ]
+}

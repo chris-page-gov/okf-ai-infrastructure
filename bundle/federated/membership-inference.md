@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/membership-inference"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Membership inference & gradient leakage"
 description: "Privacy attacks that recover information from model updates."

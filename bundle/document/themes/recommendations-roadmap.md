@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/document/themes/recommendations-roadmap"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Recommendations and roadmap"
 description: "Harden the substrate in stages: inventory → control plane → institutional capability."

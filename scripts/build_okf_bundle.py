@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the normalized OKF Explorer bundle from the local Markdown corpus."""
+"""Build the normalised OKF Explorer bundle from the local Markdown corpus."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 
 import update_viewer
+import semantic_projection
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "okf.config.json"
@@ -71,6 +72,23 @@ def bundle_generated_at(config: dict[str, Any]) -> str:
     return str(config.get("publicationGeneratedAt", ""))
 
 
+def release_expected_counts(config: dict[str, Any]) -> dict[str, int]:
+    raw = config.get("releaseExpectedCounts")
+    if not isinstance(raw, dict) or set(raw) != {"nodes", "relationships"}:
+        raise ValueError(
+            "okf.config.json releaseExpectedCounts must contain exactly nodes and relationships"
+        )
+    counts: dict[str, int] = {}
+    for name in ("nodes", "relationships"):
+        value = raw.get(name)
+        if type(value) is not int or value < 0:
+            raise ValueError(
+                f"okf.config.json releaseExpectedCounts.{name} must be a non-negative integer"
+            )
+        counts[name] = value
+    return counts
+
+
 def normalized_nodes(nodes: dict[str, dict[str, Any]], source_root: str) -> dict[str, dict[str, Any]]:
     normalized: dict[str, dict[str, Any]] = {}
     prefix = "" if source_root in {"", "."} else f"{source_root.rstrip('/')}/"
@@ -87,6 +105,9 @@ def normalized_nodes(nodes: dict[str, dict[str, Any]], source_root: str) -> dict
                 "route_aliases": route_aliases(path_id, node),
                 "section": node.get("section", "root"),
                 "source": f"{prefix}{path_id}",
+                "route": path_id,
+                "semantic_id": semantic_projection.entity_iri(path_id, node),
+                "semantic_type": semantic_projection.entity_type_iri(path_id, node),
                 "body": node.get("body", ""),
             }
         )
@@ -94,22 +115,27 @@ def normalized_nodes(nodes: dict[str, dict[str, Any]], source_root: str) -> dict
     return normalized
 
 
-def normalized_edges(graph: dict[str, Any]) -> list[dict[str, str]]:
+def normalized_edges(graph: dict[str, Any], generated_at: str) -> list[dict[str, Any]]:
     nodes = graph["nodes"]
-    edges: list[dict[str, str]] = []
+    edges: list[dict[str, Any]] = []
     for source_id, target_id in graph["edges"]:
         source = nodes[source_id]
         target = nodes[target_id]
         kind = edge_kind(source, target)
         edges.append(
-            {
-                "source": source_id,
-                "target": target_id,
-                "kind": kind,
-                "label": kind,
-            }
+            semantic_projection.rich_relationship(
+                source_id,
+                target_id,
+                nodes,
+                presentation_kind=kind,
+                observed_at=generated_at,
+            )
         )
-    return edges
+    edges.extend(semantic_projection.authored_relationships(nodes))
+    return sorted(
+        edges,
+        key=lambda item: (item["source"], item["target"], item["predicate"], item["id"]),
+    )
 
 
 def load_config() -> dict[str, Any]:
@@ -118,6 +144,10 @@ def load_config() -> dict[str, Any]:
 
 def build_bundle() -> tuple[dict[str, Any], list[str]]:
     config = load_config()
+    try:
+        expected_counts = release_expected_counts(config)
+    except ValueError as exc:
+        return {}, [str(exc)]
     graph, errors = update_viewer.build_graph()
     if errors:
         return {}, errors
@@ -125,6 +155,19 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
     corpus_config = config["corpora"][0]
     nodes = graph["nodes"]
     corpus_id = corpus_config["id"]
+    relationships = normalized_edges(graph, bundle_generated_at(config))
+    if len(nodes) != expected_counts["nodes"]:
+        errors.append(
+            "release count mismatch: "
+            f"expected {expected_counts['nodes']} nodes, generated {len(nodes)}"
+        )
+    if len(relationships) != expected_counts["relationships"]:
+        errors.append(
+            "release count mismatch: expected "
+            f"{expected_counts['relationships']} relationships, generated {len(relationships)}"
+        )
+    if errors:
+        return {}, errors
     corpus = {
         "id": corpus_id,
         "label": corpus_config["label"],
@@ -135,7 +178,7 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
         "markdown_url": corpus_config["markdownUrl"],
         "sections": ordered_sections(nodes, corpus_config.get("sectionOrder", [])),
         "nodes": normalized_nodes(nodes, corpus_config["sourceRoot"]),
-        "edges": normalized_edges(graph),
+        "relationships": relationships,
     }
     bundle = {
         "schema": "okf-explorer-bundle.v0",
@@ -183,7 +226,7 @@ def check_output(path: Path, content: str) -> list[str]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--check", action="store_true", help="fail if the bundle is not synchronized")
+    parser.add_argument("--check", action="store_true", help="fail if the bundle is not synchronised")
     args = parser.parse_args(argv)
 
     output = args.output if args.output.is_absolute() else ROOT / args.output
@@ -201,7 +244,7 @@ def main(argv: list[str] | None = None) -> int:
             for error in errors:
                 print(f"- {error}", file=sys.stderr)
             return 1
-        print(f"okf-bundle.json is synchronized with {len(next(iter(bundle['corpora'].values()))['nodes'])} nodes")
+        print(f"okf-bundle.json is synchronised with {len(next(iter(bundle['corpora'].values()))['nodes'])} nodes")
         return 0
 
     output.write_text(content, encoding="utf-8")

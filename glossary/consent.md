@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/glossary/consent"
+"@type": "okf:Concept"
 type: "Glossary term"
 title: "Consent"
 description: "Explicit user permission for data exposure or action."

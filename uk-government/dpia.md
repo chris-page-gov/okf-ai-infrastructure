@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/uk-government/dpia"
+"@type": "okf:Concept"
 type: "Government Publication"
 title: "Data Protection Impact Assessment (DPIA)"
 description: "A pre-deployment gate for high-risk processing."

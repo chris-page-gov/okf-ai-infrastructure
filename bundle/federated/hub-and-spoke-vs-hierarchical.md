@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/federated/hub-and-spoke-vs-hierarchical"
+"@type": "okf:Concept"
 type: "Concept"
 title: "Hub-and-spoke vs hierarchical coordination"
 description: "Centralised aggregation vs hierarchical/asynchronous/enclave-backed designs."

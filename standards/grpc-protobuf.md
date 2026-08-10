@@ -1,4 +1,7 @@
 ---
+"@context": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld"
+"@id": "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/grpc-protobuf"
+"@type": "okf:Concept"
 type: "Specification"
 title: "gRPC / Protocol Buffers"
 description: "Typed RPC and efficient binary serialisation with generated stubs."
