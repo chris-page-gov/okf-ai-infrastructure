@@ -49,8 +49,20 @@ uv pip compile requirements-okf.txt --python-version 3.12 --no-annotate --no-hea
 .venv/bin/python scripts/update_viewer.py --check
 .venv/bin/python scripts/check_british_english.py
 .venv/bin/python scripts/check_publication.py
+.venv/bin/python scripts/check_publication_contract.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
+
+- Keep `okf.publication.json`, `README.md`, this working agreement and
+  `CHANGELOG.md` in lockstep with controlled source, generator, dependency,
+  workflow or generated-publication changes. The contract checker fails a CI
+  change set that updates controlled paths without both human guidance and the
+  changelog.
+- Pull requests receive the complete validation contract. Feature branches do
+  not receive a duplicate push run; `main`, version tags and manual runs retain
+  full assurance. Pages deploys the exact successful `main` commit without a
+  rebuild, then compares the deployed checksum manifest and identity routes
+  with that checkout.
 
 - When a reviewed sibling Explorer checkout is available, also run
   `.venv/bin/python ../okf-explorer/scripts/reconcile_okf_repositories.py --repo . --strict`
