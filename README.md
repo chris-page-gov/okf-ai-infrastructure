@@ -71,6 +71,7 @@ Run the complete non-mutating contract from the repository root with:
 .venv/bin/python scripts/update_viewer.py --check
 .venv/bin/python scripts/check_british_english.py
 .venv/bin/python scripts/check_publication.py
+.venv/bin/python scripts/check_publication_contract.py
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
@@ -78,6 +79,32 @@ These commands are the self-contained local CI contract. When a reviewed
 sibling Explorer checkout is available, additionally run
 `.venv/bin/python ../okf-explorer/scripts/reconcile_okf_repositories.py --repo . --strict`
 as a cross-repository family audit.
+
+## Publication contract and CI
+
+[`okf.publication.json`](okf.publication.json) records the repository's source
+families, authored and generated boundaries, dependency planes, exact commands,
+documentation lockstep, CI policy, publication authority and verification
+route. It is lifecycle governance, separate from the semantic authority in
+[`okf.semantic.json`](okf.semantic.json).
+
+`scripts/check_publication_contract.py` checks local identifiers and command
+references, safe reviewed command declarations and the no-rebuild publication
+policy. In pull requests and pushes it also requires controlled changes to
+include `CHANGELOG.md` and updated human guidance in either `README.md` or
+`AGENTS.md`. Dependency updates receive the same assessment; there is no
+blanket automated-update exemption.
+
+CI runs once for a pull request and again for the integrated `main` commit or a
+version tag. Superseded runs are cancelled per pull request or ref. Pages is
+triggered only by a successful complete `main` validation, checks out that
+exact commit and uploads its existing `bundle/` directory without rebuilding
+it. A manual deployment runs the same complete validation first.
+
+After deployment, `scripts/verify_deployment.py` fetches the public
+`checksums.json`, landing page, Explorer descriptor and semantic validation
+receipt and compares them byte for byte with the validated checkout. This is a
+bounded HTTP identity gate, not a real-browser interaction or console test.
 
 The British-English check covers producer-authored Markdown plus human-facing
 Python comments and strings. It reports path, line, column and the preferred

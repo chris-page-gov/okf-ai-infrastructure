@@ -1,0 +1,671 @@
+{
+  "schema": "okf-repository-publication-contract.v1",
+  "modified": "2026-08-18",
+  "locale": "en-GB",
+  "time_zone": "Europe/London",
+  "repository": {
+    "name": "okf-ai-infrastructure",
+    "url": "https://github.com/chris-page-gov/okf-ai-infrastructure",
+    "role": "small-bundle",
+    "root_index": "index.md",
+    "lifecycle": "active"
+  },
+  "semantic_contract": {
+    "path": "okf.semantic.json",
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
+  },
+  "source_families": [
+    {
+      "id": "markdown-corpus",
+      "label": "AI infrastructure Markdown corpus",
+      "description": "The reviewed Markdown concepts, navigation records and build configuration from which the semantic and static projections are generated.",
+      "kind": "markdown-tree",
+      "paths": [
+        "index.md",
+        "sources-index.md",
+        "log.md",
+        "document/*",
+        "federated/*",
+        "frameworks/*",
+        "glossary/*",
+        "organisations/*",
+        "research/*",
+        "stack/*",
+        "standards/*",
+        "uk-government/*",
+        "okf.config.json"
+      ],
+      "formats": [
+        "text/markdown",
+        "application/json"
+      ],
+      "origin": "authored",
+      "authority": "editorial",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "okf.config.json",
+        "identity": [
+          "relative-path",
+          "sha256",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "approved",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-ai-infrastructure/blob/main/LICENSE.md"
+        ]
+      },
+      "sensitivity": {
+        "status": "public-no-personal-data",
+        "assessment": "The repository publishes research and technical documentation intended for public access."
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "build-runtime",
+          "build-publication"
+        ]
+      },
+      "invalidates": [
+        "source",
+        "semantic",
+        "runtime",
+        "documentation",
+        "release",
+        "deployment"
+      ],
+      "limitations": [
+        "Cited external sources retain their own authority and rights; inclusion in this editorial corpus does not upgrade either."
+      ]
+    }
+  ],
+  "boundaries": {
+    "authored": [
+      {
+        "path": "*.md",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "document/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "federated/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "frameworks/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "glossary/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "organisations/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "research/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "stack/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "standards/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "uk-government/*",
+        "role": "content",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "okf.config.json",
+        "role": "source-register",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "okf.semantic.json",
+        "role": "policy"
+      },
+      {
+        "path": "okf.publication.json",
+        "role": "publication-contract"
+      },
+      {
+        "path": "profiles/bundle-wiki/*",
+        "role": "profile"
+      },
+      {
+        "path": "scripts/*",
+        "role": "generator"
+      },
+      {
+        "path": "tests/*",
+        "role": "test"
+      },
+      {
+        "path": "requirements-okf.*",
+        "role": "source-register"
+      },
+      {
+        "path": "README.md",
+        "role": "documentation"
+      },
+      {
+        "path": "AGENTS.md",
+        "role": "policy"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "role": "changelog"
+      },
+      {
+        "path": ".github/workflows/*",
+        "role": "workflow"
+      }
+    ],
+    "generated": [
+      {
+        "path": "okf-bundle.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-runtime"
+        ],
+        "check_command_ids": [
+          "check-runtime"
+        ]
+      },
+      {
+        "path": "bundle/okf-bundle.yamlld",
+        "role": "semantic-yaml-ld",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/okf-bundle.jsonld",
+        "role": "semantic-json-ld",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/okf-bundle.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/relationships.json",
+        "role": "relationship-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/semantic-validation.json",
+        "role": "validation-receipt",
+        "plane": "release",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/checksums.json",
+        "role": "checksum-manifest",
+        "plane": "release",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/index.html",
+        "role": "site",
+        "plane": "deployment",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      }
+    ]
+  },
+  "planes": [
+    {
+      "id": "source",
+      "depends_on": [],
+      "paths": [
+        "*.md",
+        "document/*",
+        "federated/*",
+        "frameworks/*",
+        "glossary/*",
+        "organisations/*",
+        "research/*",
+        "stack/*",
+        "standards/*",
+        "uk-government/*",
+        "okf.config.json"
+      ],
+      "command_ids": [
+        "check-migration"
+      ]
+    },
+    {
+      "id": "semantic",
+      "depends_on": [
+        "source"
+      ],
+      "paths": [
+        "okf.semantic.json",
+        "bundle/okf-bundle.yamlld",
+        "bundle/okf-bundle.jsonld"
+      ],
+      "command_ids": [
+        "build-runtime",
+        "build-publication",
+        "check-runtime",
+        "check-publication"
+      ]
+    },
+    {
+      "id": "runtime",
+      "depends_on": [
+        "semantic"
+      ],
+      "paths": [
+        "okf-bundle.json",
+        "bundle/okf-bundle.json",
+        "bundle/relationships.json"
+      ],
+      "command_ids": [
+        "build-runtime",
+        "build-publication",
+        "check-runtime",
+        "check-viewer",
+        "check-publication"
+      ]
+    },
+    {
+      "id": "documentation",
+      "depends_on": [
+        "source",
+        "semantic"
+      ],
+      "paths": [
+        "README.md",
+        "AGENTS.md",
+        "CHANGELOG.md"
+      ],
+      "command_ids": [
+        "check-language",
+        "check-contract"
+      ]
+    },
+    {
+      "id": "release",
+      "depends_on": [
+        "semantic",
+        "runtime",
+        "documentation"
+      ],
+      "paths": [
+        "bundle/semantic-validation.json",
+        "bundle/checksums.json"
+      ],
+      "command_ids": [
+        "check-publication",
+        "test-all"
+      ]
+    },
+    {
+      "id": "deployment",
+      "depends_on": [
+        "release"
+      ],
+      "paths": [
+        "bundle/index.html",
+        ".github/workflows/pages.yml"
+      ],
+      "command_ids": [
+        "check-publication",
+        "verify-pages"
+      ]
+    }
+  ],
+  "tooling": {
+    "commands": [
+      {
+        "id": "setup-environment",
+        "kind": "setup",
+        "planes": [
+          "source"
+        ],
+        "command": "python3 -m venv .venv",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "external-state",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "install-dependencies",
+        "kind": "setup",
+        "planes": [
+          "source"
+        ],
+        "command": ".venv/bin/python -m pip install --requirement requirements-okf.lock",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "dependency-install",
+        "mutates": "external-state",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-runtime",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": ".venv/bin/python scripts/build_okf_bundle.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-publication",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime",
+          "release",
+          "deployment"
+        ],
+        "command": ".venv/bin/python scripts/build_publication.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-migration",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": ".venv/bin/python scripts/migrate_okf_v02.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-runtime",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": ".venv/bin/python scripts/build_okf_bundle.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-viewer",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": ".venv/bin/python scripts/update_viewer.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-language",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": ".venv/bin/python scripts/check_british_english.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-publication",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime",
+          "release",
+          "deployment"
+        ],
+        "command": ".venv/bin/python scripts/check_publication.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "check-contract",
+        "kind": "check",
+        "planes": [
+          "source",
+          "documentation",
+          "release"
+        ],
+        "command": ".venv/bin/python scripts/check_publication_contract.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "test-all",
+        "kind": "test",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime",
+          "documentation",
+          "release"
+        ],
+        "command": ".venv/bin/python -m unittest discover -s tests -v",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "verify-pages",
+        "kind": "verify",
+        "planes": [
+          "deployment"
+        ],
+        "command": ".venv/bin/python scripts/verify_deployment.py",
+        "source": ".github/workflows/pages.yml",
+        "review_status": "reviewed-local-guidance",
+        "network": "bounded-read",
+        "mutates": "none",
+        "timeout_minutes": 5
+      }
+    ]
+  },
+  "lockstep": {
+    "controlled_paths": [
+      "*.md",
+      "document/*",
+      "federated/*",
+      "frameworks/*",
+      "glossary/*",
+      "organisations/*",
+      "research/*",
+      "stack/*",
+      "standards/*",
+      "uk-government/*",
+      "profiles/*",
+      "scripts/*",
+      "tests/*",
+      ".github/workflows/*",
+      "requirements-okf.*",
+      "okf.config.json",
+      "okf.semantic.json",
+      "okf.publication.json",
+      "bundle/*",
+      "okf-bundle.json"
+    ],
+    "documentation_paths": [
+      "README.md",
+      "AGENTS.md",
+      "CHANGELOG.md"
+    ],
+    "changelog_path": "CHANGELOG.md",
+    "check_command_id": "check-contract",
+    "dependency_update_policy": "assess-release-bound-bytes-no-blanket-exemption",
+    "unknown_path_policy": "fail-closed"
+  },
+  "ci": {
+    "provider": "github-actions",
+    "workflow_paths": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/pages.yml"
+    ],
+    "impact_routing": "full-suite",
+    "parallelism": "serial",
+    "unknown_path_policy": "full-suite",
+    "browser": {
+      "ordinary": {
+        "policy": "not-applicable",
+        "engines": [],
+        "command_ids": []
+      },
+      "cross_engine": {
+        "policy": "not-applicable",
+        "engines": [],
+        "command_ids": [],
+        "installation": {
+          "policy": "none",
+          "command_ids": []
+        }
+      }
+    }
+  },
+  "publication": {
+    "mode": "automatic-protected-main",
+    "scope": "public-release",
+    "authority": {
+      "decision": "Protected main is the sole automatic publication authority after the complete repository validation contract passes.",
+      "evidence_paths": [
+        "README.md",
+        ".github/branch-protection.json"
+      ]
+    },
+    "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
+    "targets": [
+      {
+        "id": "github-pages",
+        "kind": "github-pages",
+        "workflow_path": ".github/workflows/pages.yml",
+        "public_base_url": "https://chris-page-gov.github.io/okf-ai-infrastructure/",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true
+      }
+    ]
+  },
+  "verification": {
+    "required": false,
+    "browser": "not-applicable",
+    "exact_commit_required": true,
+    "identity_checks": [
+      "sha256",
+      "descriptor",
+      "route"
+    ],
+    "journeys": [
+      {
+        "id": "verify-published-bundle",
+        "url": "https://chris-page-gov.github.io/okf-ai-infrastructure/",
+        "expected_identity": "The deployed checksum manifest and selected identity routes are byte-for-byte equal to the validated commit.",
+        "steps": [
+          "Fetch the deployed checksum manifest without rebuilding.",
+          "Compare the landing page, Explorer descriptor and semantic validation receipt with the checked-out candidate bytes."
+        ]
+      }
+    ],
+    "console_policy": "not-applicable",
+    "command_ids": [
+      "verify-pages"
+    ]
+  },
+  "limitations": [
+    "The post-deploy hook proves HTTP route and byte identity through the checksum manifest; this static bundle has no browser interaction or console assurance gate.",
+    "The complete validation suite remains intentionally serial and fail-closed because all generated publication planes share the same Markdown source graph."
+  ]
+}

@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 2026-08-18
+
+- Added the OKF publication-method v1 repository contract, local structural
+  validation and documentation/`CHANGELOG.md` lockstep enforcement.
+- Removed duplicate feature-branch push validation while retaining pull
+  request, integrated `main`, version-tag and manual assurance; added per-ref
+  cancellation, bounded job time and immutable action pins.
+- Made Pages wait for the complete `main` validation and deploy that exact
+  checked-in bundle without rebuilding it. Manual deployment runs the complete
+  gate first.
+- Added bounded post-deploy verification of the exact checksum manifest,
+  landing page, Explorer descriptor and semantic validation receipt.
+
 ## 0.6.0 — 2026-08-10
 
 - Added explicit YAML-LD context, absolute semantic identity and semantic type
