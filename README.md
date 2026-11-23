@@ -139,3 +139,7 @@ HTTP(S) URLs; browser URL repair is not accepted as validation.
 `main` requires a pull request, current CI, resolved conversations, linear
 history and explicit maintainer self-review. A separate approving reviewer is
 not required because this is a solo-maintained repository.
+
+## OKF standards and bundle discovery
+
+The [central standards register](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md) records current and historical OKF specifications, version-specific pins and the public bundle catalogue. Use the [machine-readable register](https://raw.githubusercontent.com/chris-page-gov/okf-explorer/main/registry/okf-standards.json) to resolve the version implemented by this repository.
