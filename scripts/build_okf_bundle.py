@@ -191,7 +191,7 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
         "schema": "okf-explorer-bundle.v0",
         "kind": "okf-bundle",
         "bundle_id": semantic_projection.PUBLIC_BASE + "semantic/ai-infrastructure",
-        "version": "0.7.0",
+        "version": "0.7.1",
         "snapshot": "sha256:" + hashlib.sha256(json.dumps({
             "markdown": {update_viewer.rel(path): hashlib.sha256(
                 semantic_projection.okf_semantic.read_regular_file_bytes(
