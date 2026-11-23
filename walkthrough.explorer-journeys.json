@@ -260,6 +260,32 @@
           "type": "console_clean"
         }
       ]
+    },
+    {
+      "id": "body-reference-paths",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-rag.md"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Federated / confidential RAG\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "visible",
+          "selector": ".right-panel .markdown-body a[href^=\"http://127.0.0.1:\"][href$=\"/bundle/federated/federated-learning.md\"]"
+        },
+        {
+          "type": "visible",
+          "selector": ".right-panel .markdown-body a[href^=\"http://127.0.0.1:\"][href$=\"/bundle/frameworks/flower.md\"]"
+        },
+        {
+          "type": "console_clean"
+        }
+      ]
     }
   ]
 }

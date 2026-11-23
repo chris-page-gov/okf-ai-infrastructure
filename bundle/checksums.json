@@ -285,8 +285,8 @@
       "sha256": "978b9946b6a02ab2772ecd71b790bb7f76ff7777539da04cc2be191514c6d762"
     },
     "index.html": {
-      "bytes": 1161,
-      "sha256": "f29eed2ab67d669b77723aec45f275f164a3cb65d835c2bbf246852272638b2f"
+      "bytes": 1192,
+      "sha256": "3ba165fce70c9da6856af58f97e358829e117d433250b681e2a2c296c348de94"
     },
     "index.md": {
       "bytes": 4372,
@@ -657,12 +657,12 @@
       "sha256": "2baa79ab5abf1e7288a2f306baee6d8e0b86343c088925f531623ac6bf3efc31"
     },
     "walkthrough.explorer-journeys.json": {
-      "bytes": 6574,
-      "sha256": "8d46fb9ea12bbbf1b9fb838afe84f1a33ab9a9b7a766cbd567cc7ba7683cc781"
+      "bytes": 7320,
+      "sha256": "6635bf42bf570ce2b876be50fa38d7544a1b35a14064d1c07acb6e40446b42d6"
     },
     "walkthrough.html": {
-      "bytes": 7481,
-      "sha256": "59ca6a7ee5f16cc8232ec06ed4f140ba2655372ca93d6dea73f0b391434acafd"
+      "bytes": 7512,
+      "sha256": "6c1c16cff28032728a707efa850e03c61bf6eb18ed1a9da669e3fa349d166547"
     },
     "walkthrough.md": {
       "bytes": 6112,
