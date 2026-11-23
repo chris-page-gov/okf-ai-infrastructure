@@ -1,13 +1,15 @@
 # Changelog
 
-## Unreleased — verified Reader and public asset checks
+## 0.7.0 — 23 November 2026
+
+### Verified Reader and public asset checks
 
 - Pin consumer acceptance to the verified Reader revision with corrected
   document-relative links and require a body-link regression journey.
 - Declare the landing page and walkthrough favicon explicitly so the public
   journey makes no request for a missing site-wide icon.
 
-## Unreleased — OKF 0.3 implementation, 23 November 2026
+### OKF 0.3 implementation
 
 - Pin the 18 November OKF 0.3 specification and adopt the separately identified
   Bundle Wiki profile and repository contract v2. Retain the frozen v1 mirror.
@@ -22,16 +24,16 @@
 - Publish a source-linked federated RAG walkthrough with a graph-derived visual
   trail, exact source digests and tested absent-path negative controls.
 - Require independent parity for every concept frontmatter block, body and core
-  reference pair, a seven-journey Explorer replay and complete HTTP graph/source
+  reference pair, an eight-journey Explorer replay and complete HTTP graph/source
   retrieval in CI. Keep the protected `validate` name as the fail-closed
   aggregator of the deterministic core and consumer jobs.
 
-## Unreleased — standards references
+### Standards references
 
 - Link the central current and historical OKF standards register and public bundle catalogue.
 
 
-## Unreleased — 2026-08-18
+### Publication contract
 
 - Added the OKF publication-method v1 repository contract, local structural
   validation and documentation/`CHANGELOG.md` lockstep enforcement.
