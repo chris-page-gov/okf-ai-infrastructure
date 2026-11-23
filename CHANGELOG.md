@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.1 — 23 November 2026
+
+- Pin consumer CI to the current Node 26.13.1 LTS security release, checked
+  against the official release index and release notes.
+- Regenerate the product version and checksum-bound publication while retaining
+  all concept sources, 155 record IDs, 579 assertion IDs and the source snapshot.
+- Retain the exact v0.7.0 archive and acceptance record as historical evidence.
+
 ## 0.7.0 — 23 November 2026
 
 ### Verified Reader and public asset checks

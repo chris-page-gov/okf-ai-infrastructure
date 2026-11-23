@@ -298,15 +298,15 @@
     },
     "okf-bundle.json": {
       "bytes": 1965801,
-      "sha256": "01cc1434666206281dac8442627834cda642e34166b5f0aa403ebd345ff2f099"
+      "sha256": "42f2e0319f0686cfdee6ccf5e1762cb2ee0c6013aaa1ca3a0a8ec54ddd8abcdf"
     },
     "okf-bundle.jsonld": {
       "bytes": 1453932,
-      "sha256": "70018f94f5ed0c82aabdc0bc3943e36772aeb7de0116b1dc6162fedd2810c059"
+      "sha256": "ab3fa502d865e63a0c5c0625257a05fb885a6cfc86bf342401631c6d24f4d192"
     },
     "okf-bundle.yamlld": {
       "bytes": 1790302,
-      "sha256": "7ee4321bcf85684538d9522644df268a56c5d9fa55ce07969f5b4ded581ea4f7"
+      "sha256": "1bed9c283298a54db669335f4664d3018a60b5843120cf62175d3b31f78db960"
     },
     "okf.config.json": {
       "bytes": 872,
@@ -650,7 +650,7 @@
     },
     "walkthrough-data.json": {
       "bytes": 6478,
-      "sha256": "cc959d5950bdd7c3bf1d03ac8163ccdc39a005fdbb2368f5be6b7be1ef6ba1c7"
+      "sha256": "06256d8750814f6814a77b606e53b01c71e140e99b3009de9378ede470edf331"
     },
     "walkthrough.case.json": {
       "bytes": 1571,
@@ -658,7 +658,7 @@
     },
     "walkthrough.explorer-journeys.json": {
       "bytes": 7320,
-      "sha256": "6635bf42bf570ce2b876be50fa38d7544a1b35a14064d1c07acb6e40446b42d6"
+      "sha256": "8d3eb5626455a6474a06a3cd33f9a803c7ad9bcebef3da009fd32e067af14913"
     },
     "walkthrough.html": {
       "bytes": 7512,

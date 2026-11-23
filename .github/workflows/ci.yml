@@ -78,7 +78,7 @@ jobs:
           run_install: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: "26.12.1"
+          node-version: "26.13.1"
       - name: Install the frozen Explorer dependencies
         run: pnpm --dir .acceptance-tools/okf-explorer/apps/okf-explorer install --frozen-lockfile
       - name: Install the runner's pinned Chromium

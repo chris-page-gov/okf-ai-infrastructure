@@ -3,9 +3,9 @@
   "bundle_id": "https://chris-page-gov.github.io/okf-ai-infrastructure/semantic/ai-infrastructure",
   "case_sha256": "2baa79ab5abf1e7288a2f306baee6d8e0b86343c088925f531623ac6bf3efc31",
   "descriptor": "okf-bundle.json",
-  "descriptor_sha256": "01cc1434666206281dac8442627834cda642e34166b5f0aa403ebd345ff2f099",
+  "descriptor_sha256": "42f2e0319f0686cfdee6ccf5e1762cb2ee0c6013aaa1ca3a0a8ec54ddd8abcdf",
   "graph": "okf-bundle.jsonld",
-  "graph_sha256": "70018f94f5ed0c82aabdc0bc3943e36772aeb7de0116b1dc6162fedd2810c059",
+  "graph_sha256": "ab3fa502d865e63a0c5c0625257a05fb885a6cfc86bf342401631c6d24f4d192",
   "id": "federated-rag-evidence",
   "negative_controls": [
     {
@@ -133,5 +133,5 @@
       ]
     }
   ],
-  "version": "0.7.0"
+  "version": "0.7.1"
 }
