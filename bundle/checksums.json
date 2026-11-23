@@ -285,32 +285,32 @@
       "sha256": "978b9946b6a02ab2772ecd71b790bb7f76ff7777539da04cc2be191514c6d762"
     },
     "index.html": {
-      "bytes": 1075,
-      "sha256": "3d51c6df7c228440c4fcd88f36dc564faec484aabea326652d7c43d207ad9681"
+      "bytes": 1161,
+      "sha256": "f29eed2ab67d669b77723aec45f275f164a3cb65d835c2bbf246852272638b2f"
     },
     "index.md": {
       "bytes": 4372,
-      "sha256": "0e436df04ae1184868b3d53dee49536c9593f357cd803543c93d634811bcc295"
+      "sha256": "1bc9dfa1ff366d7a467589440b0d377cfd7fd214fcaea6e22577bc052a0a8d84"
     },
     "log.md": {
       "bytes": 4386,
       "sha256": "85bcba94c4e88a980a7f54134ec286eadd9d764b8aa7b1a706d22f0ed9959fb0"
     },
     "okf-bundle.json": {
-      "bytes": 1823113,
-      "sha256": "f2e0060feeba21a6665435ee3fca8c6f06ae1fe9d99b8ff3f3550a36189ef8c4"
+      "bytes": 1965801,
+      "sha256": "01cc1434666206281dac8442627834cda642e34166b5f0aa403ebd345ff2f099"
     },
     "okf-bundle.jsonld": {
-      "bytes": 1358967,
-      "sha256": "25569f0efc2f63e2f1a8cbe562fc3616ab05778fdcfca1ba9ed0dc977e4e71a6"
+      "bytes": 1453932,
+      "sha256": "70018f94f5ed0c82aabdc0bc3943e36772aeb7de0116b1dc6162fedd2810c059"
     },
     "okf-bundle.yamlld": {
-      "bytes": 1663761,
-      "sha256": "c185087b57a63ea7725cc6d441202c87462d0e8918249255e5e468d2d677b657"
+      "bytes": 1790302,
+      "sha256": "7ee4321bcf85684538d9522644df268a56c5d9fa55ce07969f5b4ded581ea4f7"
     },
     "okf.config.json": {
       "bytes": 872,
-      "sha256": "9d4f802237ffb4383dc90a84735c030df29996c6e6031bb0700c8eec628fc4c2"
+      "sha256": "a2309b959e47cbc0e6dadd302f5e229fc5271d9dca2e23c5cb0e26d10c033cab"
     },
     "organisations/aisi.md": {
       "bytes": 648,
@@ -381,8 +381,8 @@
       "sha256": "e884b3e91371d81777076ac713762babfa701656beebc8820fbaf9d3d3dde377"
     },
     "relationships.json": {
-      "bytes": 1383966,
-      "sha256": "41a1f480d9415a084e2fb2141fd07f7cc1b352ba97b8e65e72d760f19ec2d90e"
+      "bytes": 1405293,
+      "sha256": "1ef80e21c843efaeff41cc8b1106b2001d4ab9b6d2d3632009da660cf043fded"
     },
     "research/agentbench.md": {
       "bytes": 682,
@@ -458,7 +458,7 @@
     },
     "semantic-validation.json": {
       "bytes": 874,
-      "sha256": "39677d022b7bd0f0d06f76dbf8dff5c7246d947431775a598ffc8e0cbaa729b4"
+      "sha256": "6348635ae621a2fb95cf6545475d81f7367b8f70fc7a6856d614998e9f9fac46"
     },
     "sources-index.md": {
       "bytes": 9397,
@@ -647,6 +647,30 @@
     "uk-government/uk-api-catalogue.md": {
       "bytes": 671,
       "sha256": "f7d1e0737d2e67d7a95c229489e15683e82f3868533ee70d377104b235a86e0a"
+    },
+    "walkthrough-data.json": {
+      "bytes": 6478,
+      "sha256": "cc959d5950bdd7c3bf1d03ac8163ccdc39a005fdbb2368f5be6b7be1ef6ba1c7"
+    },
+    "walkthrough.case.json": {
+      "bytes": 1571,
+      "sha256": "2baa79ab5abf1e7288a2f306baee6d8e0b86343c088925f531623ac6bf3efc31"
+    },
+    "walkthrough.explorer-journeys.json": {
+      "bytes": 6574,
+      "sha256": "8d46fb9ea12bbbf1b9fb838afe84f1a33ab9a9b7a766cbd567cc7ba7683cc781"
+    },
+    "walkthrough.html": {
+      "bytes": 7481,
+      "sha256": "59ca6a7ee5f16cc8232ec06ed4f140ba2655372ca93d6dea73f0b391434acafd"
+    },
+    "walkthrough.md": {
+      "bytes": 6112,
+      "sha256": "d3d72bc88e6913b4e1860e14ed06aa6dfe1e34a64e5279c134475f00f3225e9b"
+    },
+    "walkthrough.svg": {
+      "bytes": 2614,
+      "sha256": "8cc7ed44203744c1565244be779479b458f9dd171ac294351c6a4d88a52e4870"
     }
   },
   "schema": "okf-checksums.v1"

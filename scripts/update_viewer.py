@@ -13,6 +13,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 import okf_semantic
+from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
 VIEWER = ROOT / "viewer.html"
@@ -127,8 +128,10 @@ def resolve_link(source_id: str, href: str) -> str | None:
 def find_edges(path_id: str, body: str, known_ids: set[str]) -> tuple[list[tuple[str, str]], list[str]]:
     edges: set[tuple[str, str]] = set()
     errors: list[str] = []
-    for match in LINK_RE.finditer(body):
-        target = resolve_link(path_id, match.group(1))
+    targets = [token.attrs["href"] for block in MarkdownIt("commonmark").parse(body)
+               for token in (block.children or ()) if token.type == "link_open"]
+    for href in targets:
+        target = resolve_link(path_id, href)
         if not target:
             continue
         if target.endswith(".md"):
@@ -143,27 +146,28 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
     errors: list[str] = []
 
     def valid_datetime(value: object) -> bool:
-        if not isinstance(value, str) or "T" not in value:
+        if not isinstance(value, str):
             return False
         try:
-            datetime.fromisoformat(value.replace("Z", "+00:00"))
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+                date.fromisoformat(value)
+                return True
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}[Tt]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[Zz]|[+-]\d{2}:\d{2})", value):
+                return False
+            datetime.fromisoformat(value.upper().replace("Z", "+00:00"))
         except ValueError:
             return False
         return True
 
     def valid_date(value: object) -> bool:
-        if not isinstance(value, str):
-            return False
-        try:
-            date.fromisoformat(value)
-        except ValueError:
-            return False
-        return True
+        return valid_datetime(value)
 
     if "timestamp" in meta:
         errors.append(f"{path_id} uses superseded timestamp; use generated.at")
     status = meta.get("status", "stable")
-    if status not in {"draft", "stable", "deprecated"}:
+    if status in (None, "", []):
+        status = "stable"
+    if not isinstance(status, str) or status not in {"draft", "stable", "deprecated"}:
         errors.append(f"{path_id} has invalid lifecycle status {status!r}")
     generated = meta.get("generated")
     if generated is not None and (
@@ -187,14 +191,18 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
             elif not valid_datetime(event["at"]):
                 errors.append(f"{path_id} verified[{index}].at must be an ISO 8601 datetime")
     sources = meta.get("sources")
-    if sources is not None:
+    if sources not in (None, "", []):
+        if isinstance(sources, dict):
+            sources = [sources]
         if not isinstance(sources, list):
             errors.append(f"{path_id} sources must be a list")
         else:
             for index, source in enumerate(sources):
+                if not isinstance(source, dict):
+                    errors.append(f"{path_id} sources[{index}] must be a mapping")
+                    continue
                 if (
-                    not isinstance(source, dict)
-                    or not isinstance(source.get("resource"), str)
+                    not isinstance(source.get("resource"), str)
                     or not source["resource"].strip()
                 ):
                     errors.append(f"{path_id} sources[{index}] must contain non-empty resource")
@@ -207,7 +215,7 @@ def validate_v02_metadata(path_id: str, meta: dict[str, object]) -> list[str]:
                 ):
                     errors.append(f"{path_id} sources[{index}].usage_count must be a non-negative integer")
     stale_after = meta.get("stale_after")
-    if stale_after is not None and not valid_date(stale_after):
+    if stale_after not in (None, "", []) and not valid_date(stale_after):
         errors.append(f"{path_id} stale_after must be an ISO date")
     return errors
 
@@ -241,16 +249,33 @@ def build_graph() -> tuple[dict[str, object], list[str]]:
                 "aliases": meta.get("aliases", ""),
                 "section": section_for(path_id),
                 "body": body,
+                "frontmatter": dict(meta),
             }
         )
         nodes[path_id] = node
 
     known_ids = set(nodes)
     edge_set: set[tuple[str, str]] = set()
-    for path_id, (_meta, body) in parsed.items():
+    for path_id, (meta, body) in parsed.items():
         edges, link_errors = find_edges(path_id, body, known_ids)
         edge_set.update(edges)
         errors.extend(link_errors)
+        values = [meta.get(key) for key in ("resource", "computation")]
+        if meta.get("status") == "deprecated":
+            values.append(meta.get("superseded_by"))
+        sources = meta.get("sources") or []
+        for source in sources if isinstance(sources, list) else [sources]:
+            if isinstance(source, dict):
+                values.append(source.get("resource"))
+        for key in ("executor", "attester"):
+            actor = meta.get(key)
+            if isinstance(actor, dict):
+                values.append(actor.get("resource"))
+        for value in values:
+            if isinstance(value, str):
+                target = resolve_link(path_id, value)
+                if target in known_ids and Path(target).name not in RESERVED_MARKDOWN:
+                    edge_set.add((path_id, target))
 
     graph = {"nodes": nodes, "edges": [list(edge) for edge in sorted(edge_set)]}
     return graph, errors

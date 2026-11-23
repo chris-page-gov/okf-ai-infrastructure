@@ -17,7 +17,7 @@ class PublicationInventoryTest(unittest.TestCase):
     def source_root(self, directory: str) -> Path:
         root = Path(directory) / "source"
         (root / "corpus").mkdir(parents=True)
-        for name in ("index.md", "sources-index.md", "log.md", "okf.config.json"):
+        for name in ("index.md", "sources-index.md", "log.md", "okf.config.json", "walkthrough.md", "walkthrough.case.json", "walkthrough.explorer-journeys.json"):
             (root / name).write_text(f"{name}\n", encoding="utf-8")
         (root / "corpus" / "concept.md").write_text(
             "# Concept\n", encoding="utf-8"

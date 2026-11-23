@@ -15,7 +15,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "okf.publication.json"
-SEMANTIC_PROFILE = "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
+SEMANTIC_PROFILE = "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/"
 REQUIRED_TOP_LEVEL = {
     "schema",
     "modified",
@@ -138,7 +138,7 @@ def validate_contract(document: dict[str, Any]) -> list[str]:
         if not isinstance(value, str) or not (ROOT / value).is_file():
             errors.append(f"{label} must name an existing file")
     if semantic.get("profile") != SEMANTIC_PROFILE:
-        errors.append("semantic_contract.profile must name Bundle Wiki v1")
+        errors.append("semantic_contract.profile must name Bundle Wiki v2")
 
     source_ids = _ids(document.get("source_families"), "source_families", errors)
     plane_ids = _ids(document.get("planes"), "planes", errors)

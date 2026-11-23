@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-08-18",
+  "modified": "2026-11-23",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -12,7 +12,7 @@
   },
   "semantic_contract": {
     "path": "okf.semantic.json",
-    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/"
   },
   "source_families": [
     {
@@ -33,7 +33,10 @@
         "stack/*",
         "standards/*",
         "uk-government/*",
-        "okf.config.json"
+        "okf.config.json",
+        "walkthrough.md",
+        "walkthrough.case.json",
+        "walkthrough.explorer-journeys.json"
       ],
       "formats": [
         "text/markdown",
@@ -178,6 +181,16 @@
       {
         "path": ".github/workflows/*",
         "role": "workflow"
+      },
+      {
+        "path": "walkthrough.case.json",
+        "role": "source-register",
+        "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "walkthrough.explorer-journeys.json",
+        "role": "source-register",
+        "source_family_id": "markdown-corpus"
       }
     ],
     "generated": [
@@ -276,6 +289,42 @@
         "check_command_ids": [
           "check-publication"
         ]
+      },
+      {
+        "path": "bundle/walkthrough.html",
+        "role": "site",
+        "plane": "deployment",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/walkthrough.svg",
+        "role": "static-asset",
+        "plane": "deployment",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
+      },
+      {
+        "path": "bundle/walkthrough-data.json",
+        "role": "manifest",
+        "plane": "deployment",
+        "required": true,
+        "build_command_ids": [
+          "build-publication"
+        ],
+        "check_command_ids": [
+          "check-publication"
+        ]
       }
     ]
   },
@@ -356,7 +405,8 @@
       "depends_on": [
         "semantic",
         "runtime",
-        "documentation"
+        "documentation",
+        "consumer"
       ],
       "paths": [
         "bundle/semantic-validation.json",
@@ -379,6 +429,26 @@
       "command_ids": [
         "check-publication",
         "verify-pages"
+      ]
+    },
+    {
+      "id": "consumer",
+      "depends_on": [
+        "source",
+        "semantic",
+        "runtime"
+      ],
+      "paths": [
+        "walkthrough.explorer-journeys.json",
+        "scripts/check_core_projection.py",
+        "scripts/check_client_access.mjs",
+        ".github/workflows/ci.yml"
+      ],
+      "command_ids": [
+        "check-source-03",
+        "check-core-parity",
+        "check-explorer-journeys",
+        "check-client-access"
       ]
     }
   ],
@@ -555,6 +625,58 @@
         "network": "bounded-read",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "check-source-03",
+        "kind": "check",
+        "planes": [
+          "consumer"
+        ],
+        "command": "uv run --locked python scripts/check_okf_03_source.py \"$GITHUB_WORKSPACE/bundle\" --require-0.3 --output \"$RUNNER_TEMP/source-check.json\" --projection \"$RUNNER_TEMP/source-projection.json\"",
+        "source": ".github/workflows/ci.yml",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "assurance-outputs",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-core-parity",
+        "kind": "check",
+        "planes": [
+          "consumer"
+        ],
+        "command": "uv run --locked python \"$GITHUB_WORKSPACE/scripts/check_core_projection.py\" \"$RUNNER_TEMP/source-projection.json\" --output \"$RUNNER_TEMP/core-parity.json\"",
+        "source": ".github/workflows/ci.yml",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "assurance-outputs",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-explorer-journeys",
+        "kind": "test",
+        "planes": [
+          "consumer"
+        ],
+        "command": "pnpm --dir .acceptance-tools/okf-explorer/apps/okf-explorer acceptance:bundle -- --bundle-root \"$GITHUB_WORKSPACE/bundle\" --journeys \"$GITHUB_WORKSPACE/walkthrough.explorer-journeys.json\" --output \"$RUNNER_TEMP/explorer-acceptance.json\" --port 4179",
+        "source": ".github/workflows/ci.yml",
+        "review_status": "reviewed-local-guidance",
+        "network": "loopback-only",
+        "mutates": "assurance-outputs",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "check-client-access",
+        "kind": "check",
+        "planes": [
+          "consumer"
+        ],
+        "command": "node scripts/check_client_access.mjs --output \"$RUNNER_TEMP/client-access.json\"",
+        "source": ".github/workflows/ci.yml",
+        "review_status": "reviewed-local-guidance",
+        "network": "loopback-only",
+        "mutates": "assurance-outputs",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -579,7 +701,9 @@
       "okf.semantic.json",
       "okf.publication.json",
       "bundle/*",
-      "okf-bundle.json"
+      "okf-bundle.json",
+      "walkthrough.case.json",
+      "walkthrough.explorer-journeys.json"
     ],
     "documentation_paths": [
       "README.md",
@@ -598,13 +722,21 @@
       ".github/workflows/pages.yml"
     ],
     "impact_routing": "full-suite",
-    "parallelism": "serial",
+    "parallelism": "independent-core-and-consumer-with-fail-closed-validate-aggregator",
     "unknown_path_policy": "full-suite",
     "browser": {
       "ordinary": {
-        "policy": "not-applicable",
-        "engines": [],
-        "command_ids": []
+        "policy": "pinned-canonical-runner",
+        "engines": [
+          "chromium"
+        ],
+        "command_ids": [
+          "check-explorer-journeys"
+        ],
+        "installation": {
+          "policy": "bounded-five-minute-download-required-by-current-runner",
+          "command_ids": []
+        }
       },
       "cross_engine": {
         "policy": "not-applicable",
@@ -640,8 +772,8 @@
     ]
   },
   "verification": {
-    "required": false,
-    "browser": "not-applicable",
+    "required": true,
+    "browser": "real-browser-candidate-and-live-release-check",
     "exact_commit_required": true,
     "identity_checks": [
       "sha256",
@@ -655,17 +787,20 @@
         "expected_identity": "The deployed checksum manifest and selected identity routes are byte-for-byte equal to the validated commit.",
         "steps": [
           "Fetch the deployed checksum manifest without rebuilding.",
-          "Compare the landing page, Explorer descriptor and semantic validation receipt with the checked-out candidate bytes."
+          "Compare the landing page, Explorer descriptor and semantic validation receipt with the checked-out candidate bytes.",
+          "Open the exact deployed descriptor in the current Explorer in a real browser, replay the complex question and compare bundle identity.",
+          "Retrieve the deployed graph and source documents, compare their declared digests and retain the qualified answer and negative controls before a formal release."
         ]
       }
     ],
-    "console_policy": "not-applicable",
+    "console_policy": "no-console-or-page-errors",
     "command_ids": [
       "verify-pages"
     ]
   },
   "limitations": [
-    "The post-deploy hook proves HTTP route and byte identity through the checksum manifest; this static bundle has no browser interaction or console assurance gate.",
-    "The complete validation suite remains intentionally serial and fail-closed because all generated publication planes share the same Markdown source graph."
+    "The automated post-deploy hook checks HTTP routes and byte identity. A real-browser live journey remains a required release check; candidate CI alone does not establish live publication acceptance.",
+    "The required validate check combines independent deterministic core and consumer jobs; absent, skipped, cancelled or failed results cannot pass it.",
+    "The canonical acceptance runner currently requires pinned Chromium, downloaded with a five-minute timeout. It does not fetch external bundle assets or execute computations."
   ]
 }

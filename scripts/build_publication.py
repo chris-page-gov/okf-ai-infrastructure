@@ -12,6 +12,7 @@ from pathlib import Path
 import build_okf_bundle
 import okf_semantic
 import semantic_projection
+import build_walkthrough
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,7 +28,7 @@ DIRS = (
     "standards",
     "uk-government",
 )
-FILES = ("index.md", "sources-index.md", "log.md", "okf.config.json")
+FILES = ("index.md", "sources-index.md", "log.md", "okf.config.json", "walkthrough.md", "walkthrough.case.json", "walkthrough.explorer-journeys.json")
 GENERATED_FILES = (
     "okf-bundle.json",
     "okf-bundle.yamlld",
@@ -35,6 +36,9 @@ GENERATED_FILES = (
     "relationships.json",
     "semantic-validation.json",
     "index.html",
+    "walkthrough.html",
+    "walkthrough.svg",
+    "walkthrough-data.json",
 )
 CHECKSUM_FILE = "checksums.json"
 MAX_SOURCE_FILE_BYTES = 4_000_000
@@ -169,7 +173,7 @@ def publication_html(
         'body{font:18px/1.55 system-ui;max-width:850px;margin:4rem auto;padding:0 1.5rem}'
         'a{color:#1d70b8}</style></head><body>'
         '<h1>AI Infrastructure OKF Bundle Wiki</h1>'
-        f'<p>OKF v0.2 with {node_count} route-bearing records '
+        f'<p>OKF v0.3 with {node_count} route-bearing records '
         f'({concept_count} concepts and {navigation_count} reserved navigation records) and '
         f'{relationship_count} evidence-bearing directed relationships.</p>'
         '<p><a href="https://chris-page-gov.github.io/okf-explorer/?bundle='
@@ -181,6 +185,7 @@ def publication_html(
         '<li><a href="relationships.json">Rich relationship rows</a></li>'
         '<li><a href="semantic-validation.json">Semantic validation receipt</a></li>'
         '<li><a href="index.md">Markdown wiki index</a></li>'
+        '<li><a href="walkthrough.html">Follow a complex question through the evidence</a></li>'
         '<li><a href="checksums.json">Checksums</a></li>'
         '</ul></body></html>\n'
     )
@@ -230,6 +235,8 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
+    for name, content in build_walkthrough.render_walkthrough(bundle, root=ROOT).items():
+        (OUT / name).write_text(content, encoding="utf-8")
 
     expected_files = set(source_files) | set(GENERATED_FILES)
     actual_files, inventory_errors = publication_output_inventory(OUT)

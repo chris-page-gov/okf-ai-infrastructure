@@ -74,6 +74,10 @@ def migrate_text(path: Path, text: str) -> str:
     relative = path.relative_to(ROOT)
 
     if relative == Path("index.md"):
+        # Preserve the already adopted newer core and unknown root metadata.
+        declared_version = scalar_line(lines, "okf_version")
+        if declared_version and declared_version.strip("\"'") == "0.3":
+            return text
         return '---\nokf_version: "0.2"\n---\n' + body
     if path.name in {"index.md", "log.md"}:
         return body
@@ -140,7 +144,7 @@ def main(argv: list[str] | None = None) -> int:
             for path, _content in pending:
                 print(f"needs OKF v0.2 migration: {path.relative_to(ROOT)}")
             return 1
-        print("canonical Markdown is migrated to OKF v0.2")
+        print("legacy Markdown migration check passed; newer declared core versions are preserved")
         return 0
     try:
         for path, content in pending:

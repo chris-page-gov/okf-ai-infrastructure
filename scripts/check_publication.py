@@ -11,6 +11,7 @@ from pathlib import Path, PurePosixPath
 import build_okf_bundle
 import build_publication
 import semantic_projection
+import build_walkthrough
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -116,8 +117,8 @@ def main() -> int:
             )
         except ValueError as exc:
             errors.append(f"expected semantic receipt cannot be generated: {exc}")
-    if bundle.get("okf_version") != "0.2":
-        errors.append("expected OKF 0.2")
+    if bundle.get("okf_version") != "0.3":
+        errors.append("expected OKF 0.3")
     if bundle.get("generated") != {
         "by": "process:okf-ai-infrastructure-publication",
         "at": expected_generated_at,
@@ -183,6 +184,7 @@ def main() -> int:
                 len(expected_corpus["relationships"]),
             ),
         }
+        expected_documents.update(build_walkthrough.render_walkthrough(expected_bundle, root=ROOT))
         for relative, expected_text in expected_documents.items():
             try:
                 actual_text = build_publication.read_regular_publication_file(

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import hashlib
 import json
 import re
 import sys
@@ -108,6 +109,7 @@ def normalized_nodes(nodes: dict[str, dict[str, Any]], source_root: str) -> dict
                 "route": path_id,
                 "semantic_id": semantic_projection.entity_iri(path_id, node),
                 "semantic_type": semantic_projection.entity_type_iri(path_id, node),
+                "core_role": "navigation" if Path(path_id).name in {"index.md", "log.md"} else "concept",
                 "body": node.get("body", ""),
             }
         )
@@ -132,6 +134,11 @@ def normalized_edges(graph: dict[str, Any], generated_at: str) -> list[dict[str,
             )
         )
     edges.extend(semantic_projection.authored_relationships(nodes))
+    for relationship in edges:
+        relationship["relationship_role"] = (
+            "navigation" if any(Path(relationship[key]).name in {"index.md", "log.md"}
+                                for key in ("source", "target")) else "concept"
+        )
     return sorted(
         edges,
         key=lambda item: (item["source"], item["target"], item["predicate"], item["id"]),
@@ -183,7 +190,17 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
     bundle = {
         "schema": "okf-explorer-bundle.v0",
         "kind": "okf-bundle",
-        "okf_version": "0.2",
+        "bundle_id": semantic_projection.PUBLIC_BASE + "semantic/ai-infrastructure",
+        "version": "0.7.0",
+        "snapshot": "sha256:" + hashlib.sha256(json.dumps({
+            "markdown": {update_viewer.rel(path): hashlib.sha256(
+                semantic_projection.okf_semantic.read_regular_file_bytes(
+                    path, max_bytes=4_000_000, label="snapshot Markdown",
+                    repository_root=update_viewer.ROOT)).hexdigest()
+                for path in update_viewer.iter_okf_markdown()},
+            "configuration_sha256": hashlib.sha256(CONFIG.read_bytes()).hexdigest(),
+        }, sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
+        "okf_version": "0.3",
         "generated_by": "scripts/build_okf_bundle.py",
         "generated_at": bundle_generated_at(config),
         "generated": {
@@ -192,6 +209,7 @@ def build_bundle() -> tuple[dict[str, Any], list[str]]:
         },
         "meta": {
             "title": config["siteTitle"],
+            "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/",
             "default_corpus": corpus_id,
             "corpus_order": [corpus_id],
         },
