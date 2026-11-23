@@ -122,7 +122,7 @@ def render_walkthrough(bundle: dict, root: Path = ROOT) -> dict[str, str]:
     question_end = body.index("</p>", body.index("<h2>Question</h2>")) + 4
     body = body[:question_end] + diagram + body[question_end:]
     document = ('<!doctype html><html lang="en-GB"><head><meta charset="utf-8">'
-                '<meta name="viewport" content="width=device-width"><title>Federated RAG evidence walkthrough</title>'
+                '<meta name="viewport" content="width=device-width"><title>Federated RAG evidence walkthrough</title><link rel="icon" href="data:,">'
                 '<style>body{font:18px/1.6 system-ui;color:#0b0c0c;background:#fff;max-width:1100px;margin:2rem auto;padding:0 1.5rem}a{color:#1d70b8}.diagram{overflow:auto}.diagram img{width:100%;min-width:850px}code{overflow-wrap:anywhere}h2{margin-top:2rem}</style></head><body>'
                 '<header><nav aria-label="Bundle"><a href="index.html">AI Infrastructure bundle</a></nav></header><main>'
                 + body + '</main></body></html>\n')

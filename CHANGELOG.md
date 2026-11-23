@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — verified Reader and public asset checks
+
+- Pin consumer acceptance to the verified Reader revision with corrected
+  document-relative links and require a body-link regression journey.
+- Declare the landing page and walkthrough favicon explicitly so the public
+  journey makes no request for a missing site-wide icon.
+
 ## Unreleased — OKF 0.3 implementation, 23 November 2026
 
 - Pin the 18 November OKF 0.3 specification and adopt the separately identified

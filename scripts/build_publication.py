@@ -169,7 +169,7 @@ def publication_html(
     return (
         '<!doctype html><html lang="en-GB"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width">'
-        '<title>AI Infrastructure OKF</title><style>'
+        '<title>AI Infrastructure OKF</title><link rel="icon" href="data:,"><style>'
         'body{font:18px/1.55 system-ui;max-width:850px;margin:4rem auto;padding:0 1.5rem}'
         'a{color:#1d70b8}</style></head><body>'
         '<h1>AI Infrastructure OKF Bundle Wiki</h1>'

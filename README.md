@@ -32,7 +32,7 @@ examples. Path fields resolve from their containing document, with an explicit
 leading slash for the bundle root. The source check, graph/schema checks,
 Explorer journeys, AI traversal and final release evidence remain separate
 results. Local acceptance covers all 142 concept frontmatter blocks and bodies,
-418 core reference pairs, the complete 579-assertion graph and seven real
+418 core reference pairs, the complete 579-assertion graph and eight real
 Explorer journeys. CI repeats those checks against the pinned consumer.
 Deployed identity and final release acceptance remain separate.
 
