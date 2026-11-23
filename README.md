@@ -34,7 +34,15 @@ Explorer journeys, AI traversal and final release evidence remain separate
 results. Local acceptance covers all 142 concept frontmatter blocks and bodies,
 418 core reference pairs, the complete 579-assertion graph and eight real
 Explorer journeys. CI repeats those checks against the pinned consumer.
-Deployed identity and final release acceptance remain separate.
+The public replay on 23 November 2026 also retrieved and digest-checked all
+169 deployed files, reconciled all 579 direct and reified assertions, and
+passed the real Chrome desktop, mobile, graph-click and body-source-link
+journeys without console errors or failed responses. Its checksum manifest is
+`435bc4ad5d64b1a8a777ef0f32aef4c1bc30195e7e338db3097882c552aef0d8`.
+The product release is `0.7.0`; the core standard remains separately labelled
+`0.3`. Release assets retain the exact source revision and acceptance scope.
+These checks do not establish model answer quality, current external guidance
+or deployment approval.
 
 The [source-linked walkthrough](walkthrough.md) covers a complex federated RAG
 question, directed privacy references, separate evaluation/security searches
