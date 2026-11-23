@@ -60,8 +60,14 @@ ENTITY_METADATA_FIELDS = {
     "description",
     "status",
     "source_document",
+    "core_role",
+    "frontmatter",
 }
 INLINE_ASSERTION_CONTEXT: dict[str, Any] = {
+    "snapshot": "okf:snapshot",
+    "core_role": "okf:coreRole",
+    "relationship_role": "okf:relationshipRole",
+    "frontmatter": {"@id": "okf:authoredFrontmatter", "@type": "@json"},
     "route": "okf:route",
     "source_document": {"@id": "dcterms:source", "@type": "@id"},
     "source": {"@id": "rdf:subject", "@type": "@id"},
@@ -572,6 +578,8 @@ def semantic_graph(bundle: dict[str, Any]) -> dict[str, Any]:
             "description": node.get("description", ""),
             "status": node.get("status", "stable"),
             "source_document": {"@id": PUBLIC_BASE + route},
+            "core_role": node["core_role"],
+            **({"frontmatter": node["frontmatter"]} if node["core_role"] == "concept" else {}),
         }
         graph_by_iri[semantic_id] = entity
 
@@ -590,15 +598,16 @@ def semantic_graph(bundle: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "@context": [PROFILE_CONTEXT_URL, SEMANTIC_CONTEXT_URL, INLINE_ASSERTION_CONTEXT],
-        "@id": PUBLIC_BASE + "semantic/ai-infrastructure",
+        "@id": bundle["bundle_id"],
         "@type": "okf:Bundle",
-        "okf_version": "0.2",
+        "okf_version": "0.3",
         "title": corpus["title"],
         "description": corpus["subtitle"],
-        "version": "0.6.0",
+        "version": bundle["version"],
+        "snapshot": bundle["snapshot"],
         "status": "stable",
         "profile": {
-            "@id": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/"
+            "@id": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/"
         },
         "descriptor": {"@id": PUBLIC_BASE + "okf-bundle.json"},
         "semanticDescriptor": {"@id": PUBLIC_BASE + "okf-bundle.yamlld"},
@@ -640,6 +649,13 @@ def validate_relationships(bundle: dict[str, Any], semantic: dict[str, Any]) -> 
     assertion_ids = [str(item.get("@id") or "") for item in assertion_rows]
     semantic_entities = {str(item.get("@id") or ""): item for item in entity_rows}
     semantic_assertions = {str(item.get("@id") or ""): item for item in assertion_rows}
+    for route, node in nodes.items():
+        entity = semantic_entities.get(entity_iri(route, node), {})
+        role = "navigation" if Path(route).name in {"index.md", "log.md"} else "concept"
+        if entity.get("core_role") != role or node.get("core_role") != role:
+            errors.append(f"{route} core role must distinguish navigation from concepts")
+        if role == "concept" and entity.get("frontmatter") != node.get("frontmatter"):
+            errors.append(f"{route} semantic frontmatter differs from the complete source projection")
     for label, identities in (
         ("semantic entity", entity_ids),
         ("semantic assertion", assertion_ids),

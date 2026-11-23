@@ -1,6 +1,6 @@
 {
-  "profile": "OKF v0.2 + Bundle Wiki YAML-LD semantic profile v1",
-  "publicationGeneratedAt": "2026-08-10T12:33:30Z",
+  "profile": "OKF v0.3 + Bundle Wiki YAML-LD semantic profile v2",
+  "publicationGeneratedAt": "2026-11-23T17:48:00Z",
   "siteTitle": "OKF Explorer",
   "defaultBundle": "okf-bundle.json",
   "releaseExpectedCounts": {

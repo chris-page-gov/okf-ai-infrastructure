@@ -88,14 +88,14 @@ class OkfSemanticTest(unittest.TestCase):
         with self.assertRaises(okf_semantic.SemanticError):
             okf_semantic.expand({"@context": "https://untrusted.example/context", "@id": "https://example.test/item"})
 
-    def test_canonical_corpus_and_projection_are_okf_v02(self) -> None:
+    def test_canonical_corpus_and_projection_are_okf_v03(self) -> None:
         graph, errors = update_viewer.build_graph()
         self.assertEqual([], errors)
         expected_counts = self.release_counts()
         self.assertEqual(expected_counts["nodes"], len(graph["nodes"]))
         self.assertEqual(expected_counts["relationships"], len(graph["edges"]))
         root = graph["nodes"]["index.md"]
-        self.assertEqual("0.2", root["okf_version"])
+        self.assertEqual("0.3", root["okf_version"])
         self.assertEqual("Index", root["type"])
         source = graph["nodes"]["standards/openapi.md"]
         self.assertNotIn("timestamp", source)
@@ -108,7 +108,7 @@ class OkfSemanticTest(unittest.TestCase):
 
         bundle, bundle_errors = build_okf_bundle.build_bundle()
         self.assertEqual([], bundle_errors)
-        self.assertEqual("0.2", bundle["okf_version"])
+        self.assertEqual("0.3", bundle["okf_version"])
         self.assertEqual(
             "process:okf-ai-infrastructure-publication",
             bundle["generated"]["by"],
@@ -117,6 +117,9 @@ class OkfSemanticTest(unittest.TestCase):
             "standards/openapi.md"
         ]
         self.assertEqual(source["sources"], projected["sources"])
+        self.assertEqual("concept", projected["core_role"])
+        self.assertEqual(source["frontmatter"], projected["frontmatter"])
+        self.assertEqual("navigation", bundle["corpora"]["ai-infrastructure-wiki"]["nodes"]["index.md"]["core_role"])
         self.assertEqual(
             "https://chris-page-gov.github.io/okf-ai-infrastructure/id/standards/openapi",
             projected["semantic_id"],
@@ -325,6 +328,18 @@ class OkfSemanticTest(unittest.TestCase):
     def test_markdown_domain_assertion_survives_complete_publication_build(self) -> None:
         fixture_root = ROOT / "tests/fixtures/semantic_domain"
         with tempfile.TemporaryDirectory() as directory:
+            # Exercise a new candidate without changing the retained v0.2 fixture.
+            fixture_copy = Path(directory) / "source"
+            import shutil
+            shutil.copytree(fixture_root, fixture_copy)
+            fixture_root = fixture_copy
+            index = fixture_root / "index.md"
+            index.write_text(index.read_text().replace('okf_version: "0.2"', 'okf_version: "0.3"'))
+            (fixture_root / "walkthrough.md").write_text("# Synthetic domain fixture\n\n## Question\n\nHow does the source relate to its governed target?\n")
+            (fixture_root / "walkthrough.case.json").write_text(json.dumps({
+                "schema": "okf-bundle-walkthrough-case.v1", "id": "domain-fixture",
+                "trails": [{"label": "Declared domain assertion", "routes": ["frameworks/source.md", "frameworks/target.md"]}],
+                "no_directed_concept_path": []}))
             output = Path(directory) / "publication"
             with (
                 mock.patch.object(update_viewer, "ROOT", fixture_root),
@@ -338,7 +353,7 @@ class OkfSemanticTest(unittest.TestCase):
                 mock.patch.object(
                     build_publication,
                     "FILES",
-                    ("index.md", "okf.config.json"),
+                    ("index.md", "okf.config.json", "walkthrough.md", "walkthrough.case.json"),
                 ),
                 mock.patch.object(check_publication, "ROOT", fixture_root),
                 mock.patch.object(check_publication, "OUT", output),

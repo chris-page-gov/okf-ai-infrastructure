@@ -1,10 +1,10 @@
 ---
-okf_version: "0.2"
+okf_version: "0.3"
 ---
 
 # ai-infrastructure-wiki
 
-An **Open Knowledge Format (OKF v0.2)** bundle covering **AI
+An **Open Knowledge Format (OKF v0.3)** bundle covering **AI
 infrastructure** in two complementary threads: the **agent-ready vertical
 stack** (contracts → discovery → identity → execution → policy →
 observability/provenance) and the **federated collaborative-learning layer**.
@@ -21,7 +21,7 @@ search, record and directed-relationship views.
 
 ## Linking conventions
 
-OKF v0.2 links are plain Markdown—unidirectional and untyped. This bundle
+OKF v0.3 links are plain Markdown—unidirectional and untyped. This bundle
 adopts two compatible authoring conventions:
 
 1. **Glossary/vocabulary** terms are linked **from the concept that uses them** (a `Terms` section), mirroring wiki practice; each glossary entry also lists where it is used, so the term↔concept relationship is bidirectional in the files.

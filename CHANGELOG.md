@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased — OKF 0.3 implementation, 23 November 2026
+
+- Pin the 18 November OKF 0.3 specification and adopt the separately identified
+  Bundle Wiki profile and repository contract v2. Retain the frozen v1 mirror.
+- Preserve all 155 record and 579 assertion identities. Distinguish navigation
+  from core concepts, retain complete concept frontmatter without evaluating
+  nested contexts, and support CommonMark links and document-relative path fields.
+- Update only the Soup Sieve transitive pin from 2.9.2 to 4.1.3 and exercise the
+  producer's locked dependency environment.
+- Record source, semantic, Explorer, AI-access and per-bundle walkthrough
+  acceptance separately. Local consumer checks pass; CI, deployed identity and
+  formal release retain separate acceptance gates.
+- Publish a source-linked federated RAG walkthrough with a graph-derived visual
+  trail, exact source digests and tested absent-path negative controls.
+- Require independent parity for every concept frontmatter block, body and core
+  reference pair, a seven-journey Explorer replay and complete HTTP graph/source
+  retrieval in CI. Keep the protected `validate` name as the fail-closed
+  aggregator of the deterministic core and consumer jobs.
+
 ## Unreleased — standards references
 
 - Link the central current and historical OKF standards register and public bundle catalogue.

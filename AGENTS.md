@@ -1,5 +1,13 @@
 # Working agreement
 
+- The current producer candidate declares OKF core 0.3 and Bundle Wiki profile
+  v2 through repository contract v2. Preserve the byte-identical v1 schema and
+  context mirror as a structural dependency. Do not relabel a v1 contract as
+  core 0.3 or change historical releases.
+- Keep reserved index/log navigation outside the core concept graph. Preserve
+  complete authored concept frontmatter, safe source paths and every governed
+  assertion's identity and evidence. Record browser, AI-access and the
+  bundle-specific complex-question walkthrough evidence before acceptance.
 - Markdown/YAML-LD is the source of truth; regenerate projections after edits.
 - Preserve stable IDs, aliases, links and route collision checks.
 - Use British English for all human-readable material and `en-GB` for generated
@@ -53,6 +61,16 @@ uv pip compile requirements-okf.txt --python-version 3.12 --no-annotate --no-hea
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
+- Before publication, also run the pinned Explorer source, core-parity and
+  seven-journey browser checks declared in `.github/workflows/ci.yml`, then run
+  `node scripts/check_client_access.mjs --output .work/client-access.json`.
+  The client check retrieves every declared file over loopback HTTP and checks
+  the full compact graph, source digests and negative controls. Keep receipts
+  outside `bundle/` and use a fresh output path. The protected `validate` check
+  requires both the deterministic core and consumer jobs; a skipped or failed
+  job cannot pass it. The canonical runner currently requires its pinned
+  Chromium; this is the reason for that bounded CI download.
+
 - Keep `okf.publication.json`, `README.md`, this working agreement and
   `CHANGELOG.md` in lockstep with controlled source, generator, dependency,
   workflow or generated-publication changes. The contract checker fails a CI
@@ -70,10 +88,10 @@ uv pip compile requirements-okf.txt --python-version 3.12 --no-annotate --no-hea
   local CI contract.
 
 <!-- okf-semantic-contract:start -->
-## OKF 0.2 and semantic relationship contract
+## OKF 0.3 and semantic relationship contract
 
 - Read `okf.semantic.json` before changing Markdown, ontology, semantic, relationship, bundle, or Reader-facing files. It records this repository's authored inputs, generated outputs, exact build/check commands, delivery mode, and current migration limitations.
-- Keep the intentionally small OKF 0.2 Markdown core separate from the additive Bundle Wiki YAML-LD profile. Unknown OKF fields remain forward-compatible; profile requirements must never be described as universal OKF core.
+- Keep the intentionally small OKF 0.3 Markdown core separate from the additive Bundle Wiki v2 YAML-LD profile. Unknown OKF fields remain forward-compatible; profile requirements must never be described as universal OKF core. The inherited frozen v1 schemas retain their original 0.2 identity and bytes.
 - Treat the declared YAML-LD/JSON-LD graph or authored Markdown YAML-LD front matter as semantic authority. Explorer JSON, shards, adjacency, registries, checksums and sites are generated projections and must not be hand-edited.
 - Every new material directed relationship must retain a stable assertion ID, validated local runtime `source` and `target`, absolute `source_iri` and `target_iri`, an absolute predicate IRI, a governed relationship kind, preferred and inverse labels, assertion status and scope, authority, derivation, observation time, evidence and rights. Semantic reification maps the same identities to RDF subject and object. Confidence never upgrades authority.
 - Keep the direct semantic triple and its evidence-bearing `okf:RelationshipAssertion` synchronised, or generate both deterministically from one assertion source. Do not infer domain predicates from Markdown links.

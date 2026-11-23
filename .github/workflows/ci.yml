@@ -15,7 +15,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate:
+  core:
+    name: Core validation
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -36,3 +37,81 @@ jobs:
       - run: .venv/bin/python scripts/check_publication.py
       - run: .venv/bin/python scripts/check_publication_contract.py
       - run: .venv/bin/python -m unittest discover -s tests -v
+
+  consumer:
+    name: Explorer and AI access
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: 643c69ad8d5d82bf6d643325ab33d9658f8fee9b
+          path: .acceptance-tools/okf-explorer
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.2"
+          python-version: "3.12.11"
+          enable-cache: false
+      - name: Install the pinned Explorer Python environment
+        working-directory: .acceptance-tools/okf-explorer
+        run: uv sync --locked
+      - name: Check every source concept with the independent Reader
+        working-directory: .acceptance-tools/okf-explorer
+        run: >-
+          uv run --locked python scripts/check_okf_03_source.py
+          "$GITHUB_WORKSPACE/bundle" --require-0.3
+          --output "$RUNNER_TEMP/source-check.json"
+          --projection "$RUNNER_TEMP/source-projection.json"
+      - name: Compare full frontmatter, bodies and core references
+        working-directory: .acceptance-tools/okf-explorer
+        run: >-
+          uv run --locked python "$GITHUB_WORKSPACE/scripts/check_core_projection.py"
+          "$RUNNER_TEMP/source-projection.json" --output "$RUNNER_TEMP/core-parity.json"
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: "10.34.7"
+          run_install: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "26.12.1"
+      - name: Install the frozen Explorer dependencies
+        run: pnpm --dir .acceptance-tools/okf-explorer/apps/okf-explorer install --frozen-lockfile
+      - name: Install the runner's pinned Chromium
+        timeout-minutes: 5
+        run: pnpm --dir .acceptance-tools/okf-explorer/apps/okf-explorer exec playwright install chromium
+      - name: Replay the bundle-specific complex question
+        run: >-
+          pnpm --dir .acceptance-tools/okf-explorer/apps/okf-explorer acceptance:bundle --
+          --bundle-root "$GITHUB_WORKSPACE/bundle"
+          --journeys "$GITHUB_WORKSPACE/walkthrough.explorer-journeys.json"
+          --output "$RUNNER_TEMP/explorer-acceptance.json" --port 4179
+      - name: Retrieve and traverse the complete graph and declared files
+        run: node scripts/check_client_access.mjs --output "$RUNNER_TEMP/client-access.json"
+      - name: Retain exact consumer receipts
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: consumer-acceptance-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/source-check.json
+            ${{ runner.temp }}/core-parity.json
+            ${{ runner.temp }}/explorer-acceptance.json
+            ${{ runner.temp }}/client-access.json
+          if-no-files-found: ignore
+
+  validate:
+    needs: [core, consumer]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require both validation planes
+        env:
+          CORE_RESULT: ${{ needs.core.result }}
+          CONSUMER_RESULT: ${{ needs.consumer.result }}
+        run: test "$CORE_RESULT" = success && test "$CONSUMER_RESULT" = success

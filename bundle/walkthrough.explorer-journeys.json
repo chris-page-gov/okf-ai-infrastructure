@@ -1,0 +1,265 @@
+{
+  "schema": "okf-explorer-journeys.v1",
+  "bundle_descriptor": "okf-bundle.json",
+  "expected_identity": {
+    "schema": "okf-explorer-bundle.v0",
+    "id": "https://chris-page-gov.github.io/okf-ai-infrastructure/semantic/ai-infrastructure",
+    "version": "0.7.0",
+    "snapshot": "sha256:7d64ab80f9e9cc7c1577480dbe0058f25cf088c6a357b1604fc7356e9dd2332c"
+  },
+  "journeys": [
+    {
+      "id": "privacy-reference-1",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-rag.md",
+          "params": {
+            "view": "graph"
+          }
+        },
+        {
+          "type": "wait_for",
+          "selector": "svg.graph [data-route=\"federated/federated-learning.md\"]"
+        },
+        {
+          "type": "click",
+          "selector": "svg.graph [data-route=\"federated/federated-learning.md\"] circle"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Federated learning\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "Federated learning"
+        },
+        {
+          "type": "console_clean"
+        },
+        {
+          "type": "requested",
+          "includes": "/bundle/okf-bundle.json"
+        }
+      ]
+    },
+    {
+      "id": "privacy-reference-2",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-learning.md",
+          "params": {
+            "view": "graph"
+          }
+        },
+        {
+          "type": "wait_for",
+          "selector": "svg.graph [data-route=\"federated/secure-aggregation.md\"]"
+        },
+        {
+          "type": "click",
+          "selector": "svg.graph [data-route=\"federated/secure-aggregation.md\"] circle"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Secure aggregation\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "Secure aggregation"
+        },
+        {
+          "type": "console_clean"
+        },
+        {
+          "type": "requested",
+          "includes": "/bundle/okf-bundle.json"
+        }
+      ]
+    },
+    {
+      "id": "privacy-reference-3",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/secure-aggregation.md",
+          "params": {
+            "view": "graph"
+          }
+        },
+        {
+          "type": "wait_for",
+          "selector": "svg.graph [data-route=\"federated/differential-privacy.md\"]"
+        },
+        {
+          "type": "click",
+          "selector": "svg.graph [data-route=\"federated/differential-privacy.md\"] circle"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Differential privacy\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "Differential privacy"
+        },
+        {
+          "type": "console_clean"
+        },
+        {
+          "type": "requested",
+          "includes": "/bundle/okf-bundle.json"
+        }
+      ]
+    },
+    {
+      "id": "independent-search-1",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-rag.md"
+        },
+        {
+          "type": "fill",
+          "selector": ".search-input",
+          "value": "Federated evaluation"
+        },
+        {
+          "type": "click",
+          "selector": ".result-open:has(h2:text-is(\"Federated evaluation\"))"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Federated evaluation\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "Federated evaluation"
+        },
+        {
+          "type": "console_clean"
+        },
+        {
+          "type": "url_hash",
+          "equals": "#federated/federated-evaluation.md"
+        }
+      ]
+    },
+    {
+      "id": "independent-search-2",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-rag.md"
+        },
+        {
+          "type": "fill",
+          "selector": ".search-input",
+          "value": "NCSC Guidelines"
+        },
+        {
+          "type": "click",
+          "selector": ".result-open:has(h2:text-is(\"NCSC Guidelines for secure AI system development\"))"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"NCSC Guidelines\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "NCSC Guidelines"
+        },
+        {
+          "type": "console_clean"
+        },
+        {
+          "type": "url_hash",
+          "equals": "#uk-government/ncsc-secure-ai.md"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-reference",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-evaluation.md",
+          "params": {
+            "view": "graph"
+          }
+        },
+        {
+          "type": "click",
+          "selector": "svg.graph [data-route=\"federated/evaluation-rubric.md\"] circle"
+        },
+        {
+          "type": "wait_for",
+          "selector": ".right-panel h2:has-text(\"Multi-dimensional evaluation rubric\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "governance"
+        },
+        {
+          "type": "console_clean"
+        }
+      ]
+    },
+    {
+      "id": "inspect-authored-metadata",
+      "actions": [
+        {
+          "type": "goto",
+          "hash": "#federated/federated-rag.md"
+        },
+        {
+          "type": "click",
+          "selector": ".right-panel [role=\"tab\"]:text-is(\"Data\")"
+        },
+        {
+          "type": "click",
+          "selector": ".json-panel summary:has-text(\"Node JSON and provenance\")"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "frontmatter"
+        },
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "Unverified"
+        },
+        {
+          "type": "text",
+          "selector": ".right-panel",
+          "includes": "OKF 0.3"
+        },
+        {
+          "type": "console_clean"
+        }
+      ]
+    }
+  ]
+}

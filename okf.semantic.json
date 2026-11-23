@@ -1,8 +1,8 @@
 {
   "okf_core": {
-    "specification": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
-    "status": "conformant",
-    "version": "0.2"
+    "version": "0.3",
+    "specification": "https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/SPEC.md",
+    "status": "conformant"
   },
   "reader": {
     "consumer": "https://chris-page-gov.github.io/okf-explorer/",
@@ -55,7 +55,7 @@
     "role": "small-bundle",
     "root_index": "index.md"
   },
-  "schema": "okf-repository-semantic-contract.v1",
+  "schema": "okf-repository-semantic-contract.v2",
   "semantic_layer": {
     "authoritative_inputs": [
       "index.md",
@@ -82,15 +82,24 @@
       "scripts/migrate_okf_v02.py",
       "scripts/okf_semantic.py",
       "scripts/semantic_projection.py",
-      "scripts/update_viewer.py"
+      "scripts/update_viewer.py",
+      "profiles/bundle-wiki/v2/",
+      "walkthrough.md",
+      "walkthrough.case.json",
+      "scripts/build_walkthrough.py",
+      "walkthrough.explorer-journeys.json",
+      "scripts/check_client_access.mjs",
+      "scripts/check_core_projection.py"
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
     "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
     "limitations": [
       "Authored local Markdown links are conservatively assigned the exact `normalized` status and emitted as dcterms:references; domain-specific predicates require separately authored evidence and are not inferred from link placement or prose.",
-      "The YAML-LD and JSON-LD graph is authoritative for directed relationships. Its entity nodes are an intentionally selected-field, lossy projection containing semantic identity and type plus `route`, `title`, `description`, `status` and `source_document`; authored Markdown remains authoritative for complete prose, source metadata and navigation richness, while the generated Explorer projection preserves the selected reader fields.",
+      "The semantic graph preserves complete concept frontmatter as an inert JSON literal, semantic identity/type, route, title, description, lifecycle and source-document links. Authored Markdown remains authoritative for complete prose and exact original serialisation. Reserved navigation records are explicit extensions, not core concepts.",
       "The `semantic_layer.outputs` list enumerates only artefacts that have governed Bundle Wiki v1 semantic or Reader roles. The static publication additionally generates `bundle/index.html`, `bundle/checksums.json`, the copied root surfaces `bundle/index.md`, `bundle/sources-index.md`, `bundle/log.md` and `bundle/okf.config.json`, and copied Markdown under `bundle/document/**/*.md`, `bundle/federated/**/*.md`, `bundle/frameworks/**/*.md`, `bundle/glossary/**/*.md`, `bundle/organisations/**/*.md`, `bundle/research/**/*.md`, `bundle/stack/**/*.md`, `bundle/standards/**/*.md` and `bundle/uk-government/**/*.md`. Repository-contract v1 has no truthful generic static-publication role for those HTML, Markdown and configuration outputs, so they are scoped here rather than mislabelled: `bundle/checksums.json` binds every other published file by exact path, byte count and SHA-256, while `scripts/check_publication.py` validates that exact file set, the checksum manifest and every byte-exact source/configuration copy.",
-      "A conformant local semantic receipt establishes deterministic build and validation status only; public deployment, release identity and live Reader behaviour remain separate release gates and are not proved by this contract."
+      "A conformant local semantic receipt establishes deterministic build and validation status only; public deployment, release identity and live Reader behaviour remain separate release gates and are not proved by this contract.",
+      "Reserved Index and Log records remain explicitly marked navigation extensions, outside the OKF concept graph. Complete concept frontmatter is retained as an inert JSON literal alongside pinned source documents.",
+      "The static walkthrough HTML, SVG and source-trail JSON are generated from the authored Markdown guide, case-route manifest and the same graph; they prove local trail and negative-control agreement, not live consumer or release acceptance."
     ],
     "outputs": [
       {
@@ -136,7 +145,7 @@
         "role": "semantic-validation"
       }
     ],
-    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/",
+    "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v2/",
     "state": "generated-yaml-ld-graph"
   },
   "tooling": {
