@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — patched uv certificate trust, 24 November 2026
+
+- Pin the independent consumer bootstrap and local uv commands to uv 0.13.4,
+  addressing the compromised emSign root in its bundled certificate store
+  ([GHSA-hq85-5cpj-mr62](https://github.com/astral-sh/uv/security/advisories/GHSA-hq85-5cpj-mr62)).
+  Keep the reviewed Python package lock, concept sources and published
+  0.7.1 bundle bytes unchanged.
+
 ## 0.7.1 — 23 November 2026
 
 - Pin consumer CI to the current Node 26.13.1 LTS security release, checked

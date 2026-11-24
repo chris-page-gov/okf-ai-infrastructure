@@ -35,7 +35,8 @@ python3 -m venv .venv
 
 - `requirements-okf.txt` contains the permitted direct dependency ranges;
   `requirements-okf.lock` is the reviewed exact Python package set. Regenerate the
-  lock only as an intentional dependency update:
+  lock only as an intentional dependency update. Use uv 0.13.4 for compilation
+  and the pinned independent consumer; `uv.toml` rejects older executables:
 
 ```sh
 uv pip compile requirements-okf.txt --python-version 3.12 --no-annotate --no-header --output-file requirements-okf.lock

@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-11-23",
+  "modified": "2026-11-24",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -191,6 +191,10 @@
         "path": "walkthrough.explorer-journeys.json",
         "role": "source-register",
         "source_family_id": "markdown-corpus"
+      },
+      {
+        "path": "uv.toml",
+        "role": "policy"
       }
     ],
     "generated": [
@@ -703,7 +707,8 @@
       "bundle/*",
       "okf-bundle.json",
       "walkthrough.case.json",
-      "walkthrough.explorer-journeys.json"
+      "walkthrough.explorer-journeys.json",
+      "uv.toml"
     ],
     "documentation_paths": [
       "README.md",
