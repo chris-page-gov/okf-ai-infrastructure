@@ -80,7 +80,11 @@ python3 -m venv .venv
 `requirements-okf.txt` records the permitted direct dependency ranges;
 `requirements-okf.lock` records the exact transitive Python package versions
 used by the repository; the interpreter patch and operating system remain
-separate execution controls. Updating dependencies is a deliberate operation:
+separate execution controls. Dependency compilation and independent consumer
+checks require uv 0.13.4. The repository version fence rejects an older uv
+before a command runs, addressing
+[GHSA-hq85-5cpj-mr62](https://github.com/astral-sh/uv/security/advisories/GHSA-hq85-5cpj-mr62).
+Updating dependencies is a deliberate operation:
 
 ```sh
 uv pip compile requirements-okf.txt --python-version 3.12 --no-annotate --no-header --output-file requirements-okf.lock
